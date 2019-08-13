@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/CopyToClipboard.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/components/</a> CopyToClipboard.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">53.73% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>36/67</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">35.71% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>5/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">53.85% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>35/65</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import PropTypes from 'prop-types';
+import { Tooltip, OverlayTrigger, MenuItem } from 'react-bootstrap';
+import { t } from '../locales';
+&nbsp;
+const propTypes = {
+  copyNode: PropTypes.node,
+  getText: PropTypes.func,
+  onCopyEnd: PropTypes.func,
+  shouldShowText: PropTypes.bool,
+  text: PropTypes.string,
+  inMenu: PropTypes.bool,
+  tooltipText: PropTypes.string,
+};
+&nbsp;
+const defaultProps = {
+  copyNode: &lt;span&gt;Copy&lt;/span&gt;,
+  onCopyEnd: () =&gt; <span class="fstat-no" title="function not covered" >{</span>},
+  shouldShowText: true,
+  inMenu: false,
+  tooltipText: t('Copy to clipboard'),
+};
+&nbsp;
+export default class CopyToClipboard extends React.Component {
+  constructor(props) {
+    super(<span class="branch-1 cbranch-no" title="branch not covered" >p</span>rops);
+    this.state = {
+      hasCopied: false,
+    };
+&nbsp;
+    // bindings
+    this.copyToClipboard = this.copyToClipboard.bind(this);
+    this.resetTooltipText = this.resetTooltipText.bind(this);
+    this.onMouseOut = this.onMouseOut.bind(this);
+  }
+&nbsp;
+  onMouseOut() <span class="fstat-no" title="function not covered" >{</span>
+    // delay to avoid flash of text change on tooltip
+    setTimeout(<span class="cstat-no" title="statement not covered" >this.resetTooltipText, 200);</span>
+  }
+&nbsp;
+  onClick() <span class="fstat-no" title="function not covered" >{</span>
+    if (<span class="cstat-no" title="statement not covered" >this.props.getText) {</span>
+      this.<span class="cstat-no" title="statement not covered" >props.getText(<span class="fstat-no" title="function not covered" >(d) =&gt; {</span> this.<span class="cstat-no" title="statement not covered" >copyToClipboard(d); });</span></span>
+    } else {
+      this.<span class="cstat-no" title="statement not covered" >copyToClipboard(this.props.text);</span>
+    }
+  }
+&nbsp;
+  resetTooltipText() <span class="fstat-no" title="function not covered" >{</span>
+    this.<span class="cstat-no" title="statement not covered" >setState({ hasCopied: false });</span>
+  }
+&nbsp;
+  copyToClipboard(<span class="fstat-no" title="function not covered" >textToCopy) {</span>
+    const <span class="cstat-no" title="statement not covered" >selection = document.getSelection();</span>
+    selection.<span class="cstat-no" title="statement not covered" >removeAllRanges();</span>
+    document.<span class="cstat-no" title="statement not covered" >activeElement.blur();</span>
+    const <span class="cstat-no" title="statement not covered" >range = document.createRange();</span>
+    const <span class="cstat-no" title="statement not covered" >span = document.createElement('span');</span>
+    span.<span class="cstat-no" title="statement not covered" >textContent = textToCopy;</span>
+    span.<span class="cstat-no" title="statement not covered" >style.all = 'unset';</span>
+    span.<span class="cstat-no" title="statement not covered" >style.position = 'fixed';</span>
+    span.<span class="cstat-no" title="statement not covered" >style.top = 0;</span>
+    span.<span class="cstat-no" title="statement not covered" >style.clip = 'rect(0, 0, 0, 0)';</span>
+    span.<span class="cstat-no" title="statement not covered" >style.whiteSpace = 'pre';</span>
+&nbsp;
+    document.<span class="cstat-no" title="statement not covered" >body.appendChild(span);</span>
+    range.<span class="cstat-no" title="statement not covered" >selectNode(span);</span>
+    selection.<span class="cstat-no" title="statement not covered" >addRange(range);</span>
+    try <span class="cstat-no" title="statement not covered" >{</span>
+      if (<span class="cstat-no" title="statement not covered" >!document.execCommand('copy')) {</span>
+        throw <span class="cstat-no" title="statement not covered" >new Error(t('Not successful'));</span>
+      }
+    } catch (err) {
+      window.<span class="cstat-no" title="statement not covered" >alert(t('Sorry, your browser does not support copying. Use Ctrl / Cmd + C!')); // eslint-disable-line</span>
+    }
+&nbsp;
+    document.<span class="cstat-no" title="statement not covered" >body.removeChild(span);</span>
+    if (<span class="cstat-no" title="statement not covered" >selection.removeRange) {</span>
+      selection.<span class="cstat-no" title="statement not covered" >removeRange(range);</span>
+    } else {
+      selection.<span class="cstat-no" title="statement not covered" >removeAllRanges();</span>
+    }
+&nbsp;
+    this.<span class="cstat-no" title="statement not covered" >setState({ hasCopied: true });</span>
+    this.<span class="cstat-no" title="statement not covered" >props.onCopyEnd();</span>
+  }
+&nbsp;
+  tooltipText() {
+    if (<span class="missing-if-branch" title="if path not taken" >I</span>this.state.hasCopied) {
+      return <span class="cstat-no" title="statement not covered" >t('Copied!');</span>
+    }
+    return this.props.tooltipText;
+  }
+&nbsp;
+  renderLink() {
+    return (
+      &lt;span&gt;
+        {this.props.shouldShowText &amp;&amp;
+<span class="branch-1 cbranch-no" title="branch not covered" >          &lt;span&gt;</span>
+            {this.props.text}
+            &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+          &lt;/span&gt;
+        }
+        &lt;OverlayTrigger
+          placement="top"
+          style={{ cursor: 'pointer' }}
+          overlay={this.renderTooltip()}
+          trigger={['hover']}
+          bsStyle="link"
+          onClick={this.onClick.bind(this)}
+          onMouseOut={this.onMouseOut}
+        &gt;
+          {this.props.copyNode}
+        &lt;/OverlayTrigger&gt;
+      &lt;/span&gt;
+    );
+  }
+&nbsp;
+  renderInMenu() {
+    return (
+      &lt;OverlayTrigger placement="top" overlay={this.renderTooltip()} trigger={['hover']}&gt;
+        &lt;MenuItem&gt;
+          &lt;span
+            onClick={this.onClick.bind(this)}
+            onMouseOut={this.onMouseOut}
+          &gt;
+            {this.props.copyNode}
+          &lt;/span&gt;
+        &lt;/MenuItem&gt;
+      &lt;/OverlayTrigger&gt;
+    );
+  }
+&nbsp;
+  renderTooltip() {
+    return (
+      &lt;Tooltip id="copy-to-clipboard-tooltip"&gt;
+        {this.tooltipText()}
+      &lt;/Tooltip&gt;
+    );
+  }
+&nbsp;
+  render() {
+    let html;
+    if (this.props.inMenu) {
+      html = this.renderInMenu();
+    } else {
+      html = this.renderLink();
+    }
+    return html;
+  }
+}
+&nbsp;
+CopyToClipboard.propTypes = propTypes;
+CopyToClipboard.defaultProps = defaultProps;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

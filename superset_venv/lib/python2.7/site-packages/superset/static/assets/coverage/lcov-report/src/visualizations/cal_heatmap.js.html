@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/visualizations/cal_heatmap.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/visualizations/</a> cal_heatmap.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/44</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/39</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import d3 from 'd3';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >import { colorScalerFactory } from '../modules/colors';</span>
+<span class="cstat-no" title="statement not covered" >import CalHeatMap from '../../vendor/cal-heatmap/cal-heatmap';</span>
+<span class="cstat-no" title="statement not covered" >import '../../vendor/cal-heatmap/cal-heatmap.css';</span>
+<span class="cstat-no" title="statement not covered" >import { d3TimeFormatPreset, d3FormatPreset } from '../modules/utils';</span>
+<span class="cstat-no" title="statement not covered" >import './cal_heatmap.css';</span>
+<span class="cstat-no" title="statement not covered" >import { UTC } from '../modules/dates';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >UTCTS = uts =&gt; <span class="cstat-no" title="statement not covered" >UTC(new Date(uts)).getTime();</span></span></span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function calHeatmap(slice, payload) {</span></span>
+  const <span class="cstat-no" title="statement not covered" >fd = slice.formData;</span>
+  const <span class="cstat-no" title="statement not covered" >steps = fd.steps;</span>
+  const <span class="cstat-no" title="statement not covered" >valueFormatter = d3FormatPreset(fd.y_axis_format);</span>
+  const <span class="cstat-no" title="statement not covered" >timeFormatter = d3TimeFormatPreset(fd.x_axis_time_format);</span>
+&nbsp;
+  const <span class="cstat-no" title="statement not covered" >container = d3.select(slice.selector).style('height', slice.height());</span>
+  container.<span class="cstat-no" title="statement not covered" >selectAll('*').remove();</span>
+  const <span class="cstat-no" title="statement not covered" >div = container.append('div');</span>
+  const <span class="cstat-no" title="statement not covered" >data = payload.data;</span>
+&nbsp;
+  const <span class="cstat-no" title="statement not covered" >subDomainTextFormat = fd.show_values ? <span class="fstat-no" title="function not covered" >(date, value) =&gt; <span class="cstat-no" title="statement not covered" >valueFormatter(value) : null;</span></span></span>
+  const <span class="cstat-no" title="statement not covered" >cellPadding = fd.cell_padding !== '' ? fd.cell_padding : 2;</span>
+  const <span class="cstat-no" title="statement not covered" >cellRadius = fd.cell_radius || 0;</span>
+  const <span class="cstat-no" title="statement not covered" >cellSize = fd.cell_size || 10;</span>
+&nbsp;
+  // Trick to convert all timestamps to UTC
+  const <span class="cstat-no" title="statement not covered" >metricsData = {};</span>
+  Object.<span class="cstat-no" title="statement not covered" >keys(data.data).forEach(<span class="fstat-no" title="function not covered" >(metric) =&gt; {</span></span>
+    metricsData[<span class="cstat-no" title="statement not covered" >metric] = {};</span>
+    Object.<span class="cstat-no" title="statement not covered" >keys(data.data[metric]).forEach(<span class="fstat-no" title="function not covered" >(ts) =&gt; {</span></span>
+      metricsData[<span class="cstat-no" title="statement not covered" >metric][UTCTS(ts * 1000) / 1000] = data.data[metric][ts];</span>
+    });
+  });
+&nbsp;
+  Object.<span class="cstat-no" title="statement not covered" >keys(metricsData).forEach(<span class="fstat-no" title="function not covered" >(metric) =&gt; {</span></span>
+    const <span class="cstat-no" title="statement not covered" >calContainer = div.append('div');</span>
+    if (<span class="cstat-no" title="statement not covered" >fd.show_metric_name) {</span>
+      calContainer.<span class="cstat-no" title="statement not covered" >append('h4').text(slice.verboseMetricName(metric));</span>
+    }
+    const <span class="cstat-no" title="statement not covered" >timestamps = metricsData[metric];</span>
+    const <span class="cstat-no" title="statement not covered" >extents = d3.extent(Object.keys(timestamps), <span class="fstat-no" title="function not covered" >key =&gt; <span class="cstat-no" title="statement not covered" >timestamps[key]);</span></span></span>
+    const <span class="cstat-no" title="statement not covered" >step = (extents[1] - extents[0]) / (steps - 1);</span>
+    const <span class="cstat-no" title="statement not covered" >colorScale = colorScalerFactory(fd.linear_color_scheme, null, null, extents);</span>
+&nbsp;
+    const <span class="cstat-no" title="statement not covered" >legend = d3.range(steps).map(<span class="fstat-no" title="function not covered" >i =&gt; <span class="cstat-no" title="statement not covered" >extents[0] + (step * i));</span></span></span>
+    const <span class="cstat-no" title="statement not covered" >legendColors = legend.map(colorScale);</span>
+&nbsp;
+    const <span class="cstat-no" title="statement not covered" >cal = new CalHeatMap();</span>
+&nbsp;
+    cal.<span class="cstat-no" title="statement not covered" >init({</span>
+      start: UTCTS(data.start),
+      data: timestamps,
+      itemSelector: calContainer[0][0],
+      legendVerticalPosition: 'top',
+      cellSize,
+      cellPadding,
+      cellRadius,
+      legendCellSize: cellSize,
+      legendCellPadding: 2,
+      legendCellRadius: cellRadius,
+      tooltip: true,
+      domain: data.domain,
+      subDomain: data.subdomain,
+      range: data.range,
+      browsing: true,
+      legend,
+      legendColors: {
+        colorScale,
+        min: legendColors[0],
+        max: legendColors[legendColors.length - 1],
+        empty: 'white',
+      },
+      displayLegend: fd.show_legend,
+      itemName: '',
+      valueFormatter,
+      timeFormatter,
+      subDomainTextFormat,
+    });
+  });
+}
+<span class="cstat-no" title="statement not covered" >module.exports = calHeatmap;</span>
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/AlteredSliceTag.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/components/</a> AlteredSliceTag.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>69/69</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">94.12% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>48/51</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>10/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>66/66</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">25×</span>
+<span class="cline-any cline-yes">25×</span>
+<span class="cline-any cline-yes">25×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">27×</span>
+<span class="cline-any cline-yes">27×</span>
+<span class="cline-any cline-yes">27×</span>
+<span class="cline-any cline-yes">27×</span>
+<span class="cline-any cline-yes">217×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">217×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">189×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">189×</span>
+<span class="cline-any cline-yes">183×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">27×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">449×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">447×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">446×</span>
+<span class="cline-any cline-yes">65×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-yes">66×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">66×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">381×</span>
+<span class="cline-any cline-yes">63×</span>
+<span class="cline-any cline-yes">318×</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-yes">255×</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-yes">191×</span>
+<span class="cline-any cline-yes">63×</span>
+<span class="cline-any cline-yes">128×</span>
+<span class="cline-any cline-yes">65×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">63×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-yes">218×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">26×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">27×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">25×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import PropTypes from 'prop-types';
+import { Table, Tr, Td, Thead, Th } from 'reactable';
+import { isEqual, isEmpty } from 'underscore';
+&nbsp;
+import TooltipWrapper from './TooltipWrapper';
+import { controls } from '../explore/controls';
+import ModalTrigger from './ModalTrigger';
+import { t } from '../locales';
+&nbsp;
+const propTypes = {
+  origFormData: PropTypes.object.isRequired,
+  currentFormData: PropTypes.object.isRequired,
+};
+&nbsp;
+export default class AlteredSliceTag extends React.Component {
+&nbsp;
+  constructor(props) {
+    super(<span class="branch-1 cbranch-no" title="branch not covered" >p</span>rops);
+    const diffs = this.getDiffs(props);
+    this.state = { diffs, hasDiffs: !isEmpty(diffs) };
+  }
+&nbsp;
+  componentWillReceiveProps(newProps) {
+    // Update differences if need be
+    if (isEqual(this.props, newProps)) {
+      return;
+    }
+    const diffs = this.getDiffs(newProps);
+    this.setState({ diffs, hasDiffs: !isEmpty(diffs) });
+  }
+&nbsp;
+  getDiffs(props) {
+    // Returns all properties that differ in the
+    // current form data and the saved form data
+    const ofd = props.origFormData;
+    const cfd = props.currentFormData;
+    const fdKeys = Object.keys(cfd);
+    const diffs = {};
+    for (const fdKey of fdKeys) {
+      // Ignore values that are undefined/nonexisting in either
+      if (!ofd[fdKey] &amp;&amp; !cfd[fdKey]) {
+        continue;
+      }
+      // Ignore obsolete legacy filters
+      if (<span class="missing-if-branch" title="if path not taken" >I</span>['filters', 'having', 'having_filters', 'where'].includes(fdKey)) {
+        continue;
+      }
+      if (!isEqual(ofd[fdKey], cfd[fdKey])) {
+        diffs[fdKey] = { before: ofd[fdKey], after: cfd[fdKey] };
+      }
+    }
+    return diffs;
+  }
+&nbsp;
+  formatValue(value, key) {
+    // Format display value based on the control type
+    // or the value type
+    if (value === undefined) {
+      return 'N/A';
+    } else if (value === null) {
+      return 'null';
+    } else if (controls[key] &amp;&amp; controls[key].type === 'AdhocFilterControl') {
+      if (!value.length) {
+        return '[]';
+      }
+      return value.map((v) =&gt; {
+        const filterVal = v.comparator &amp;&amp; v.comparator.constructor === Array ?
+          `[${v.comparator.join(', ')}]` :
+          v.comparator;
+        return `${v.subject} ${v.operator} ${filterVal}`;
+      }).join(', ');
+    } else if (controls[key] &amp;&amp; controls[key].type === 'BoundsControl') {
+      return `Min: ${value[0]}, Max: ${value[1]}`;
+    } else if (controls[key] &amp;&amp; controls[key].type === 'CollectionControl') {
+      return value.map(v =&gt; JSON.stringify(v)).join(', ');
+    } else if (typeof value === 'boolean') {
+      return value ? 'true' : 'false';
+    } else if (value.constructor === Array) {
+      r</span>eturn value.length ? value.join(', ') : <span class="branch-1 cbranch-no" title="branch not covered" >'[]';
+    } else if (typeof value === 'string' || typeof value === 'number') {
+      return value;
+    }
+    return JSON.stringify(value);
+  }
+&nbsp;
+  renderRows() {
+    const diffs = this.state.diffs;
+    const rows = [];
+    for (const key in diffs) {
+      rows.push(
+        &lt;Tr key={key}&gt;
+          &lt;Td column="control" data={(controls[key] &amp;&amp; controls[key].label) || key} /&gt;
+          &lt;Td column="before"&gt;{this.formatValue(diffs[key].before, key)}&lt;/Td&gt;
+          &lt;Td column="after"&gt;{this.formatValue(diffs[key].after, key)}&lt;/Td&gt;
+        &lt;/Tr&gt;,
+      );
+    }
+    return rows;
+  }
+&nbsp;
+  renderModalBody() {
+    return (
+      &lt;Table className="table" sortable&gt;
+        &lt;Thead&gt;
+          &lt;Th column="control"&gt;Control&lt;/Th&gt;
+          &lt;Th column="before"&gt;Before&lt;/Th&gt;
+          &lt;Th column="after"&gt;After&lt;/Th&gt;
+        &lt;/Thead&gt;
+        {this.renderRows()}
+      &lt;/Table&gt;
+    );
+  }
+&nbsp;
+  renderTriggerNode() {
+    return (
+      &lt;TooltipWrapper
+        label="difference"
+        tooltip={t('Click to see difference')}
+      &gt;
+        &lt;span
+          className="label label-warning m-l-5"
+          style={{ fontSize: '12px' }}
+        &gt;
+          {t('Altered')}
+        &lt;/span&gt;
+      &lt;/TooltipWrapper&gt;
+    );
+  }
+&nbsp;
+  render() {
+    // Return nothing if there are no differences
+    if (!this.state.hasDiffs) {
+      return null;
+    }
+    // Render the label-warning 'Altered' tag which the user may
+    // click to open a modal containing a table summarizing the
+    // differences in the slice
+    return (
+      &lt;ModalTrigger
+        animation
+        triggerNode={this.renderTriggerNode()}
+        modalTitle={t('Chart changes')}
+        bsSize="large"
+        modalBody={this.renderModalBody()}
+      /&gt;
+    );
+  }
+}
+&nbsp;
+AlteredSliceTag.propTypes = propTypes;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

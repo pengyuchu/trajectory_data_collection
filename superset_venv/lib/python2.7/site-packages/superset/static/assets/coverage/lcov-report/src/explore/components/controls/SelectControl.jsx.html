@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/explore/components/controls/SelectControl.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">src/explore/components/controls/</a> SelectControl.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">84.75% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>50/59</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">58.82% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>20/34</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">72.73% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">85.71% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>48/56</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import PropTypes from 'prop-types';
+import VirtualizedSelect from 'react-virtualized-select';
+import Select, { Creatable } from 'react-select';
+import ControlHeader from '../ControlHeader';
+import { t } from '../../../locales';
+import VirtualizedRendererWrap from '../../../components/VirtualizedRendererWrap';
+import OnPasteSelect from '../../../components/OnPasteSelect';
+&nbsp;
+const propTypes = {
+  choices: PropTypes.array,
+  clearable: PropTypes.bool,
+  description: PropTypes.string,
+  disabled: PropTypes.bool,
+  freeForm: PropTypes.bool,
+  isLoading: PropTypes.bool,
+  label: PropTypes.string,
+  multi: PropTypes.bool,
+  name: PropTypes.string.isRequired,
+  onChange: PropTypes.func,
+  onFocus: PropTypes.func,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
+  showHeader: PropTypes.bool,
+  optionRenderer: PropTypes.func,
+  valueRenderer: PropTypes.func,
+  valueKey: PropTypes.string,
+  options: PropTypes.array,
+  placeholder: PropTypes.string,
+  noResultsText: PropTypes.string,
+  refFunc: PropTypes.func,
+  filterOption: PropTypes.func,
+};
+&nbsp;
+const defaultProps = {
+  choices: [],
+  clearable: true,
+  description: null,
+  disabled: false,
+  freeForm: false,
+  isLoading: false,
+  label: null,
+  multi: false,
+  onChange: () =&gt; <span class="fstat-no" title="function not covered" >{</span>},
+  onFocus: () =&gt; <span class="fstat-no" title="function not covered" >{</span>},
+  showHeader: true,
+  optionRenderer: opt =&gt; <span class="cstat-no" title="statement not covered" >opt.label,</span>
+  valueRenderer: opt =&gt; <span class="cstat-no" title="statement not covered" >opt.label,</span>
+  valueKey: 'value',
+  noResultsText: t('No results found'),
+};
+&nbsp;
+export default class SelectControl extends React.PureComponent {
+  constructor(props) {
+    super(<span class="branch-1 cbranch-no" title="branch not covered" >p</span>rops);
+    this.state = { options: this.getOptions(props) };
+    this.onChange = this.onChange.bind(this);
+  }
+  componentWillReceiveProps(nextProps) {
+    if (<span class="missing-if-branch" title="else path not taken" >E</span>nextProps.choices !== this.props.choices ||
+<span class="branch-1 cbranch-no" title="branch not covered" >        nextProps.options !== this.props.options) {</span>
+      const options = this.getOptions(nextProps);
+      this.setState({ options });
+    }
+  }
+  onChange(opt) {
+    l</span>et optionValue = opt ? opt[this.props.valueKey] : <span class="branch-1 cbranch-no" title="branch not covered" >null;
+    // if multi, return options values as an array
+    if (<span class="missing-if-branch" title="if path not taken" >I</span>this.props.multi) {
+      optionValue = <span class="cstat-no" title="statement not covered" >opt ? opt.map(<span class="fstat-no" title="function not covered" >o =&gt; <span class="cstat-no" title="statement not covered" >o[this.props.valueKey]) : null;</span></span></span>
+    }
+    this.props.onChange(optionValue);
+  }
+  getOptions(props) {
+    if (<span class="missing-if-branch" title="if path not taken" >I</span>props.options) {
+      return <span class="cstat-no" title="statement not covered" >props.options;</span>
+    }
+    // Accepts different formats of input
+    const options = props.choices.map((c) =&gt; {
+      let option;
+      if (<span class="missing-if-branch" title="else path not taken" >E</span>Array.isArray(c)) {
+        c</span>onst label = c.length &gt; 1 ? c[1] : <span class="branch-1 cbranch-no" title="branch not covered" >c[0];
+        option = {
+          value: c[0],
+          label,
+        };
+      } else <span class="cstat-no" title="statement not covered" >if (Object.is(c)) {</span>
+        option = <span class="cstat-no" title="statement not covered" >c;</span>
+      } else {
+        option = <span class="cstat-no" title="statement not covered" >{</span>
+          value: c,
+          label: c,
+        };
+      }
+      return option;
+    });
+    if (props.freeForm) {
+      // For FreeFormSelect, insert value into options if not exist
+      const values = options.map(c =&gt; c.value);
+      if (props.value) {
+        let valuesToAdd = props.value;
+        if (<span class="missing-if-branch" title="if path not taken" >I</span>!Array.isArray(valuesToAdd)) {
+          valuesToAdd = <span class="cstat-no" title="statement not covered" >[valuesToAdd];</span>
+        }
+        valuesToAdd.forEach((v) =&gt; {
+          if (<span class="missing-if-branch" title="else path not taken" >E</span>values.indexOf(v) &lt; 0) {
+            options.push({ value: v, label: v });
+          }
+        });
+      }
+    }
+    return options;
+  }
+  render() {
+    //  Tab, comma or Enter will trigger a new option created for FreeFormSelect
+    const placeholder = this.props.placeholder || t('%s option(s)', this.state.options.length);
+    const selectProps = {
+      multi: this.props.multi,
+      name: `select-${this.props.name}`,
+      placeholder,
+      options: this.state.options,
+      value: this.props.value,
+      labelKey: 'label',
+      valueKey: this.props.valueKey,
+      autosize: false,
+      clearable: this.props.clearable,
+      isLoading: this.props.isLoading,
+      onChange: this.onChange,
+      onFocus: this.props.onFocus,
+      optionRenderer: VirtualizedRendererWrap(this.props.optionRenderer),
+      valueRenderer: this.props.valueRenderer,
+      noResultsText: this.props.noResultsText,
+      selectComponent: this.props.freeForm ? Creatable : Select,
+      disabled: this.props.disabled,
+      refFunc: this.props.refFunc,
+      filterOption: this.props.filterOption,
+    };
+    return (
+      &lt;div&gt;
+        {this.props.showHeader &amp;&amp;
+          &lt;ControlHeader {...this.props} /&gt;
+        }
+        &lt;OnPasteSelect {...selectProps} selectWrap={VirtualizedSelect} /&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+&nbsp;
+SelectControl.propTypes = propTypes;
+SelectControl.defaultProps = defaultProps;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

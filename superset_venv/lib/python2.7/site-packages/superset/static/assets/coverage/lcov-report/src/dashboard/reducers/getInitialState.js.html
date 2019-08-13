@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/dashboard/reducers/getInitialState.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/dashboard/reducers/</a> getInitialState.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/56</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/32</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/56</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* eslint-disable camelcase */
+<span class="cstat-no" title="statement not covered" >import shortid from 'shortid';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >import { chart } from '../../chart/chartReducer';</span>
+<span class="cstat-no" title="statement not covered" >import { initSliceEntities } from './sliceEntities';</span>
+<span class="cstat-no" title="statement not covered" >import { getParam } from '../../modules/utils';</span>
+<span class="cstat-no" title="statement not covered" >import { applyDefaultFormData } from '../../explore/store';</span>
+<span class="cstat-no" title="statement not covered" >import { getColorFromScheme } from '../../modules/colors';</span>
+<span class="cstat-no" title="statement not covered" >import findFirstParentContainerId from '../util/findFirstParentContainer';</span>
+<span class="cstat-no" title="statement not covered" >import layoutConverter from '../util/dashboardLayoutConverter';</span>
+<span class="cstat-no" title="statement not covered" >import getEmptyLayout from '../util/getEmptyLayout';</span>
+<span class="cstat-no" title="statement not covered" >import newComponentFactory from '../util/newComponentFactory';</span>
+<span class="cstat-no" title="statement not covered" >import { DASHBOARD_VERSION_KEY, DASHBOARD_HEADER_ID } from '../util/constants';</span>
+<span class="cstat-no" title="statement not covered" >import {</span>
+  DASHBOARD_HEADER_TYPE,
+  CHART_TYPE,
+  ROW_TYPE,
+} from '../util/componentTypes';
+&nbsp;
+export default <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function(bootstrapData) {</span></span>
+  const {
+<span class="cstat-no" title="statement not covered" >    user_id,</span>
+    datasources,
+    common,
+    editMode,
+    force_v2_edit: forceV2Edit,
+    v2_auto_convert_date: v2AutoConvertDate,
+    v2_feedback_url: v2FeedbackUrl,
+  } = bootstrapData;
+  delete <span class="cstat-no" title="statement not covered" >common.locale;</span>
+  delete <span class="cstat-no" title="statement not covered" >common.language_pack;</span>
+&nbsp;
+  const <span class="cstat-no" title="statement not covered" >dashboard = { ...bootstrapData.dashboard_data };</span>
+  let <span class="cstat-no" title="statement not covered" >filters = {};</span>
+  try <span class="cstat-no" title="statement not covered" >{</span>
+    // allow request parameter overwrite dashboard metadata
+    filters = <span class="cstat-no" title="statement not covered" >JSON.parse(</span>
+      getParam('preselect_filters') || dashboard.metadata.default_filters,
+    );
+  } catch (e) {
+    //
+  }
+&nbsp;
+  // Priming the color palette with user's label-color mapping provided in
+  // the dashboard's JSON metadata
+  if (<span class="cstat-no" title="statement not covered" >dashboard.metadata &amp;&amp; dashboard.metadata.label_colors) {</span>
+    const <span class="cstat-no" title="statement not covered" >colorMap = dashboard.metadata.label_colors;</span>
+    Object.<span class="cstat-no" title="statement not covered" >keys(colorMap).forEach(<span class="fstat-no" title="function not covered" >label =&gt; {</span></span>
+      getColorFromScheme(<span class="cstat-no" title="statement not covered" >label, null, colorMap[label]);</span>
+    });
+  }
+&nbsp;
+  // dashboard layout
+  const { position_json: <span class="cstat-no" title="statement not covered" >positionJson } = dashboard;</span>
+  const <span class="cstat-no" title="statement not covered" >shouldConvertToV2 =</span>
+    positionJson &amp;&amp; positionJson[DASHBOARD_VERSION_KEY] !== 'v2';
+&nbsp;
+  const <span class="cstat-no" title="statement not covered" >layout = shouldConvertToV2</span>
+    ? layoutConverter(dashboard)
+    : positionJson || getEmptyLayout();
+&nbsp;
+  // create a lookup to sync layout names with slice names
+  const <span class="cstat-no" title="statement not covered" >chartIdToLayoutId = {};</span>
+  Object.<span class="cstat-no" title="statement not covered" >values(layout).forEach(<span class="fstat-no" title="function not covered" >layoutComponent =&gt; {</span></span>
+    if (<span class="cstat-no" title="statement not covered" >layoutComponent.type === CHART_TYPE) {</span>
+      chartIdToLayoutId[<span class="cstat-no" title="statement not covered" >layoutComponent.meta.chartId] = layoutComponent.id;</span>
+    }
+  });
+&nbsp;
+  // find root level chart container node for newly-added slices
+  const <span class="cstat-no" title="statement not covered" >parentId = findFirstParentContainerId(layout);</span>
+  const <span class="cstat-no" title="statement not covered" >chartQueries = {};</span>
+  const <span class="cstat-no" title="statement not covered" >slices = {};</span>
+  const <span class="cstat-no" title="statement not covered" >sliceIds = new Set();</span>
+  dashboard.<span class="cstat-no" title="statement not covered" >slices.forEach(<span class="fstat-no" title="function not covered" >slice =&gt; {</span></span>
+    const <span class="cstat-no" title="statement not covered" >key = slice.slice_id;</span>
+    if (<span class="cstat-no" title="statement not covered" >['separator', 'markup'].indexOf(slice.form_data.viz_type) === -1) {</span>
+      chartQueries[<span class="cstat-no" title="statement not covered" >key] = {</span>
+        ...chart,
+        id: key,
+        form_data: slice.form_data,
+        formData: applyDefaultFormData(slice.form_data),
+      };
+&nbsp;
+      slices[<span class="cstat-no" title="statement not covered" >key] = {</span>
+        slice_id: key,
+        slice_url: slice.slice_url,
+        slice_name: slice.slice_name,
+        form_data: slice.form_data,
+        edit_url: slice.edit_url,
+        viz_type: slice.form_data.viz_type,
+        datasource: slice.form_data.datasource,
+        description: slice.description,
+        description_markeddown: slice.description_markeddown,
+        modified: slice.modified,
+        changed_on: new Date(slice.changed_on).getTime(),
+      };
+&nbsp;
+      sliceIds.<span class="cstat-no" title="statement not covered" >add(key);</span>
+&nbsp;
+      // if chart is newly added from explore view, add a row in layout
+      if (<span class="cstat-no" title="statement not covered" >!chartIdToLayoutId[key] &amp;&amp; layout[parentId]) {</span>
+        const <span class="cstat-no" title="statement not covered" >parent = layout[parentId];</span>
+        const <span class="cstat-no" title="statement not covered" >rowContainer = newComponentFactory(ROW_TYPE);</span>
+        layout[<span class="cstat-no" title="statement not covered" >rowContainer.id] = rowContainer;</span>
+        parent.<span class="cstat-no" title="statement not covered" >children.push(rowContainer.id);</span>
+&nbsp;
+        const <span class="cstat-no" title="statement not covered" >chartHolder = newComponentFactory(CHART_TYPE, {</span>
+          chartId: slice.slice_id,
+        });
+&nbsp;
+        layout[<span class="cstat-no" title="statement not covered" >chartHolder.id] = chartHolder;</span>
+        rowContainer.<span class="cstat-no" title="statement not covered" >children.push(chartHolder.id);</span>
+        chartIdToLayoutId[<span class="cstat-no" title="statement not covered" >chartHolder.meta.chartId] = chartHolder.id;</span>
+      }
+    }
+&nbsp;
+    // sync layout names with current slice names in case a slice was edited
+    // in explore since the layout was updated. name updates go through layout for undo/redo
+    // functionality and python updates slice names based on layout upon dashboard save
+    const <span class="cstat-no" title="statement not covered" >layoutId = chartIdToLayoutId[key];</span>
+    if (<span class="cstat-no" title="statement not covered" >layoutId &amp;&amp; layout[layoutId]) {</span>
+      layout[<span class="cstat-no" title="statement not covered" >layoutId].meta.sliceName = slice.slice_name;</span>
+    }
+  });
+&nbsp;
+  // store the header as a layout component so we can undo/redo changes
+  layout[<span class="cstat-no" title="statement not covered" >DASHBOARD_HEADER_ID] = {</span>
+    id: DASHBOARD_HEADER_ID,
+    type: DASHBOARD_HEADER_TYPE,
+    meta: {
+      text: dashboard.dashboard_title,
+    },
+  };
+&nbsp;
+  const <span class="cstat-no" title="statement not covered" >dashboardLayout = {</span>
+    past: [],
+    present: layout,
+    future: [],
+  };
+&nbsp;
+  return <span class="cstat-no" title="statement not covered" >{</span>
+    datasources,
+    sliceEntities: { ...initSliceEntities, slices, isLoading: false },
+    charts: chartQueries,
+    // read-only data
+    dashboardInfo: {
+      id: dashboard.id,
+      slug: dashboard.slug,
+      metadata: {
+        filter_immune_slice_fields:
+          dashboard.metadata.filter_immune_slice_fields,
+        filter_immune_slices: dashboard.metadata.filter_immune_slices,
+        timed_refresh_immune_slices:
+          dashboard.metadata.timed_refresh_immune_slices,
+      },
+      userId: user_id,
+      dash_edit_perm: dashboard.dash_edit_perm,
+      dash_save_perm: dashboard.dash_save_perm,
+      superset_can_explore: dashboard.superset_can_explore,
+      slice_can_edit: dashboard.slice_can_edit,
+      common,
+      v2AutoConvertDate,
+      v2FeedbackUrl,
+      forceV2Edit,
+    },
+    dashboardState: {
+      sliceIds: Array.from(sliceIds),
+      refresh: false,
+      filters,
+      expandedSlices: dashboard.metadata.expanded_slices || {},
+      css: dashboard.css || '',
+      editMode: dashboard.dash_edit_perm &amp;&amp; editMode,
+      showBuilderPane: dashboard.dash_edit_perm &amp;&amp; editMode,
+      hasUnsavedChanges: false,
+      maxUndoHistoryExceeded: false,
+      isV2Preview: shouldConvertToV2,
+    },
+    dashboardLayout,
+    messageToasts: [],
+    impressionId: shortid.generate(),
+  };
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

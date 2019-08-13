@@ -1,0 +1,1961 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/explore/components/controls/AnnotationLayer.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">src/explore/components/controls/</a> AnnotationLayer.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">26.7% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>47/176</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/92</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/42</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">26.74% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>46/172</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567
+568
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618
+619
+620
+621
+622
+623
+624
+625
+626
+627
+628
+629
+630
+631
+632
+633</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import PropTypes from 'prop-types';
+import { CompactPicker } from 'react-color';
+import { Button } from 'react-bootstrap';
+&nbsp;
+import $ from 'jquery';
+import mathjs from 'mathjs';
+&nbsp;
+import SelectControl from './SelectControl';
+import TextControl from './TextControl';
+import CheckboxControl from './CheckboxControl';
+&nbsp;
+import AnnotationTypes, {
+  DEFAULT_ANNOTATION_TYPE,
+  ANNOTATION_SOURCE_TYPES,
+  getAnnotationSourceTypeLabels,
+  getAnnotationTypeLabel,
+  getSupportedSourceTypes,
+  getSupportedAnnotationTypes,
+  requiresQuery,
+} from '../../../modules/AnnotationTypes';
+&nbsp;
+import { ALL_COLOR_SCHEMES } from '../../../modules/colors';
+import PopoverSection from '../../../components/PopoverSection';
+import ControlHeader from '../ControlHeader';
+import { nonEmpty } from '../../validators';
+import vizTypes from '../../visTypes';
+&nbsp;
+const AUTOMATIC_COLOR = '';
+&nbsp;
+const propTypes = {
+  name: PropTypes.string,
+  annotationType: PropTypes.string,
+  sourceType: PropTypes.string,
+  color: PropTypes.string,
+  opacity: PropTypes.string,
+  style: PropTypes.string,
+  width: PropTypes.number,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  overrides: PropTypes.object,
+  show: PropTypes.bool,
+  titleColumn: PropTypes.string,
+  descriptionColumns: PropTypes.arrayOf(PropTypes.string),
+  timeColumn: PropTypes.string,
+  intervalEndColumn: PropTypes.string,
+  vizType: PropTypes.string,
+&nbsp;
+  error: PropTypes.string,
+  colorScheme: PropTypes.string,
+&nbsp;
+  addAnnotationLayer: PropTypes.func,
+  removeAnnotationLayer: PropTypes.func,
+  close: PropTypes.func,
+};
+&nbsp;
+const defaultProps = {
+  name: '',
+  annotationType: DEFAULT_ANNOTATION_TYPE,
+  sourceType: '',
+  color: AUTOMATIC_COLOR,
+  opacity: '',
+  style: 'solid',
+  width: 1,
+  overrides: {},
+  colorScheme: 'd3Category10',
+  show: true,
+  titleColumn: '',
+  descriptionColumns: [],
+  timeColumn: '',
+  intervalEndColumn: '',
+&nbsp;
+  addAnnotationLayer: () =&gt; <span class="fstat-no" title="function not covered" >{</span>},
+  removeAnnotationLayer: () =&gt; <span class="fstat-no" title="function not covered" >{</span>},
+  close: () =&gt; <span class="fstat-no" title="function not covered" >{</span>},
+};
+&nbsp;
+export default class AnnotationLayer extends React.PureComponent {
+  constructor(<span class="fstat-no" title="function not covered" >props) {</span>
+    super(<span class="cstat-no" title="statement not covered" >props);</span>
+    const { <span class="cstat-no" title="statement not covered" >name, annotationType, sourceType,</span>
+      color, opacity, style, width, value,
+      overrides, show, titleColumn, descriptionColumns,
+      timeColumn, intervalEndColumn } = props;
+    this.<span class="cstat-no" title="statement not covered" >state = {</span>
+      // base
+      name,
+      oldName: !this.props.name ? null : name,
+      annotationType,
+      sourceType,
+      value,
+      overrides,
+      show,
+      // slice
+      titleColumn,
+      descriptionColumns,
+      timeColumn,
+      intervalEndColumn,
+      // display
+      color: color || AUTOMATIC_COLOR,
+      opacity,
+      style,
+      width,
+      // refData
+      isNew: !this.props.name,
+      isLoadingOptions: true,
+      valueOptions: [],
+      validationErrors: {},
+    };
+    this.<span class="cstat-no" title="statement not covered" >submitAnnotation = this.submitAnnotation.bind(this);</span>
+    this.<span class="cstat-no" title="statement not covered" >deleteAnnotation = this.deleteAnnotation.bind(this);</span>
+    this.<span class="cstat-no" title="statement not covered" >applyAnnotation = this.applyAnnotation.bind(this);</span>
+    this.<span class="cstat-no" title="statement not covered" >fetchOptions = this.fetchOptions.bind(this);</span>
+    this.<span class="cstat-no" title="statement not covered" >handleAnnotationType = this.handleAnnotationType.bind(this);</span>
+    this.<span class="cstat-no" title="statement not covered" >handleAnnotationSourceType =</span>
+        this.handleAnnotationSourceType.bind(this);
+    this.<span class="cstat-no" title="statement not covered" >handleValue = this.handleValue.bind(this);</span>
+    this.<span class="cstat-no" title="statement not covered" >isValidForm = this.isValidForm.bind(this);</span>
+  }
+&nbsp;
+  componentDidMount() <span class="fstat-no" title="function not covered" >{</span>
+    const { annotationType, sourceType, isLoadingOptions } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+    this.<span class="cstat-no" title="statement not covered" >fetchOptions(annotationType, sourceType, isLoadingOptions);</span>
+  }
+&nbsp;
+  componentDidUpdate(<span class="fstat-no" title="function not covered" >prevProps, prevState) {</span>
+    if (<span class="cstat-no" title="statement not covered" >prevState.sourceType !== this.state.sourceType) {</span>
+      this.<span class="cstat-no" title="statement not covered" >fetchOptions(this.state.annotationType, this.state.sourceType, true);</span>
+    }
+  }
+&nbsp;
+  isValidFormula(<span class="fstat-no" title="function not covered" >value, annotationType) {</span>
+    if (<span class="cstat-no" title="statement not covered" >annotationType === AnnotationTypes.FORMULA) {</span>
+      try <span class="cstat-no" title="statement not covered" >{</span>
+        mathjs.<span class="cstat-no" title="statement not covered" >parse(value).compile().eval({ x: 0 });</span>
+      } catch (err) {
+        return <span class="cstat-no" title="statement not covered" >true;</span>
+      }
+    }
+    return <span class="cstat-no" title="statement not covered" >false;</span>
+  }
+&nbsp;
+  isValidForm() <span class="fstat-no" title="function not covered" >{</span>
+    const {
+      name, annotationType, sourceType,
+      value, timeColumn, intervalEndColumn,
+    } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+    const <span class="cstat-no" title="statement not covered" >errors = [nonEmpty(name), nonEmpty(annotationType), nonEmpty(value)];</span>
+    if (<span class="cstat-no" title="statement not covered" >sourceType !== ANNOTATION_SOURCE_TYPES.NATIVE) {</span>
+      if (<span class="cstat-no" title="statement not covered" >annotationType === AnnotationTypes.EVENT) {</span>
+        errors.<span class="cstat-no" title="statement not covered" >push(nonEmpty(timeColumn));</span>
+      }
+      if (<span class="cstat-no" title="statement not covered" >annotationType === AnnotationTypes.INTERVAL) {</span>
+        errors.<span class="cstat-no" title="statement not covered" >push(nonEmpty(timeColumn));</span>
+        errors.<span class="cstat-no" title="statement not covered" >push(nonEmpty(intervalEndColumn));</span>
+      }
+    }
+    errors.<span class="cstat-no" title="statement not covered" >push(this.isValidFormula(value, annotationType));</span>
+    return <span class="cstat-no" title="statement not covered" >!errors.filter(<span class="fstat-no" title="function not covered" >x =&gt; <span class="cstat-no" title="statement not covered" >x).length;</span></span></span>
+  }
+&nbsp;
+&nbsp;
+  handleAnnotationType(<span class="fstat-no" title="function not covered" >annotationType) {</span>
+    this.<span class="cstat-no" title="statement not covered" >setState({</span>
+      annotationType,
+      sourceType: null,
+      validationErrors: {},
+      value: null,
+    });
+  }
+&nbsp;
+  handleAnnotationSourceType(<span class="fstat-no" title="function not covered" >sourceType) {</span>
+    this.<span class="cstat-no" title="statement not covered" >setState({</span>
+      sourceType,
+      isLoadingOptions: true,
+      validationErrors: {},
+      value: null,
+    });
+  }
+&nbsp;
+  handleValue(<span class="fstat-no" title="function not covered" >value) {</span>
+    this.<span class="cstat-no" title="statement not covered" >setState({</span>
+      value,
+      descriptionColumns: null,
+      intervalEndColumn: null,
+      timeColumn: null,
+      titleColumn: null,
+      overrides: { since: null, until: null },
+    });
+  }
+&nbsp;
+  fetchOptions(<span class="fstat-no" title="function not covered" >annotationType, sourceType, isLoadingOptions) {</span>
+    if (<span class="cstat-no" title="statement not covered" >isLoadingOptions === true) {</span>
+      if (<span class="cstat-no" title="statement not covered" >sourceType === ANNOTATION_SOURCE_TYPES.NATIVE) {</span>
+        $.<span class="cstat-no" title="statement not covered" >ajax({</span>
+          type: 'GET',
+          url: '/annotationlayermodelview/api/read?',
+        }).then(<span class="fstat-no" title="function not covered" >(data) =&gt; {</span>
+          const <span class="cstat-no" title="statement not covered" >layers = data ? data.result.map(<span class="fstat-no" title="function not covered" >layer =&gt; (<span class="cstat-no" title="statement not covered" >{</span></span></span>
+            value: layer.id,
+            label: layer.name,
+          })) : [];
+          this.<span class="cstat-no" title="statement not covered" >setState({</span>
+            isLoadingOptions: false,
+            valueOptions: layers,
+          });
+        });
+      } else <span class="cstat-no" title="statement not covered" >if (requiresQuery(sourceType)) {</span>
+        $.<span class="cstat-no" title="statement not covered" >ajax({</span>
+          type: 'GET',
+          url: '/superset/user_slices',
+        }).then(<span class="fstat-no" title="function not covered" >data =&gt;</span>
+<span class="cstat-no" title="statement not covered" >          this.setState({</span>
+            isLoadingOptions: false,
+            valueOptions: data.filter(
+<span class="fstat-no" title="function not covered" >                x =&gt; <span class="cstat-no" title="statement not covered" >getSupportedSourceTypes(annotationType)</span></span>
+                .find(<span class="fstat-no" title="function not covered" >v =&gt; <span class="cstat-no" title="statement not covered" >v === x.viz_type))</span></span>
+                .map(<span class="fstat-no" title="function not covered" >x =&gt; (<span class="cstat-no" title="statement not covered" >{ value: x.id, label: x.title, slice: x }),</span></span>
+              ),
+          }),
+        );
+      } else {
+        this.<span class="cstat-no" title="statement not covered" >setState({</span>
+          isLoadingOptions: false,
+          valueOptions: [],
+        });
+      }
+    }
+  }
+&nbsp;
+  deleteAnnotation() <span class="fstat-no" title="function not covered" >{</span>
+    this.<span class="cstat-no" title="statement not covered" >props.close();</span>
+    if (<span class="cstat-no" title="statement not covered" >!this.state.isNew) {</span>
+      this.<span class="cstat-no" title="statement not covered" >props.removeAnnotationLayer(this.state);</span>
+    }
+  }
+&nbsp;
+  applyAnnotation() <span class="fstat-no" title="function not covered" >{</span>
+    if (<span class="cstat-no" title="statement not covered" >this.state.name.length) {</span>
+      const <span class="cstat-no" title="statement not covered" >annotation = {};</span>
+      Object.<span class="cstat-no" title="statement not covered" >keys(this.state).forEach(<span class="fstat-no" title="function not covered" >(k) =&gt; {</span></span>
+        if (<span class="cstat-no" title="statement not covered" >this.state[k] !== null) {</span>
+          annotation[<span class="cstat-no" title="statement not covered" >k] = this.state[k];</span>
+        }
+      });
+      delete <span class="cstat-no" title="statement not covered" >annotation.isNew;</span>
+      delete <span class="cstat-no" title="statement not covered" >annotation.valueOptions;</span>
+      delete <span class="cstat-no" title="statement not covered" >annotation.isLoadingOptions;</span>
+      delete <span class="cstat-no" title="statement not covered" >annotation.validationErrors;</span>
+      annotation.<span class="cstat-no" title="statement not covered" >color = annotation.color === AUTOMATIC_COLOR ? null : annotation.color;</span>
+      this.<span class="cstat-no" title="statement not covered" >props.addAnnotationLayer(annotation);</span>
+      this.<span class="cstat-no" title="statement not covered" >setState({ isNew: false, oldName: this.state.name });</span>
+    }
+  }
+&nbsp;
+  submitAnnotation() <span class="fstat-no" title="function not covered" >{</span>
+    this.<span class="cstat-no" title="statement not covered" >applyAnnotation();</span>
+    this.<span class="cstat-no" title="statement not covered" >props.close();</span>
+  }
+&nbsp;
+  renderValueConfiguration() <span class="fstat-no" title="function not covered" >{</span>
+    const { annotationType, sourceType, value,
+      valueOptions, isLoadingOptions } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+    let <span class="cstat-no" title="statement not covered" >label = '';</span>
+    let <span class="cstat-no" title="statement not covered" >description = '';</span>
+    if (<span class="cstat-no" title="statement not covered" >requiresQuery(sourceType)) {</span>
+      if (<span class="cstat-no" title="statement not covered" >sourceType === ANNOTATION_SOURCE_TYPES.NATIVE) {</span>
+        label = <span class="cstat-no" title="statement not covered" >'Annotation Layer';</span>
+        description = <span class="cstat-no" title="statement not covered" >'Select the Annotation Layer you would like to use.';</span>
+      } else {
+        label = <span class="cstat-no" title="statement not covered" >'Slice';</span>
+        description = `Use a pre defined Superset Slice as a source for annotations and overlays. 
+        'your chart must be one of these visualization types:
+        '[${<span class="cstat-no" title="statement not covered" >getSupportedSourceTypes(annotationType)</span>
+            .map(<span class="fstat-no" title="function not covered" >x =&gt; <span class="cstat-no" title="statement not covered" >vizTypes[x].label).join(', ')}]'`;</span></span>
+      }
+    } else <span class="cstat-no" title="statement not covered" >if (annotationType === AnnotationTypes.FORMULA) {</span>
+      label = <span class="cstat-no" title="statement not covered" >'Formula';</span>
+      description = `Expects a formula with depending time parameter 'x'
+        in milliseconds since epoch. mathjs is used to evaluate the formulas.
+        Example: '2x+5'`;
+    }
+    if (<span class="cstat-no" title="statement not covered" >requiresQuery(sourceType)) {</span>
+      return (
+<span class="cstat-no" title="statement not covered" >        &lt;SelectControl</span>
+          name="annotation-layer-value"
+          showHeader
+          hovered
+          description={description}
+          label={label}
+          placeholder=""
+          options={valueOptions}
+          isLoading={isLoadingOptions}
+          value={value}
+          onChange={this.handleValue}
+          validationErrors={!value ? ['Mandatory'] : []}
+        /&gt;
+      );
+    } <span class="cstat-no" title="statement not covered" >if (annotationType === AnnotationTypes.FORMULA) {</span>
+      return (
+<span class="cstat-no" title="statement not covered" >        &lt;TextControl</span>
+          name="annotation-layer-value"
+          hovered
+          showHeader
+          description={description}
+          label={label}
+          placeholder=""
+          value={value}
+          onChange={this.handleValue}
+          validationErrors={this.isValidFormula(value, annotationType) ? ['Bad formula.'] : []}
+        /&gt;
+      );
+    }
+    return <span class="cstat-no" title="statement not covered" >'';</span>
+  }
+&nbsp;
+  renderSliceConfiguration() <span class="fstat-no" title="function not covered" >{</span>
+    const { annotationType, sourceType, value, valueOptions, overrides, titleColumn,
+      timeColumn, intervalEndColumn, descriptionColumns } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+    const <span class="cstat-no" title="statement not covered" >slice = (valueOptions.find(<span class="fstat-no" title="function not covered" >x =&gt; <span class="cstat-no" title="statement not covered" >x.value === value) || {}).slice;</span></span></span>
+    if (<span class="cstat-no" title="statement not covered" >sourceType !== ANNOTATION_SOURCE_TYPES.NATIVE &amp;&amp; slice) {</span>
+      const <span class="cstat-no" title="statement not covered" >columns = (slice.data.groupby || []).concat(</span>
+        (slice.data.all_columns || [])).map(<span class="fstat-no" title="function not covered" >x =&gt; (<span class="cstat-no" title="statement not covered" >{ value: x, label: x }));</span></span>
+      const <span class="cstat-no" title="statement not covered" >timeColumnOptions = slice.data.include_time ?</span>
+        [{ value: '__timestamp', label: '__timestamp' }].concat(columns) : columns;
+      return (
+<span class="cstat-no" title="statement not covered" >        &lt;div style={{ marginRight: '2rem' }}&gt;</span>
+          &lt;PopoverSection
+            isSelected
+            onSelect={() =&gt; <span class="fstat-no" title="function not covered" >{</span>
+            }}
+            title="Annotation Slice Configuration"
+            info={
+              `This section allows you to configure how to use the slice
+               to generate annotations.`
+            }
+          &gt;
+            {
+              (
+                annotationType === AnnotationTypes.EVENT ||
+                annotationType === AnnotationTypes.INTERVAL
+              ) &amp;&amp;
+              &lt;SelectControl
+                hovered
+                name="annotation-layer-time-column"
+                label={
+                  annotationType === AnnotationTypes.INTERVAL ?
+                    'Interval Start column' : 'Event Time Column'
+                }
+                description={'This column must contain date/time information.'}
+                validationErrors={!timeColumn ? ['Mandatory'] : []}
+                clearable={false}
+                options={timeColumnOptions}
+                value={timeColumn}
+                onChange={v =&gt; <span class="cstat-no" title="statement not covered" >this.setState({ timeColumn: v })}</span>
+              /&gt;
+            }
+            {
+              annotationType === AnnotationTypes.INTERVAL &amp;&amp;
+              &lt;SelectControl
+                hovered
+                name="annotation-layer-intervalEnd"
+                label="Interval End column"
+                description={'This column must contain date/time information.'}
+                validationErrors={!intervalEndColumn ? ['Mandatory'] : []}
+                options={columns}
+                value={intervalEndColumn}
+                onChange={v =&gt; <span class="cstat-no" title="statement not covered" >this.setState({ intervalEndColumn: v })}</span>
+              /&gt;
+            }
+            &lt;SelectControl
+              hovered
+              name="annotation-layer-title"
+              label="Title Column"
+              description={'Pick a title for you annotation.'}
+              options={
+                [{ value: '', label: 'None' }].concat(columns)
+              }
+              value={titleColumn}
+              onChange={v =&gt; <span class="cstat-no" title="statement not covered" >this.setState({ titleColumn: v })}</span>
+            /&gt;
+            {
+              annotationType !== AnnotationTypes.TIME_SERIES &amp;&amp;
+              &lt;SelectControl
+                hovered
+                name="annotation-layer-title"
+                label="Description Columns"
+                description={`Pick one or more columns that should be shown in the
+                  annotation. If you don't select a column all of them will be shown.`}
+                multi
+                options={
+                  columns
+                }
+                value={descriptionColumns}
+                onChange={v =&gt; <span class="cstat-no" title="statement not covered" >this.setState({ descriptionColumns: v })}</span>
+              /&gt;
+            }
+            &lt;div style={{ marginTop: '1rem' }}&gt;
+              &lt;CheckboxControl
+                hovered
+                name="annotation-override-since"
+                label="Override 'Since'"
+                description={`This controls whether the "Since" field from the current
+                  view should be passed down to the chart containing the annotation data.`}
+                value={!!Object.keys(overrides).find(<span class="fstat-no" title="function not covered" >x =&gt; <span class="cstat-no" title="statement not covered" >x === 'since')}</span></span>
+                onChange={(<span class="fstat-no" title="function not covered" >v) =&gt; {</span>
+                  delete <span class="cstat-no" title="statement not covered" >overrides.since;</span>
+                  if (<span class="cstat-no" title="statement not covered" >v) {</span>
+                    this.<span class="cstat-no" title="statement not covered" >setState({ overrides: { ...overrides, since: null } });</span>
+                  } else {
+                    this.<span class="cstat-no" title="statement not covered" >setState({ overrides: { ...overrides } });</span>
+                  }
+                }}
+              /&gt;
+              &lt;CheckboxControl
+                hovered
+                name="annotation-override-until"
+                label="Override 'Until'"
+                description={`This controls whether the "Until" field from the current
+                  view should be passed down to the chart containing the annotation data.`}
+                value={!!Object.keys(overrides).find(<span class="fstat-no" title="function not covered" >x =&gt; <span class="cstat-no" title="statement not covered" >x === 'until')}</span></span>
+                onChange={(<span class="fstat-no" title="function not covered" >v) =&gt; {</span>
+                  delete <span class="cstat-no" title="statement not covered" >overrides.until;</span>
+                  if (<span class="cstat-no" title="statement not covered" >v) {</span>
+                    this.<span class="cstat-no" title="statement not covered" >setState({ overrides: { ...overrides, until: null } });</span>
+                  } else {
+                    this.<span class="cstat-no" title="statement not covered" >setState({ overrides: { ...overrides } });</span>
+                  }
+                }}
+              /&gt;
+              &lt;CheckboxControl
+                hovered
+                name="annotation-override-timegrain"
+                label="Override time grain"
+                description={`This controls whether the time grain field from the current
+                  view should be passed down to the chart containing the annotation data.`}
+                value={!!Object.keys(overrides).find(<span class="fstat-no" title="function not covered" >x =&gt; <span class="cstat-no" title="statement not covered" >x === 'time_grain_sqla')}</span></span>
+                onChange={(<span class="fstat-no" title="function not covered" >v) =&gt; {</span>
+                  delete <span class="cstat-no" title="statement not covered" >overrides.time_grain_sqla;</span>
+                  delete <span class="cstat-no" title="statement not covered" >overrides.granularity;</span>
+                  if (<span class="cstat-no" title="statement not covered" >v) {</span>
+                    this.<span class="cstat-no" title="statement not covered" >setState({</span>
+                      overrides: {
+                        ...overrides,
+                        time_grain_sqla: null,
+                        granularity: null,
+                      },
+                    });
+                  } else {
+                    this.<span class="cstat-no" title="statement not covered" >setState({ overrides: { ...overrides } });</span>
+                  }
+                }}
+              /&gt;
+              &lt;TextControl
+                hovered
+                name="annotation-layer-timeshift"
+                label="Time Shift"
+                description={`Time delta in natural language
+                  (example:  24 hours, 7 days, 56 weeks, 365 days)`}
+                placeholder=""
+                value={overrides.time_shift}
+                onChange={v =&gt; <span class="cstat-no" title="statement not covered" >this.setState({ overrides: { ...overrides, time_shift: v } })}</span>
+              /&gt;
+            &lt;/div&gt;
+          &lt;/PopoverSection&gt;
+        &lt;/div&gt;
+      );
+    }
+    return (<span class="cstat-no" title="statement not covered" >'');</span>
+  }
+&nbsp;
+  renderDisplayConfiguration() <span class="fstat-no" title="function not covered" >{</span>
+    const { color, opacity, style, width } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+    const <span class="cstat-no" title="statement not covered" >colorScheme = [...ALL_COLOR_SCHEMES[this.props.colorScheme]];</span>
+    if (<span class="cstat-no" title="statement not covered" >color &amp;&amp; color !== AUTOMATIC_COLOR &amp;&amp;</span>
+      !colorScheme.find(<span class="fstat-no" title="function not covered" >x =&gt; <span class="cstat-no" title="statement not covered" >x.toLowerCase() === color.toLowerCase())) {</span></span>
+      colorScheme.<span class="cstat-no" title="statement not covered" >push(color);</span>
+    }
+    return (
+<span class="cstat-no" title="statement not covered" >      &lt;PopoverSection</span>
+        isSelected
+        onSelect={() =&gt; <span class="fstat-no" title="function not covered" >{</span>}}
+        title="Display configuration"
+        info="Configure your how you overlay is displayed here."
+      &gt;
+        &lt;SelectControl
+          name="annotation-layer-stroke"
+          label="Style"
+            // see '../../../visualizations/nvd3_vis.css'
+          options={[
+              { value: 'solid', label: 'Solid' },
+              { value: 'dashed', label: 'Dashed' },
+              { value: 'longDashed', label: 'Long Dashed' },
+              { value: 'dotted', label: 'Dotted' },
+          ]}
+          value={style}
+          onChange={v =&gt; <span class="cstat-no" title="statement not covered" >this.setState({ style: v })}</span>
+        /&gt;
+        &lt;SelectControl
+          name="annotation-layer-opacity"
+          label="Opacity"
+            // see '../../../visualizations/nvd3_vis.css'
+          options={[
+              { value: '', label: 'Solid' },
+              { value: 'opacityLow', label: '0.2' },
+              { value: 'opacityMedium', label: '0.5' },
+              { value: 'opacityHigh', label: '0.8' },
+          ]}
+          value={opacity}
+          onChange={v =&gt; <span class="cstat-no" title="statement not covered" >this.setState({ opacity: v })}</span>
+        /&gt;
+        &lt;div&gt;
+          &lt;ControlHeader label="Color" /&gt;
+          &lt;div style={{ display: 'flex', flexDirection: 'column' }}&gt;
+            &lt;CompactPicker
+              color={color}
+              colors={colorScheme}
+              onChangeComplete={v =&gt; <span class="cstat-no" title="statement not covered" >this.setState({ color: v.hex })}</span>
+            /&gt;
+            &lt;Button
+              style={{ marginTop: '0.5rem', marginBottom: '0.5rem' }}
+              bsStyle={color === AUTOMATIC_COLOR ? 'success' : 'default'}
+              bsSize="xsmall"
+              onClick={() =&gt; <span class="cstat-no" title="statement not covered" >this.setState({ color: AUTOMATIC_COLOR })}</span>
+            &gt;
+              Automatic Color
+            &lt;/Button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;TextControl
+          name="annotation-layer-stroke-width"
+          label="Line Width"
+          isInt
+          value={width}
+          onChange={v =&gt; <span class="cstat-no" title="statement not covered" >this.setState({ width: v })}</span>
+        /&gt;
+      &lt;/PopoverSection&gt;
+    );
+  }
+&nbsp;
+  render() <span class="fstat-no" title="function not covered" >{</span>
+    const { isNew, name, annotationType,
+      sourceType, show } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+    const <span class="cstat-no" title="statement not covered" >isValid = this.isValidForm();</span>
+    return (
+<span class="cstat-no" title="statement not covered" >      &lt;div&gt;</span>
+        {
+          this.props.error &amp;&amp;
+          &lt;span style={{ color: 'red' }}&gt;
+            ERROR: {this.props.error}
+          &lt;/span&gt;
+        }
+        &lt;div style={{ display: 'flex', flexDirection: 'row' }}&gt;
+          &lt;div style={{ marginRight: '2rem' }}&gt;
+            &lt;PopoverSection
+              isSelected
+              onSelect={() =&gt; <span class="fstat-no" title="function not covered" >{</span>}}
+              title="Layer Configuration"
+              info="Configure the basics of your Annotation Layer."
+            &gt;
+              &lt;TextControl
+                name="annotation-layer-name"
+                label="Name"
+                placeholder=""
+                value={name}
+                onChange={v =&gt; <span class="cstat-no" title="statement not covered" >this.setState({ name: v })}</span>
+                validationErrors={!name ? ['Mandatory'] : []}
+              /&gt;
+              &lt;CheckboxControl
+                name="annotation-layer-hide"
+                label="Hide Layer"
+                value={!show}
+                onChange={v =&gt; <span class="cstat-no" title="statement not covered" >this.setState({ show: !v })}</span>
+              /&gt;
+              &lt;SelectControl
+                hovered
+                description="Choose the Annotation Layer Type"
+                label="Annotation Layer Type"
+                name="annotation-layer-type"
+                options={getSupportedAnnotationTypes(this.props.vizType).map(
+<span class="fstat-no" title="function not covered" >                    x =&gt; (<span class="cstat-no" title="statement not covered" >{ value: x, label: getAnnotationTypeLabel(x) }))}</span></span>
+                value={annotationType}
+                onChange={this.handleAnnotationType}
+              /&gt;
+              {!!getSupportedSourceTypes(annotationType).length &amp;&amp;
+                &lt;SelectControl
+                  hovered
+                  description="Choose the source of your annotations"
+                  label="Annotation Source"
+                  name="annotation-source-type"
+                  options={getSupportedSourceTypes(annotationType).map(
+<span class="fstat-no" title="function not covered" >                        x =&gt; (<span class="cstat-no" title="statement not covered" >{ value: x, label: getAnnotationSourceTypeLabels(x) }))}</span></span>
+                  value={sourceType}
+                  onChange={this.handleAnnotationSourceType}
+                /&gt;
+              }
+              { this.renderValueConfiguration() }
+            &lt;/PopoverSection&gt;
+          &lt;/div&gt;
+          { this.renderSliceConfiguration() }
+          { this.renderDisplayConfiguration() }
+        &lt;/div&gt;
+        &lt;div style={{ display: 'flex', justifyContent: 'space-between' }}&gt;
+          &lt;Button
+            bsSize="sm"
+            onClick={this.deleteAnnotation}
+          &gt;
+            { !isNew ? 'Remove' : 'Cancel' }
+          &lt;/Button&gt;
+          &lt;div&gt;
+            &lt;Button
+              bsSize="sm"
+              disabled={!isValid}
+              onClick={this.applyAnnotation}
+            &gt;
+              Apply
+            &lt;/Button&gt;
+&nbsp;
+            &lt;Button
+              bsSize="sm"
+              disabled={!isValid}
+              onClick={this.submitAnnotation}
+            &gt;
+              OK
+            &lt;/Button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+AnnotationLayer.propTypes = propTypes;
+AnnotationLayer.defaultProps = defaultProps;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

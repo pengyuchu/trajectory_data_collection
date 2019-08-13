@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/FilterableTable/FilterableTable.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/components/FilterableTable/</a> FilterableTable.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">92.39% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>85/92</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60.71% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>17/28</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">86.96% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>20/23</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">92.68% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>76/82</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-yes">36×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">48×</span>
+<span class="cline-any cline-yes">48×</span>
+<span class="cline-any cline-yes">48×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">28×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { List } from 'immutable';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
+import {
+  Column,
+  Table,
+  SortDirection,
+  SortIndicator,
+} from 'react-virtualized';
+import { getTextWidth } from '../../modules/visUtils';
+&nbsp;
+const propTypes = {
+  orderedColumnKeys: PropTypes.array.isRequired,
+  data: PropTypes.array.isRequired,
+  height: PropTypes.number.isRequired,
+  filterText: PropTypes.string,
+  headerHeight: PropTypes.number,
+  overscanRowCount: PropTypes.number,
+  rowHeight: PropTypes.number,
+  striped: PropTypes.bool,
+};
+&nbsp;
+const defaultProps = {
+  filterText: '',
+  headerHeight: 32,
+  overscanRowCount: 10,
+  rowHeight: 32,
+  striped: true,
+};
+&nbsp;
+export default class FilterableTable extends PureComponent {
+  constructor(props) {
+    super(<span class="branch-1 cbranch-no" title="branch not covered" >p</span>rops);
+    this.list = List(this.formatTableData(props.data));
+    this.headerRenderer = this.headerRenderer.bind(this);
+    this.rowClassName = this.rowClassName.bind(this);
+    this.sort = this.sort.bind(this);
+&nbsp;
+    this.widthsForColumnsByKey = this.getWidthsForColumns();
+    this.totalTableWidth = props.orderedColumnKeys
+      .map(key =&gt; this.widthsForColumnsByKey[key])
+      .reduce((curr, next) =&gt; curr + next);
+&nbsp;
+    this.state = {
+      sortBy: null,
+      sortDirection: SortDirection.ASC,
+      fitted: false,
+    };
+  }
+&nbsp;
+  componentDidMount() {
+    this.fitTableToWidthIfNeeded();
+  }
+&nbsp;
+  getDatum(list, index) {
+    return list.get(index % list.size);
+  }
+&nbsp;
+  getWidthsForColumns() {
+    const PADDING = 40; // accounts for cell padding and width of sorting icon
+    const widthsByColumnKey = {};
+    this.props.orderedColumnKeys.forEach((key) =&gt; {
+      const colWidths = this.list
+        .map(d =&gt; getTextWidth(d[key]) + PADDING) // get width for each value for a key
+        .push(getTextWidth(key) + PADDING); // add width of column key to end of list
+      // set max width as value for key
+      widthsByColumnKey[key] = Math.max(...colWidths);
+    });
+    return widthsByColumnKey;
+  }
+&nbsp;
+  fitTableToWidthIfNeeded() {
+    const containerWidth = this.container.getBoundingClientRect().width;
+    if (<span class="missing-if-branch" title="if path not taken" >I</span>containerWidth &gt; this.totalTableWidth) {
+      this.<span class="cstat-no" title="statement not covered" >totalTableWidth = containerWidth - 2; // accommodates 1px border on container</span>
+    }
+    this.setState({ fitted: true });
+  }
+&nbsp;
+  formatTableData(data) {
+    const formattedData = data.map((row) =&gt; {
+      const newRow = {};
+      for (const k in row) {
+        const val = row[k];
+        if (<span class="missing-if-branch" title="else path not taken" >E</span>['string', 'number'].indexOf(typeof (<span class="branch-0 cbranch-no" title="branch not covered" >v</span>al)) &gt;= 0) {
+          newRow[k] = val;
+        } else {
+          newRow[<span class="cstat-no" title="statement not covered" >k] = JSON.stringify(val);</span>
+        }
+      }
+      return newRow;
+    });
+    return formattedData;
+  }
+&nbsp;
+  hasMatch(text, row) {
+    const values = [];
+    for (const key in row) {
+      if (<span class="missing-if-branch" title="else path not taken" >E</span>row.hasOwnProperty(key)) {
+        const cellValue = row[key];
+        if (typeof cellValue === 'string') {
+          values.push(cellValue.toLowerCase());
+        } else <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof cellValue.toString === 'function') {
+          values.push(cellValue.toString());
+        }
+      }
+    }
+    const lowerCaseText = text.toLowerCase();
+    return values.some(v =&gt; v.includes(lowerCaseText));
+  }
+&nbsp;
+  headerRenderer({ dataKey, label, sortBy, sortDirection }) {
+    return (
+      &lt;div&gt;
+        {label}
+        {sortBy === dataKey &amp;&amp;
+<span class="branch-1 cbranch-no" title="branch not covered" >          &lt;SortIndicator sortDirection={sortDirection} /&gt;</span>
+        }
+      &lt;/div&gt;
+    );
+  }
+&nbsp;
+  rowClassName({ index }) {
+    let className = '';
+    if (<span class="missing-if-branch" title="else path not taken" >E</span>this.props.striped) {
+      className = index % 2 === 0 ? 'even-row' : 'odd-row';
+    }
+    return className;
+  }
+&nbsp;
+  sort({ <span class="cstat-no" title="statement not covered" >sortBy, sortDirection }) <span class="fstat-no" title="function not covered" >{</span></span>
+    this.<span class="cstat-no" title="statement not covered" >setState({ sortBy, sortDirection });</span>
+  }
+&nbsp;
+  render() {
+    const { sortBy, sortDirection } = this.state;
+    const {
+      filterText,
+      headerHeight,
+      height,
+      orderedColumnKeys,
+      overscanRowCount,
+      rowHeight,
+    } = this.props;
+&nbsp;
+    let sortedAndFilteredList = this.list;
+    // filter list
+    if (filterText) {
+      sortedAndFilteredList = this.list.filter(row =&gt; this.hasMatch(filterText, row));
+    }
+    // sort list
+    if (<span class="missing-if-branch" title="if path not taken" >I</span>sortBy) {
+      sortedAndFilteredList = <span class="cstat-no" title="statement not covered" >sortedAndFilteredList</span>
+      .sortBy(<span class="fstat-no" title="function not covered" >item =&gt; <span class="cstat-no" title="statement not covered" >item[sortBy])</span></span>
+      .update(<span class="fstat-no" title="function not covered" >list =&gt; <span class="cstat-no" title="statement not covered" >sortDirection === SortDirection.DESC ? list.reverse() : list);</span></span>
+    }
+&nbsp;
+    const rowGetter = ({ index }) =&gt; this.getDatum(sortedAndFilteredList, index);
+    return (
+      &lt;div
+        style={{ height }}
+        className="filterable-table-container"
+        ref={(ref) =&gt; { this.container = ref; }}
+      &gt;
+        {this.state.fitted &amp;&amp;
+          &lt;Table
+            ref="Table"
+            headerHeight={headerHeight}
+            height={height - 2}
+            overscanRowCount={overscanRowCount}
+            rowClassName={this.rowClassName}
+            rowHeight={rowHeight}
+            rowGetter={rowGetter}
+            rowCount={sortedAndFilteredList.size}
+            sort={this.sort}
+            sortBy={sortBy}
+            sortDirection={sortDirection}
+            width={this.totalTableWidth}
+          &gt;
+            {orderedColumnKeys.map(columnKey =&gt; (
+              &lt;Column
+                dataKey={columnKey}
+                disableSort={false}
+                headerRenderer={this.headerRenderer}
+                width={this.widthsForColumnsByKey[columnKey]}
+                label={columnKey}
+                key={columnKey}
+              /&gt;
+            ))}
+          &lt;/Table&gt;
+        }
+      &lt;/div&gt;
+    );
+  }
+}
+&nbsp;
+FilterableTable.propTypes = propTypes;
+FilterableTable.defaultProps = defaultProps;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

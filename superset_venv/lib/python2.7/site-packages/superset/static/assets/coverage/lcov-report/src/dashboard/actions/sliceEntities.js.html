@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/dashboard/actions/sliceEntities.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/dashboard/actions/</a> sliceEntities.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">40% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>14/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">32.26% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>10/31</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* eslint camelcase: 0 */
+import $ from 'jquery';
+&nbsp;
+import { getDatasourceParameter } from '../../modules/utils';
+&nbsp;
+export const SET_ALL_SLICES = 'SET_ALL_SLICES';
+export <span class="fstat-no" title="function not covered" >function setAllSlices(slices) {</span>
+  return <span class="cstat-no" title="statement not covered" >{ type: SET_ALL_SLICES, slices };</span>
+}
+&nbsp;
+export const FETCH_ALL_SLICES_STARTED = 'FETCH_ALL_SLICES_STARTED';
+export <span class="fstat-no" title="function not covered" >function fetchAllSlicesStarted() {</span>
+  return <span class="cstat-no" title="statement not covered" >{ type: FETCH_ALL_SLICES_STARTED };</span>
+}
+&nbsp;
+export const FETCH_ALL_SLICES_FAILED = 'FETCH_ALL_SLICES_FAILED';
+export <span class="fstat-no" title="function not covered" >function fetchAllSlicesFailed(error) {</span>
+  return <span class="cstat-no" title="statement not covered" >{ type: FETCH_ALL_SLICES_FAILED, error };</span>
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function fetchAllSlices(userId) {</span>
+  return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(dispatch, getState) =&gt; {</span></span>
+    const { sliceEntities } = <span class="cstat-no" title="statement not covered" >getState();</span>
+    if (<span class="cstat-no" title="statement not covered" >sliceEntities.lastUpdated === 0) {</span>
+      dispatch(<span class="cstat-no" title="statement not covered" >fetchAllSlicesStarted());</span>
+&nbsp;
+      const <span class="cstat-no" title="statement not covered" >uri = `/sliceaddview/api/read?_flt_0_created_by=${userId}`;</span>
+      return <span class="cstat-no" title="statement not covered" >$.ajax({</span>
+        url: uri,
+        type: 'GET',
+        success: response =&gt; <span class="fstat-no" title="function not covered" >{</span>
+          const <span class="cstat-no" title="statement not covered" >slices = {};</span>
+          response.<span class="cstat-no" title="statement not covered" >result.forEach(<span class="fstat-no" title="function not covered" >slice =&gt; {</span></span>
+            let <span class="cstat-no" title="statement not covered" >form_data = JSON.parse(slice.params);</span>
+            let <span class="cstat-no" title="statement not covered" >datasource = form_data.datasource;</span>
+            if (<span class="cstat-no" title="statement not covered" >!datasource) {</span>
+              datasource = <span class="cstat-no" title="statement not covered" >getDatasourceParameter(</span>
+                slice.datasource_id,
+                slice.datasource_type,
+              );
+              form_data = {
+                ...<span class="cstat-no" title="statement not covered" >form_data,</span>
+                datasource,
+              };
+            }
+            if (<span class="cstat-no" title="statement not covered" >['markup', 'separator'].indexOf(slice.viz_type) === -1) {</span>
+              slices[<span class="cstat-no" title="statement not covered" >slice.id] = {</span>
+                slice_id: slice.id,
+                slice_url: slice.slice_url,
+                slice_name: slice.slice_name,
+                edit_url: slice.edit_url,
+                form_data,
+                datasource_name: slice.datasource_name_text,
+                datasource_link: slice.datasource_link,
+                changed_on: new Date(slice.changed_on).getTime(),
+                description: slice.description,
+                description_markdown: slice.description_markeddown,
+                viz_type: slice.viz_type,
+                modified: slice.modified,
+              };
+            }
+          });
+          return <span class="cstat-no" title="statement not covered" >dispatch(setAllSlices(slices));</span>
+        },
+        error: error =&gt; <span class="cstat-no" title="statement not covered" >dispatch(fetchAllSlicesFailed(error)),</span>
+      });
+    }
+&nbsp;
+    return <span class="cstat-no" title="statement not covered" >dispatch(setAllSlices(sliceEntities.slices));</span>
+  };
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

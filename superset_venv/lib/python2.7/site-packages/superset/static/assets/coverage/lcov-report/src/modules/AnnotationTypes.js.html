@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/modules/AnnotationTypes.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/modules/</a> AnnotationTypes.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">73.33% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>22/30</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">66.67% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>16/24</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { VIZ_TYPES } from '../visualizations';
+import vizTypes from '../explore/visTypes';
+&nbsp;
+export const ANNOTATION_TYPES = {
+  FORMULA: 'FORMULA',
+  EVENT: 'EVENT',
+  INTERVAL: 'INTERVAL',
+  TIME_SERIES: 'TIME_SERIES',
+};
+&nbsp;
+export const ANNOTATION_TYPE_LABELS = {
+  FORMULA: 'Formula ',
+  EVENT: 'Event',
+  INTERVAL: 'Interval',
+  TIME_SERIES: 'Time Series',
+};
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function getAnnotationTypeLabel(annotationType) {</span>
+  return <span class="cstat-no" title="statement not covered" >ANNOTATION_TYPE_LABELS[annotationType];</span>
+}
+&nbsp;
+export const DEFAULT_ANNOTATION_TYPE = ANNOTATION_TYPES.FORMULA;
+&nbsp;
+export const ANNOTATION_SOURCE_TYPES = {
+  NATIVE: 'NATIVE',
+  ...VIZ_TYPES,
+};
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function getAnnotationSourceTypeLabels(sourceType) {</span>
+  return <span class="cstat-no" title="statement not covered" >ANNOTATION_SOURCE_TYPES.NATIVE === sourceType ? 'Superset annotation' :</span>
+      vizTypes[sourceType].label;
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function requiresQuery(annotationSourceType) {</span>
+  return <span class="cstat-no" title="statement not covered" >!!annotationSourceType;</span>
+}
+&nbsp;
+// Map annotation type to annotation source type
+const SUPPORTED_SOURCE_TYPE_MAP = {
+  [ANNOTATION_TYPES.EVENT]: [
+    ANNOTATION_SOURCE_TYPES.NATIVE,
+    ANNOTATION_SOURCE_TYPES.table,
+  ],
+  [ANNOTATION_TYPES.INTERVAL]: [
+    ANNOTATION_SOURCE_TYPES.NATIVE,
+    ANNOTATION_SOURCE_TYPES.table,
+  ],
+  [ANNOTATION_TYPES.TIME_SERIES]: [
+    ANNOTATION_SOURCE_TYPES.line,
+  ],
+};
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function getSupportedSourceTypes(annotationType) {</span>
+  return <span class="cstat-no" title="statement not covered" >SUPPORTED_SOURCE_TYPE_MAP[annotationType] || [];</span>
+}
+&nbsp;
+// Map from viz type to supported annotation
+const SUPPORTED_ANNOTATIONS = {
+  [VIZ_TYPES.line]: [
+    ANNOTATION_TYPES.TIME_SERIES,
+    ANNOTATION_TYPES.INTERVAL,
+    ANNOTATION_TYPES.EVENT,
+    ANNOTATION_TYPES.FORMULA,
+  ],
+  [VIZ_TYPES.bar]: [
+    ANNOTATION_TYPES.INTERVAL,
+    ANNOTATION_TYPES.EVENT,
+  ],
+  [VIZ_TYPES.area]: [
+    ANNOTATION_TYPES.INTERVAL,
+    ANNOTATION_TYPES.EVENT,
+  ],
+};
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function getSupportedAnnotationTypes(vizType) {</span>
+  return <span class="cstat-no" title="statement not covered" >SUPPORTED_ANNOTATIONS[vizType] || [];</span>
+}
+&nbsp;
+const NATIVE_COLUMN_NAMES = {
+  timeColumn: 'start_dttm',
+  intervalEndColumn: 'end_dttm',
+  titleColumn: 'short_descr',
+  descriptionColumns: ['long_descr'],
+};
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function applyNativeColumns(annotation) {</span>
+  if (<span class="cstat-no" title="statement not covered" >annotation.sourceType === ANNOTATION_SOURCE_TYPES.NATIVE) {</span>
+    return { ...<span class="cstat-no" title="statement not covered" >annotation, ...NATIVE_COLUMN_NAMES };</span>
+  }
+  return <span class="cstat-no" title="statement not covered" >annotation;</span>
+}
+&nbsp;
+export default ANNOTATION_TYPES;
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

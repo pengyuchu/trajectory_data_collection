@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/visualizations/deckgl/DeckGLContainer.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/visualizations/deckgl/</a> DeckGLContainer.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/51</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/44</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import React from 'react';</span>
+<span class="cstat-no" title="statement not covered" >import PropTypes from 'prop-types';</span>
+<span class="cstat-no" title="statement not covered" >import MapGL from 'react-map-gl';</span>
+<span class="cstat-no" title="statement not covered" >import DeckGL from 'deck.gl';</span>
+<span class="cstat-no" title="statement not covered" >import 'mapbox-gl/dist/mapbox-gl.css';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >const propTypes = {</span>
+  viewport: PropTypes.object.isRequired,
+  layers: PropTypes.array.isRequired,
+  setControlValue: PropTypes.func.isRequired,
+  mapStyle: PropTypes.string,
+  mapboxApiAccessToken: PropTypes.string.isRequired,
+  onViewportChange: PropTypes.func,
+};
+<span class="cstat-no" title="statement not covered" >const defaultProps = {</span>
+  mapStyle: 'light',
+  onViewportChange: () =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >{</span>},</span>
+};
+&nbsp;
+export default class <span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" >DeckGLContainer extends React.Component {</span></span>
+  constructor(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >props) {</span></span>
+    super(<span class="cstat-no" title="statement not covered" >props);</span>
+    this.<span class="cstat-no" title="statement not covered" >state = {</span>
+      viewport: props.viewport,
+    };
+    this.<span class="cstat-no" title="statement not covered" >tick = this.tick.bind(this);</span>
+    this.<span class="cstat-no" title="statement not covered" >onViewportChange = this.onViewportChange.bind(this);</span>
+  }
+  componentWillMount() <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >{</span></span>
+    const <span class="cstat-no" title="statement not covered" >timer = setInterval(this.tick, 1000);</span>
+    this.<span class="cstat-no" title="statement not covered" >setState(<span class="fstat-no" title="function not covered" >() =&gt; (<span class="cstat-no" title="statement not covered" >{ timer }));</span></span></span>
+  }
+  componentWillReceiveProps(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >nextProps) {</span></span>
+    this.<span class="cstat-no" title="statement not covered" >setState(<span class="fstat-no" title="function not covered" >() =&gt; (<span class="cstat-no" title="statement not covered" >{</span></span></span>
+      viewport: { ...nextProps.viewport },
+      previousViewport: this.state.viewport,
+    }));
+  }
+  componentWillUnmount() <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >{</span></span>
+    this.<span class="cstat-no" title="statement not covered" >clearInterval(this.state.timer);</span>
+  }
+  onViewportChange(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >viewport) {</span></span>
+    const <span class="cstat-no" title="statement not covered" >vp = Object.assign({}, viewport);</span>
+    delete <span class="cstat-no" title="statement not covered" >vp.width;</span>
+    delete <span class="cstat-no" title="statement not covered" >vp.height;</span>
+    const <span class="cstat-no" title="statement not covered" >newVp = { ...this.state.viewport, ...vp };</span>
+&nbsp;
+    this.<span class="cstat-no" title="statement not covered" >setState(<span class="fstat-no" title="function not covered" >() =&gt; (<span class="cstat-no" title="statement not covered" >{ viewport: newVp }));</span></span></span>
+    this.<span class="cstat-no" title="statement not covered" >props.onViewportChange(newVp);</span>
+  }
+  tick() <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >{</span></span>
+    // Limiting updating viewport controls through Redux at most 1*sec
+    if (<span class="cstat-no" title="statement not covered" >this.state.previousViewport !== this.state.viewport) {</span>
+      const <span class="cstat-no" title="statement not covered" >setCV = this.props.setControlValue;</span>
+      const <span class="cstat-no" title="statement not covered" >vp = this.state.viewport;</span>
+      if (<span class="cstat-no" title="statement not covered" >setCV) {</span>
+        setCV(<span class="cstat-no" title="statement not covered" >'viewport', vp);</span>
+      }
+      this.<span class="cstat-no" title="statement not covered" >setState(<span class="fstat-no" title="function not covered" >() =&gt; (<span class="cstat-no" title="statement not covered" >{ previousViewport: this.state.viewport }));</span></span></span>
+    }
+  }
+  layers() <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >{</span></span>
+    // Support for layer factory
+    if (<span class="cstat-no" title="statement not covered" >this.props.layers.some(<span class="fstat-no" title="function not covered" >l =&gt; <span class="cstat-no" title="statement not covered" >typeof l === 'function')) {</span></span></span>
+      return <span class="cstat-no" title="statement not covered" >this.props.layers.map(<span class="fstat-no" title="function not covered" >l =&gt; <span class="cstat-no" title="statement not covered" >typeof l === 'function' ? l() : l);</span></span></span>
+    }
+    return <span class="cstat-no" title="statement not covered" >this.props.layers;</span>
+  }
+  render() <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >{</span></span>
+    const { <span class="cstat-no" title="statement not covered" >viewport } = this.state;</span>
+    return (
+<span class="cstat-no" title="statement not covered" >      &lt;MapGL</span>
+        {...viewport}
+        mapStyle={this.props.mapStyle}
+        onViewportChange={this.onViewportChange}
+        mapboxApiAccessToken={this.props.mapboxApiAccessToken}
+      &gt;
+        &lt;DeckGL
+          {...viewport}
+          layers={this.layers()}
+          initWebGLParameters
+        /&gt;
+      &lt;/MapGL&gt;
+    );
+  }
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >DeckGLContainer.propTypes = propTypes;</span>
+<span class="cstat-no" title="statement not covered" >DeckGLContainer.defaultProps = defaultProps;</span>
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

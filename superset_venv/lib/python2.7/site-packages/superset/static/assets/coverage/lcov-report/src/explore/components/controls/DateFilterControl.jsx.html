@@ -1,0 +1,1208 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/explore/components/controls/DateFilterControl.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">src/explore/components/controls/</a> DateFilterControl.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">59.65% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>68/114</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>9/36</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">35% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>7/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60.58% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>63/104</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">42×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">30×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import PropTypes from 'prop-types';
+import {
+  Button,
+  DropdownButton,
+  FormControl,
+  FormGroup,
+  InputGroup,
+  Label,
+  MenuItem,
+  OverlayTrigger,
+  Popover,
+  Radio,
+  Tab,
+  Tabs,
+} from 'react-bootstrap';
+import 'react-datetime/css/react-datetime.css';
+import DateTimeField from 'react-bootstrap-datetimepicker';
+import 'react-bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css';
+import moment from 'moment';
+&nbsp;
+import ControlHeader from '../ControlHeader';
+import { t } from '../../../locales';
+import PopoverSection from '../../../components/PopoverSection';
+&nbsp;
+const TYPES = Object.freeze({
+  DEFAULTS: 'defaults',
+  CUSTOM_START_END: 'custom_start_end',
+  CUSTOM_RANGE: 'custom_range',
+});
+const RELATIVE_TIME_OPTIONS = Object.freeze({
+  LAST: 'Last',
+  NEXT: 'Next',
+});
+const COMMON_TIME_FRAMES = [
+  'Last day',
+  'Last week',
+  'Last month',
+  'Last quarter',
+  'Last year',
+];
+const TIME_GRAIN_OPTIONS = ['seconds', 'minutes', 'hours', 'days', 'weeks', 'months', 'years'];
+&nbsp;
+const MOMENT_FORMAT = 'YYYY-MM-DD[T]HH:mm:ss';
+const DEFAULT_SINCE = moment().startOf('day').subtract(7, 'days').format(MOMENT_FORMAT);
+const DEFAULT_UNTIL = moment().startOf('day').format(MOMENT_FORMAT);
+const INVALID_DATE_MESSAGE = 'Invalid date';
+const SEPARATOR = ' : ';
+const FREEFORM_TOOLTIP = t(
+  'Superset supports smart date parsing. Strings like `last sunday` or ' +
+  '`last october` can be used.',
+);
+&nbsp;
+const propTypes = {
+  animation: PropTypes.bool,
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string,
+  description: PropTypes.string,
+  onChange: PropTypes.func,
+  value: PropTypes.string,
+  height: PropTypes.number,
+};
+&nbsp;
+const defaultProps = {
+  animation: true,
+  onChange: () =&gt; <span class="fstat-no" title="function not covered" >{</span>},
+  value: 'Last week',
+};
+&nbsp;
+&nbsp;
+function isFreeform(s) {
+  /* Moment sometimes consider invalid dates as valid, eg, "10 years ago" gets
+   * parsed as "Fri Jan 01 2010 00:00:00" local time. This function does a
+   * better check by comparing a string with a parse/format roundtrip.
+   */
+  return (s !== moment(s, MOMENT_FORMAT).format(MOMENT_FORMAT));
+}
+&nbsp;
+export default class DateFilterControl extends React.Component {
+  constructor(props) {
+    super(<span class="branch-1 cbranch-no" title="branch not covered" >p</span>rops);
+    c</span>onst value = props.value || <span class="branch-1 cbranch-no" title="branch not covered" >defaultProps.value;
+    this.state = {
+      type: TYPES.DEFAULTS,
+&nbsp;
+      // default time frames, for convenience
+      common: COMMON_TIME_FRAMES[0],
+&nbsp;
+      // "last 7 days", "next 4 weeks", etc.
+      rel: RELATIVE_TIME_OPTIONS.LAST,
+      num: '7',
+      grain: TIME_GRAIN_OPTIONS[3],
+&nbsp;
+      // distinct start/end values, either ISO or freeform
+      since: DEFAULT_SINCE,
+      until: DEFAULT_UNTIL,
+      freeformInputs: {},
+    };
+    if (<span class="missing-if-branch" title="if path not taken" >I</span>value.indexOf(SEPARATOR) &gt;= 0) {
+      this.<span class="cstat-no" title="statement not covered" >state.type = TYPES.CUSTOM_START_END;</span>
+      [this.<span class="cstat-no" title="statement not covered" >state.since, this.<span class="cstat-no" title="statement not covered" >state.until] = <span class="cstat-no" title="statement not covered" >value.split(SEPARATOR, 2);</span></span></span>
+    } else {
+      this.state.type = TYPES.DEFAULTS;
+      if (<span class="missing-if-branch" title="if path not taken" >I</span>COMMON_TIME_FRAMES.indexOf(value) &gt;= 0) {
+        this.<span class="cstat-no" title="statement not covered" >state.common = value;</span>
+      } else {
+        this.state.common = null;
+        [this.state.rel, this.state.num, this.state.grain] = value.split(' ', 3);
+      }
+    }
+    this.state.freeformInputs.since = isFreeform(this.state.since);
+    this.state.freeformInputs.until = isFreeform(this.state.until);
+&nbsp;
+    // We need direct access to the state of the `DateTimeField` component
+    this.dateTimeFieldRefs = {};
+&nbsp;
+    this.handleClick = this.handleClick.bind(this);
+  }
+  componentDidMount() <span class="fstat-no" title="function not covered" >{</span>
+    document.<span class="cstat-no" title="statement not covered" >addEventListener('click', this.handleClick);</span>
+  }
+  componentWillUnmount() <span class="fstat-no" title="function not covered" >{</span>
+    document.<span class="cstat-no" title="statement not covered" >removeEventListener('click', this.handleClick);</span>
+  }
+  onEnter(<span class="fstat-no" title="function not covered" >event) {</span>
+    if (<span class="cstat-no" title="statement not covered" >event.key === 'Enter') {</span>
+      this.<span class="cstat-no" title="statement not covered" >close();</span>
+    }
+  }
+  setDefaults(<span class="fstat-no" title="function not covered" >timeFrame) {</span>
+    const <span class="cstat-no" title="statement not covered" >nextState = {</span>
+      type: TYPES.DEFAULTS,
+      common: timeFrame,
+      until: moment().startOf('day').format(MOMENT_FORMAT),
+    };
+    const <span class="cstat-no" title="statement not covered" >units = timeFrame.split(' ')[1] + 's';</span>
+    nextState.<span class="cstat-no" title="statement not covered" >since = moment().startOf('day').subtract(1, units).format(MOMENT_FORMAT);</span>
+    this.<span class="cstat-no" title="statement not covered" >setState(nextState, this.updateRefs);</span>
+  }
+  setCustomRange(<span class="fstat-no" title="function not covered" >key, value) {</span>
+    const <span class="cstat-no" title="statement not covered" >nextState = { ...this.state, type: TYPES.CUSTOM_RANGE };</span>
+    if (<span class="cstat-no" title="statement not covered" >key !== undefined &amp;&amp; value !== undefined) {</span>
+      nextState[<span class="cstat-no" title="statement not covered" >key] = value;</span>
+    }
+    if (<span class="cstat-no" title="statement not covered" >nextState.rel === RELATIVE_TIME_OPTIONS.LAST) {</span>
+      nextState.<span class="cstat-no" title="statement not covered" >until = moment().startOf('day').format(MOMENT_FORMAT);</span>
+      nextState.<span class="cstat-no" title="statement not covered" >since = moment()</span>
+        .startOf('day')
+        .subtract(nextState.num, nextState.grain)
+        .format(MOMENT_FORMAT);
+    } else {
+      nextState.<span class="cstat-no" title="statement not covered" >until = moment()</span>
+        .startOf('day')
+        .add(nextState.num, nextState.grain)
+        .format(MOMENT_FORMAT);
+      nextState.<span class="cstat-no" title="statement not covered" >since = moment().startOf('day').format(MOMENT_FORMAT);</span>
+    }
+    this.<span class="cstat-no" title="statement not covered" >setState(nextState, this.updateRefs);</span>
+  }
+  setCustomStartEnd(<span class="fstat-no" title="function not covered" >key, value) {</span>
+    const <span class="cstat-no" title="statement not covered" >nextState = {</span>
+      type: TYPES.CUSTOM_START_END,
+      freeformInputs: { ...this.state.freeformInputs },
+    };
+    if (<span class="cstat-no" title="statement not covered" >value === INVALID_DATE_MESSAGE) {</span>
+      // the DateTimeField component will return `Invalid date` for freeform
+      // text, so we need to cheat and steal the value from the state
+      const <span class="cstat-no" title="statement not covered" >freeformValue = this.dateTimeFieldRefs[key].state.inputValue;</span>
+      nextState.<span class="cstat-no" title="statement not covered" >freeformInputs[key] = true;</span>
+      nextState[<span class="cstat-no" title="statement not covered" >key] = freeformValue;</span>
+    } else {
+      nextState.<span class="cstat-no" title="statement not covered" >freeformInputs[key] = false;</span>
+      nextState[<span class="cstat-no" title="statement not covered" >key] = value;</span>
+    }
+    this.<span class="cstat-no" title="statement not covered" >setState(nextState, this.updateRefs);</span>
+  }
+  handleClick(<span class="fstat-no" title="function not covered" >e) {</span>
+    // switch to `TYPES.CUSTOM_START_END` when the calendar is clicked
+    if (<span class="cstat-no" title="statement not covered" >this.startEndSectionRef &amp;&amp; this.startEndSectionRef.contains(e.target)) {</span>
+      this.<span class="cstat-no" title="statement not covered" >setState({ type: TYPES.CUSTOM_START_END });</span>
+    }
+  }
+  updateRefs() <span class="fstat-no" title="function not covered" >{</span>
+    /* This is required because the &lt;DateTimeField&gt; component does not accept
+     * freeform dates as props, since they can't be parsed by `moment`.
+     */
+    this.<span class="cstat-no" title="statement not covered" >dateTimeFieldRefs.since.setState({ inputValue: this.state.since });</span>
+    this.<span class="cstat-no" title="statement not covered" >dateTimeFieldRefs.until.setState({ inputValue: this.state.until });</span>
+  }
+  close() <span class="fstat-no" title="function not covered" >{</span>
+    let <span class="cstat-no" title="statement not covered" >val;</span>
+    if (<span class="cstat-no" title="statement not covered" >this.state.type === TYPES.DEFAULTS) {</span>
+      val = <span class="cstat-no" title="statement not covered" >this.state.common;</span>
+    } else <span class="cstat-no" title="statement not covered" >if (this.state.type === TYPES.CUSTOM_RANGE) {</span>
+      val = `${<span class="cstat-no" title="statement not covered" >this.state.rel} ${this.state.num} ${this.state.grain}`;</span>
+    } else {
+      val = <span class="cstat-no" title="statement not covered" >[this.state.since, this.state.until].join(SEPARATOR);</span>
+    }
+    this.<span class="cstat-no" title="statement not covered" >props.onChange(val);</span>
+    this.<span class="cstat-no" title="statement not covered" >refs.trigger.hide();</span>
+  }
+  renderPopover() {
+    const grainOptions = TIME_GRAIN_OPTIONS.map(grain =&gt; (
+      &lt;MenuItem
+        onSelect={this.setCustomRange.bind(this, 'grain')}
+        key={grain}
+        eventKey={grain}
+        active={grain === this.state.grain}
+      &gt;
+        {grain}
+      &lt;/MenuItem&gt;
+      ));
+    const timeFrames = COMMON_TIME_FRAMES.map(timeFrame =&gt; (
+      &lt;Radio
+        key={timeFrame.replace(' ', '').toLowerCase()}
+        checked={this.state.common === timeFrame}
+        onChange={this.setDefaults.bind(this, timeFrame)}
+      &gt;
+        {timeFrame}
+      &lt;/Radio&gt;
+      ));
+    return (
+      &lt;Popover id="filter-popover" placement="top" positionTop={0}&gt;
+        &lt;div style={{ width: '250px' }}&gt;
+          &lt;Tabs
+            defaultActiveKey={this.state.type === TYPES.DEFAULTS ? 1 : <span class="branch-1 cbranch-no" title="branch not covered" >2}</span>
+            id="type"
+            className="time-filter-tabs"
+          &gt;
+            &lt;Tab eventKey={1} title="Defaults"&gt;
+              &lt;FormGroup&gt;{timeFrames}&lt;/FormGroup&gt;
+            &lt;/Tab&gt;
+            &lt;Tab eventKey={2} title="Custom"&gt;
+              &lt;FormGroup&gt;
+                &lt;PopoverSection
+                  title="Relative to today"
+                  isSelected={this.state.type === TYPES.CUSTOM_RANGE}
+                  onSelect={this.setCustomRange.bind(this)}
+                &gt;
+                  &lt;div className="clearfix centered" style={{ marginTop: '12px' }}&gt;
+                    &lt;div style={{ width: '60px', marginTop: '-4px' }} className="input-inline"&gt;
+                      &lt;DropdownButton
+                        bsSize="small"
+                        componentClass={InputGroup.Button}
+                        id="input-dropdown-rel"
+                        title={this.state.rel}
+                        onFocus={this.setCustomRange.bind(this)}
+                      &gt;
+                        &lt;MenuItem
+                          onSelect={this.setCustomRange.bind(this, 'rel')}
+                          key={RELATIVE_TIME_OPTIONS.LAST}
+                          eventKey={RELATIVE_TIME_OPTIONS.LAST}
+                          active={this.state.rel === RELATIVE_TIME_OPTIONS.LAST}
+                        &gt;Last
+                        &lt;/MenuItem&gt;
+                        &lt;MenuItem
+                          onSelect={this.setCustomRange.bind(this, 'rel')}
+                          key={RELATIVE_TIME_OPTIONS.NEXT}
+                          eventKey={RELATIVE_TIME_OPTIONS.NEXT}
+                          active={this.state.rel === RELATIVE_TIME_OPTIONS.NEXT}
+                        &gt;Next
+                        &lt;/MenuItem&gt;
+                      &lt;/DropdownButton&gt;
+                    &lt;/div&gt;
+                    &lt;div style={{ width: '60px', marginTop: '-4px' }} className="input-inline"&gt;
+                      &lt;FormControl
+                        bsSize="small"
+                        type="text"
+                        onChange={event =&gt; (
+<span class="cstat-no" title="statement not covered" >                          this.setCustomRange.call(this, 'num', event.target.value)</span>
+                        )}
+                        onFocus={this.setCustomRange.bind(this)}
+                        onKeyPress={this.onEnter.bind(this)}
+                        value={this.state.num}
+                        style={{ height: '30px' }}
+                      /&gt;
+                    &lt;/div&gt;
+                    &lt;div style={{ width: '90px', marginTop: '-4px' }} className="input-inline"&gt;
+                      &lt;DropdownButton
+                        bsSize="small"
+                        componentClass={InputGroup.Button}
+                        id="input-dropdown-grain"
+                        title={this.state.grain}
+                        onFocus={this.setCustomRange.bind(this)}
+                      &gt;
+                        {grainOptions}
+                      &lt;/DropdownButton&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/PopoverSection&gt;
+                &lt;PopoverSection
+                  title="Start / end"
+                  isSelected={this.state.type === TYPES.CUSTOM_START_END}
+                  onSelect={this.setCustomStartEnd.bind(this)}
+                  info={FREEFORM_TOOLTIP}
+                &gt;
+                  &lt;div ref={(<span class="fstat-no" title="function not covered" >ref) =&gt; {</span> this.<span class="cstat-no" title="statement not covered" >startEndSectionRef = ref; }}&gt;</span>
+                    &lt;InputGroup&gt;
+                      &lt;div style={{ margin: '5px 0' }}&gt;
+                        &lt;DateTimeField
+                          ref={(<span class="fstat-no" title="function not covered" >ref) =&gt; {</span> this.<span class="cstat-no" title="statement not covered" >dateTimeFieldRefs.since = ref; }}</span>
+                          dateTime={
+                          this.state.freeformInputs.since ?
+<span class="branch-0 cbranch-no" title="branch not covered" >                            DEFAULT_SINCE :</span>
+                            this.state.since
+                        }
+                          defaultText={this.state.since}
+                          onChange={this.setCustomStartEnd.bind(this, 'since')}
+                          maxDate={moment(this.state.until, MOMENT_FORMAT)}
+                          format={MOMENT_FORMAT}
+                          inputFormat={MOMENT_FORMAT}
+                          onClick={this.setCustomStartEnd.bind(this)}
+                          inputProps={{
+                          onKeyPress: this.onEnter.bind(this),
+                          onFocus: this.setCustomStartEnd.bind(this),
+                        }}
+                        /&gt;
+                      &lt;/div&gt;
+                      &lt;div style={{ margin: '5px 0' }}&gt;
+                        &lt;DateTimeField
+                          ref={(<span class="fstat-no" title="function not covered" >ref) =&gt; {</span> this.<span class="cstat-no" title="statement not covered" >dateTimeFieldRefs.until = ref; }}</span>
+                          dateTime={
+                          this.state.freeformInputs.until ?
+<span class="branch-0 cbranch-no" title="branch not covered" >                            DEFAULT_UNTIL :</span>
+                            this.state.until
+                        }
+                          defaultText={this.state.until}
+                          onChange={this.setCustomStartEnd.bind(this, 'until')}
+                          minDate={moment(this.state.since, MOMENT_FORMAT).add(1, 'days')}
+                          format={MOMENT_FORMAT}
+                          inputFormat={MOMENT_FORMAT}
+                          inputProps={{
+                          onKeyPress: this.onEnter.bind(this),
+                          onFocus: this.setCustomStartEnd.bind(this),
+                        }}
+                        /&gt;
+                      &lt;/div&gt;
+                    &lt;/InputGroup&gt;
+                  &lt;/div&gt;
+                &lt;/PopoverSection&gt;
+              &lt;/FormGroup&gt;
+            &lt;/Tab&gt;
+          &lt;/Tabs&gt;
+          &lt;div className="clearfix"&gt;
+            &lt;Button
+              bsSize="small"
+              className="float-right ok"
+              bsStyle="primary"
+              onClick={this.close.bind(this)}
+            &gt;
+              Ok
+            &lt;/Button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/Popover&gt;
+    );
+  }
+  render() {
+    l</span>et value = this.props.value || <span class="branch-1 cbranch-no" title="branch not covered" >defaultProps.value;
+    value = value.split(SEPARATOR).map(v</span> =&gt; v.replace('T00:00:00', '') || <span class="branch-1 cbranch-no" title="branch not covered" >'∞').join(SEPARATOR);
+    return (
+      &lt;div&gt;
+        &lt;ControlHeader {...this.props} /&gt;
+        &lt;OverlayTrigger
+          animation={this.props.animation}
+          container={document.body}
+          trigger="click"
+          rootClose
+          ref="trigger"
+          placement="right"
+          overlay={this.renderPopover()}
+        &gt;
+          &lt;Label style={{ cursor: 'pointer' }}&gt;{value}&lt;/Label&gt;
+        &lt;/OverlayTrigger&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+&nbsp;
+DateFilterControl.propTypes = propTypes;
+DateFilterControl.defaultProps = defaultProps;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

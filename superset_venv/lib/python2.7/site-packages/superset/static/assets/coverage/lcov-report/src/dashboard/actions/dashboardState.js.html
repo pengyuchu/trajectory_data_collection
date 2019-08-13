@@ -1,0 +1,848 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/dashboard/actions/dashboardState.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/dashboard/actions/</a> dashboardState.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>80/160</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/53</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">7.32% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/41</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">46.03% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>58/126</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* eslint camelcase: 0 */
+import $ from 'jquery';
+import { ActionCreators as UndoActionCreators } from 'redux-undo';
+&nbsp;
+import { addChart, removeChart, refreshChart } from '../../chart/chartAction';
+import { chart as initChart } from '../../chart/chartReducer';
+import { fetchDatasourceMetadata } from '../../dashboard/actions/datasources';
+import { applyDefaultFormData } from '../../explore/store';
+import { getAjaxErrorMsg } from '../../modules/utils';
+import {
+  Logger,
+  LOG_ACTIONS_CHANGE_DASHBOARD_FILTER,
+  LOG_ACTIONS_REFRESH_DASHBOARD,
+} from '../../logger';
+import { SAVE_TYPE_OVERWRITE } from '../util/constants';
+import { t } from '../../locales';
+&nbsp;
+import {
+  addSuccessToast,
+  addWarningToast,
+  addDangerToast,
+} from '../../messageToasts/actions';
+&nbsp;
+export const SET_UNSAVED_CHANGES = 'SET_UNSAVED_CHANGES';
+export function setUnsavedChanges(hasUnsavedChanges) {
+  return { type: SET_UNSAVED_CHANGES, payload: { hasUnsavedChanges } };
+}
+&nbsp;
+export const CHANGE_FILTER = 'CHANGE_FILTER';
+export <span class="fstat-no" title="function not covered" >function changeFilter(chart, col, vals, <span class="cstat-no" title="statement not covered" >merge = true, <span class="cstat-no" title="statement not covered" >refresh = true) {</span></span></span>
+  Logger.<span class="cstat-no" title="statement not covered" >append(LOG_ACTIONS_CHANGE_DASHBOARD_FILTER, {</span>
+    id: chart.id,
+    column: col,
+    value_count: Array.isArray(vals) ? vals.length : (vals &amp;&amp; 1) || 0,
+    merge,
+    refresh,
+  });
+  return <span class="cstat-no" title="statement not covered" >{ type: CHANGE_FILTER, chart, col, vals, merge, refresh };</span>
+}
+&nbsp;
+export const ADD_SLICE = 'ADD_SLICE';
+export <span class="fstat-no" title="function not covered" >function addSlice(slice) {</span>
+  return <span class="cstat-no" title="statement not covered" >{ type: ADD_SLICE, slice };</span>
+}
+&nbsp;
+export const REMOVE_SLICE = 'REMOVE_SLICE';
+export <span class="fstat-no" title="function not covered" >function removeSlice(sliceId) {</span>
+  return <span class="cstat-no" title="statement not covered" >{ type: REMOVE_SLICE, sliceId };</span>
+}
+&nbsp;
+const FAVESTAR_BASE_URL = '/superset/favstar/Dashboard';
+export const TOGGLE_FAVE_STAR = 'TOGGLE_FAVE_STAR';
+export <span class="fstat-no" title="function not covered" >function toggleFaveStar(isStarred) {</span>
+  return <span class="cstat-no" title="statement not covered" >{ type: TOGGLE_FAVE_STAR, isStarred };</span>
+}
+&nbsp;
+export const FETCH_FAVE_STAR = 'FETCH_FAVE_STAR';
+export function fetchFaveStar(id) {
+  return function fetchFaveStarThunk(dispatch) {
+    const url = `${FAVESTAR_BASE_URL}/${id}/count`;
+    return $.get(url).done(<span class="fstat-no" title="function not covered" >data =&gt; {</span>
+      if (<span class="cstat-no" title="statement not covered" >data.count &gt; 0) {</span>
+        dispatch(<span class="cstat-no" title="statement not covered" >toggleFaveStar(true));</span>
+      }
+    });
+  };
+}
+&nbsp;
+export const SAVE_FAVE_STAR = 'SAVE_FAVE_STAR';
+export <span class="fstat-no" title="function not covered" >function saveFaveStar(id, isStarred) {</span>
+  return function <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >saveFaveStarThunk(dispatch) {</span></span>
+    const <span class="cstat-no" title="statement not covered" >urlSuffix = isStarred ? 'unselect' : 'select';</span>
+    const <span class="cstat-no" title="statement not covered" >url = `${FAVESTAR_BASE_URL}/${id}/${urlSuffix}/`;</span>
+    $.<span class="cstat-no" title="statement not covered" >get(url);</span>
+    dispatch(<span class="cstat-no" title="statement not covered" >toggleFaveStar(!isStarred));</span>
+  };
+}
+&nbsp;
+export const TOGGLE_EXPAND_SLICE = 'TOGGLE_EXPAND_SLICE';
+export <span class="fstat-no" title="function not covered" >function toggleExpandSlice(sliceId) {</span>
+  return <span class="cstat-no" title="statement not covered" >{ type: TOGGLE_EXPAND_SLICE, sliceId };</span>
+}
+&nbsp;
+export const UPDATE_CSS = 'UPDATE_CSS';
+export <span class="fstat-no" title="function not covered" >function updateCss(css) {</span>
+  return <span class="cstat-no" title="statement not covered" >{ type: UPDATE_CSS, css };</span>
+}
+&nbsp;
+export const SET_EDIT_MODE = 'SET_EDIT_MODE';
+export <span class="fstat-no" title="function not covered" >function setEditMode(editMode) {</span>
+  return <span class="cstat-no" title="statement not covered" >{ type: SET_EDIT_MODE, editMode };</span>
+}
+&nbsp;
+export const ON_CHANGE = 'ON_CHANGE';
+export <span class="fstat-no" title="function not covered" >function onChange() {</span>
+  return <span class="cstat-no" title="statement not covered" >{ type: ON_CHANGE };</span>
+}
+&nbsp;
+export const ON_SAVE = 'ON_SAVE';
+export <span class="fstat-no" title="function not covered" >function onSave() {</span>
+  return <span class="cstat-no" title="statement not covered" >{ type: ON_SAVE };</span>
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function saveDashboardRequestSuccess() {</span>
+  return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >dispatch =&gt; {</span></span>
+    dispatch(<span class="cstat-no" title="statement not covered" >onSave());</span>
+    // clear layout undo history
+    dispatch(<span class="cstat-no" title="statement not covered" >UndoActionCreators.clearHistory());</span>
+  };
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function saveDashboardRequest(data, id, saveType) {</span>
+  const <span class="cstat-no" title="statement not covered" >path = saveType === SAVE_TYPE_OVERWRITE ? 'save_dash' : 'copy_dash';</span>
+  const <span class="cstat-no" title="statement not covered" >url = `/superset/${path}/${id}/`;</span>
+  return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >dispatch =&gt;</span></span>
+<span class="cstat-no" title="statement not covered" >    $.ajax({</span>
+      type: 'POST',
+      url,
+      data: {
+        data: JSON.stringify(data),
+      },
+      success: () =&gt; <span class="fstat-no" title="function not covered" >{</span>
+        dispatch(<span class="cstat-no" title="statement not covered" >saveDashboardRequestSuccess());</span>
+        dispatch(<span class="cstat-no" title="statement not covered" >addSuccessToast(t('This dashboard was saved successfully.')));</span>
+      },
+      error: error =&gt; <span class="fstat-no" title="function not covered" >{</span>
+        const <span class="cstat-no" title="statement not covered" >errorMsg = getAjaxErrorMsg(error);</span>
+        dispatch(
+<span class="cstat-no" title="statement not covered" >          addDangerToast(</span>
+            `${t('Sorry, there was an error saving this dashboard: ')}
+          ${errorMsg}`,
+          ),
+        );
+      },
+    });
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function fetchCharts(<span class="cstat-no" title="statement not covered" >chartList = [], <span class="cstat-no" title="statement not covered" >force = false, <span class="cstat-no" title="statement not covered" >interval = 0) {</span></span></span></span>
+  return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(dispatch, getState) =&gt; {</span></span>
+    Logger.<span class="cstat-no" title="statement not covered" >append(LOG_ACTIONS_REFRESH_DASHBOARD, {</span>
+      force,
+      interval,
+      chartCount: chartList.length,
+    });
+    const <span class="cstat-no" title="statement not covered" >timeout = getState().dashboardInfo.common.conf</span>
+      .SUPERSET_WEBSERVER_TIMEOUT;
+    if (<span class="cstat-no" title="statement not covered" >!interval) {</span>
+      chartList.<span class="cstat-no" title="statement not covered" >forEach(<span class="fstat-no" title="function not covered" >chart =&gt; <span class="cstat-no" title="statement not covered" >dispatch(refreshChart(chart, force, timeout)));</span></span></span>
+      return;
+    }
+&nbsp;
+    const { metadata: <span class="cstat-no" title="statement not covered" >meta } = getState().dashboardInfo;</span>
+    const <span class="cstat-no" title="statement not covered" >refreshTime = Math.max(interval, meta.stagger_time || 5000); // default 5 seconds</span>
+    if (<span class="cstat-no" title="statement not covered" >typeof meta.stagger_refresh !== 'boolean') {</span>
+      meta.<span class="cstat-no" title="statement not covered" >stagger_refresh =</span>
+        meta.stagger_refresh === undefined
+          ? true
+          : meta.stagger_refresh === 'true';
+    }
+    const <span class="cstat-no" title="statement not covered" >delay = meta.stagger_refresh</span>
+      ? refreshTime / (chartList.length - 1)
+      : 0;
+    chartList.<span class="cstat-no" title="statement not covered" >forEach(<span class="fstat-no" title="function not covered" >(chart, i) =&gt; {</span></span>
+      setTimeout(
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >        () =&gt; <span class="cstat-no" title="statement not covered" >dispatch(refreshChart(chart, force, timeout)),</span></span></span>
+        delay * i,
+      );
+    });
+  };
+}
+&nbsp;
+let refreshTimer = null;
+export <span class="fstat-no" title="function not covered" >function startPeriodicRender(interval) {</span>
+  const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >stopPeriodicRender = () =&gt; {</span></span>
+    if (<span class="cstat-no" title="statement not covered" >refreshTimer) {</span>
+      clearTimeout(<span class="cstat-no" title="statement not covered" >refreshTimer);</span>
+      refreshTimer = <span class="cstat-no" title="statement not covered" >null;</span>
+    }
+  };
+&nbsp;
+  return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(dispatch, getState) =&gt; {</span></span>
+    stopPeriodicRender();
+&nbsp;
+    const { <span class="cstat-no" title="statement not covered" >metadata } = getState().dashboardInfo;</span>
+    const <span class="cstat-no" title="statement not covered" >immune = metadata.timed_refresh_immune_slices || [];</span>
+    const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >refreshAll = () =&gt; {</span></span>
+      const <span class="cstat-no" title="statement not covered" >affected = Object.values(getState().charts).filter(</span>
+<span class="fstat-no" title="function not covered" >        chart =&gt; <span class="cstat-no" title="statement not covered" >immune.indexOf(chart.id) === -1,</span></span>
+      );
+      return <span class="cstat-no" title="statement not covered" >dispatch(fetchCharts(affected, true, interval * 0.2));</span>
+    };
+    const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >fetchAndRender = () =&gt; {</span></span>
+      refreshAll();
+      if (<span class="cstat-no" title="statement not covered" >interval &gt; 0) {</span>
+        refreshTimer = <span class="cstat-no" title="statement not covered" >setTimeout(fetchAndRender, interval);</span>
+      }
+    };
+&nbsp;
+    fetchAndRender();
+  };
+}
+&nbsp;
+export const TOGGLE_BUILDER_PANE = 'TOGGLE_BUILDER_PANE';
+export <span class="fstat-no" title="function not covered" >function toggleBuilderPane() {</span>
+  return <span class="cstat-no" title="statement not covered" >{ type: TOGGLE_BUILDER_PANE };</span>
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function addSliceToDashboard(id) {</span>
+  return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(dispatch, getState) =&gt; {</span></span>
+    const { sliceEntities } = <span class="cstat-no" title="statement not covered" >getState();</span>
+    const <span class="cstat-no" title="statement not covered" >selectedSlice = sliceEntities.slices[id];</span>
+    if (<span class="cstat-no" title="statement not covered" >!selectedSlice) {</span>
+      return <span class="cstat-no" title="statement not covered" >dispatch(</span>
+        addWarningToast(
+          'Sorry, there is no chart definition associated with the chart trying to be added.',
+        ),
+      );
+    }
+    const <span class="cstat-no" title="statement not covered" >form_data = selectedSlice.form_data;</span>
+    const <span class="cstat-no" title="statement not covered" >newChart = {</span>
+      ...initChart,
+      id,
+      form_data,
+      formData: applyDefaultFormData(form_data),
+    };
+&nbsp;
+    return <span class="cstat-no" title="statement not covered" >Promise.all([</span>
+      dispatch(addChart(newChart, id)),
+      dispatch(fetchDatasourceMetadata(form_data.datasource)),
+    ]).then(<span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" >dispatch(addSlice(selectedSlice)));</span></span>
+  };
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function removeSliceFromDashboard(id) {</span>
+  return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >dispatch =&gt; {</span></span>
+    dispatch(<span class="cstat-no" title="statement not covered" >removeSlice(id));</span>
+    dispatch(<span class="cstat-no" title="statement not covered" >removeChart(id));</span>
+  };
+}
+&nbsp;
+// Undo history ---------------------------------------------------------------
+export const SET_MAX_UNDO_HISTORY_EXCEEDED = 'SET_MAX_UNDO_HISTORY_EXCEEDED';
+export <span class="fstat-no" title="function not covered" >function setMaxUndoHistoryExceeded(<span class="cstat-no" title="statement not covered" >maxUndoHistoryExceeded = true) {</span></span>
+  return <span class="cstat-no" title="statement not covered" >{</span>
+    type: SET_MAX_UNDO_HISTORY_EXCEEDED,
+    payload: { maxUndoHistoryExceeded },
+  };
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function maxUndoHistoryToast() {</span>
+  return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(dispatch, getState) =&gt; {</span></span>
+    const { dashboardLayout } = <span class="cstat-no" title="statement not covered" >getState();</span>
+    const <span class="cstat-no" title="statement not covered" >historyLength = dashboardLayout.past.length;</span>
+&nbsp;
+    return <span class="cstat-no" title="statement not covered" >dispatch(</span>
+      addWarningToast(
+        `You have used all ${historyLength} undo slots and will not be able to fully undo subsequent actions. You may save your current state to reset the history.`,
+      ),
+    );
+  };
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

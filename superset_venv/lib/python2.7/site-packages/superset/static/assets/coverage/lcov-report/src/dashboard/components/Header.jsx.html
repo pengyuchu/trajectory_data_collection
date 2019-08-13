@@ -1,0 +1,1064 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/dashboard/components/Header.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/dashboard/components/</a> Header.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">59.74% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>46/77</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">36.84% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>28/76</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">16.67% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60.87% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>42/69</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="branch-1 cbranch-no" title="branch not covered" ><span class="missing-if-branch" title="else path not taken" >E</span><span class="branch-1 cbranch-no" title="branch not covered" ><span class="missing-if-branch" title="if path not taken" >I</span>/</span></span></span>* eslint-env browser */
+import React from 'react';
+import PropTypes from 'prop-types';
+&nbsp;
+import HeaderActionsDropdown from './HeaderActionsDropdown';
+import EditableTitle from '../../components/EditableTitle';
+import Button from '../../components/Button';
+import FaveStar from '../../components/FaveStar';
+import UndoRedoKeylisteners from './UndoRedoKeylisteners';
+import V2PreviewModal from '../deprecated/V2PreviewModal';
+&nbsp;
+import { chartPropShape } from '../util/propShapes';
+import { t } from '../../locales';
+import { UNDO_LIMIT, SAVE_TYPE_OVERWRITE } from '../util/constants';
+&nbsp;
+const propTypes = {
+  addSuccessToast: PropTypes.func.isRequired,
+  addDangerToast: PropTypes.func.isRequired,
+  dashboardInfo: PropTypes.object.isRequired,
+  dashboardTitle: PropTypes.string.isRequired,
+  charts: PropTypes.objectOf(chartPropShape).isRequired,
+  layout: PropTypes.object.isRequired,
+  filters: PropTypes.object.isRequired,
+  expandedSlices: PropTypes.object.isRequired,
+  css: PropTypes.string.isRequired,
+  isStarred: PropTypes.bool.isRequired,
+  onSave: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
+  fetchFaveStar: PropTypes.func.isRequired,
+  fetchCharts: PropTypes.func.isRequired,
+  saveFaveStar: PropTypes.func.isRequired,
+  startPeriodicRender: PropTypes.func.isRequired,
+  updateDashboardTitle: PropTypes.func.isRequired,
+  editMode: PropTypes.bool.isRequired,
+  isV2Preview: PropTypes.bool.isRequired,
+  setEditMode: PropTypes.func.isRequired,
+  showBuilderPane: PropTypes.bool.isRequired,
+  toggleBuilderPane: PropTypes.func.isRequired,
+  updateCss: PropTypes.func.isRequired,
+  hasUnsavedChanges: PropTypes.bool.isRequired,
+  maxUndoHistoryExceeded: PropTypes.bool.isRequired,
+&nbsp;
+  // redux
+  onUndo: PropTypes.func.isRequired,
+  onRedo: PropTypes.func.isRequired,
+  undoLength: PropTypes.number.isRequired,
+  redoLength: PropTypes.number.isRequired,
+  setMaxUndoHistoryExceeded: PropTypes.func.isRequired,
+  maxUndoHistoryToast: PropTypes.func.isRequired,
+};
+&nbsp;
+class Header extends React.PureComponent {
+  static discardChanges() <span class="fstat-no" title="function not covered" >{</span>
+    window.<span class="cstat-no" title="statement not covered" >location.reload();</span>
+  }
+&nbsp;
+  constructor(props) {
+    super(<span class="branch-1 cbranch-no" title="branch not covered" >p</span>rops);
+    this.state = {
+      didNotifyMaxUndoHistoryToast: false,
+      emphasizeUndo: false,
+      hightlightRedo: false,
+      showV2PreviewModal: props.isV2Preview,
+    };
+&nbsp;
+    this.handleChangeText = this.handleChangeText.bind(this);
+    this.handleCtrlZ = this.handleCtrlZ.bind(this);
+    this.handleCtrlY = this.handleCtrlY.bind(this);
+    this.toggleEditMode = this.toggleEditMode.bind(this);
+    this.forceRefresh = this.forceRefresh.bind(this);
+    this.overwriteDashboard = this.overwriteDashboard.bind(this);
+    this.toggleShowV2PreviewModal = this.toggleShowV2PreviewModal.bind(this);
+  }
+&nbsp;
+  componentWillReceiveProps(<span class="fstat-no" title="function not covered" >nextProps) {</span>
+    if (
+<span class="cstat-no" title="statement not covered" >      UNDO_LIMIT - nextProps.undoLength &lt;= 0 &amp;&amp;</span>
+      !this.state.didNotifyMaxUndoHistoryToast
+    ) {
+      this.<span class="cstat-no" title="statement not covered" >setState(<span class="fstat-no" title="function not covered" >() =&gt; (<span class="cstat-no" title="statement not covered" >{ didNotifyMaxUndoHistoryToast: true }));</span></span></span>
+      this.<span class="cstat-no" title="statement not covered" >props.maxUndoHistoryToast();</span>
+    }
+    if (
+<span class="cstat-no" title="statement not covered" >      nextProps.undoLength &gt; UNDO_LIMIT &amp;&amp;</span>
+      !this.props.maxUndoHistoryExceeded
+    ) {
+      this.<span class="cstat-no" title="statement not covered" >props.setMaxUndoHistoryExceeded();</span>
+    }
+  }
+&nbsp;
+  componentWillUnmount() <span class="fstat-no" title="function not covered" >{</span>
+    clearTimeout(<span class="cstat-no" title="statement not covered" >this.ctrlYTimeout);</span>
+    clearTimeout(<span class="cstat-no" title="statement not covered" >this.ctrlZTimeout);</span>
+  }
+&nbsp;
+  forceRefresh() <span class="fstat-no" title="function not covered" >{</span>
+    return <span class="cstat-no" title="statement not covered" >this.props.fetchCharts(Object.values(this.props.charts), true);</span>
+  }
+&nbsp;
+  handleChangeText(<span class="fstat-no" title="function not covered" >nextText) {</span>
+    const { updateDashboardTitle, onChange } = <span class="cstat-no" title="statement not covered" >this.props;</span>
+    if (<span class="cstat-no" title="statement not covered" >nextText &amp;&amp; this.props.dashboardTitle !== nextText) {</span>
+      updateDashboardTitle(<span class="cstat-no" title="statement not covered" >nextText);</span>
+      onChange();
+    }
+  }
+&nbsp;
+  handleCtrlY() <span class="fstat-no" title="function not covered" >{</span>
+    this.<span class="cstat-no" title="statement not covered" >props.onRedo();</span>
+    this.<span class="cstat-no" title="statement not covered" >setState({ emphasizeRedo: true }, <span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
+      if (<span class="cstat-no" title="statement not covered" >this.ctrlYTimeout) <span class="cstat-no" title="statement not covered" >clearTimeout(this.ctrlYTimeout);</span></span>
+      this.<span class="cstat-no" title="statement not covered" >ctrlYTimeout = setTimeout(<span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
+        this.<span class="cstat-no" title="statement not covered" >setState({ emphasizeRedo: false });</span>
+      }, 100);
+    });
+  }
+&nbsp;
+  handleCtrlZ() <span class="fstat-no" title="function not covered" >{</span>
+    this.<span class="cstat-no" title="statement not covered" >props.onUndo();</span>
+    this.<span class="cstat-no" title="statement not covered" >setState({ emphasizeUndo: true }, <span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
+      if (<span class="cstat-no" title="statement not covered" >this.ctrlZTimeout) <span class="cstat-no" title="statement not covered" >clearTimeout(this.ctrlZTimeout);</span></span>
+      this.<span class="cstat-no" title="statement not covered" >ctrlZTimeout = setTimeout(<span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
+        this.<span class="cstat-no" title="statement not covered" >setState({ emphasizeUndo: false });</span>
+      }, 100);
+    });
+  }
+&nbsp;
+  toggleEditMode() <span class="fstat-no" title="function not covered" >{</span>
+    this.<span class="cstat-no" title="statement not covered" >props.setEditMode(!this.props.editMode);</span>
+  }
+&nbsp;
+  toggleShowV2PreviewModal() <span class="fstat-no" title="function not covered" >{</span>
+    this.<span class="cstat-no" title="statement not covered" >setState({ showV2PreviewModal: !this.state.showV2PreviewModal });</span>
+  }
+&nbsp;
+  overwriteDashboard() <span class="fstat-no" title="function not covered" >{</span>
+    const {
+      dashboardTitle,
+      layout: positions,
+      expandedSlices,
+      css,
+      filters,
+      dashboardInfo,
+    } = <span class="cstat-no" title="statement not covered" >this.props;</span>
+&nbsp;
+    const <span class="cstat-no" title="statement not covered" >data = {</span>
+      positions,
+      expanded_slices: expandedSlices,
+      css,
+      dashboard_title: dashboardTitle,
+      default_filters: JSON.stringify(filters),
+    };
+&nbsp;
+    this.<span class="cstat-no" title="statement not covered" >props.onSave(data, dashboardInfo.id, SAVE_TYPE_OVERWRITE);</span>
+  }
+&nbsp;
+  render() {
+    const {
+      dashboardTitle,
+      layout,
+      filters,
+      expandedSlices,
+      css,
+      isV2Preview,
+      onUndo,
+      onRedo,
+      undoLength,
+      redoLength,
+      onChange,
+      onSave,
+      updateCss,
+      editMode,
+      showBuilderPane,
+      dashboardInfo,
+      hasUnsavedChanges,
+    } = this.props;
+&nbsp;
+    const userCanEdit = dashboardInfo.dash_edit_perm;
+    const userCanSaveAs = dashboardInfo.dash_save_perm;
+    const popButton = hasUnsavedChanges || isV2Preview;
+&nbsp;
+    return (
+      &lt;div className="dashboard-header"&gt;
+        &lt;div className="dashboard-component-header header-large"&gt;
+          &lt;EditableTitle
+            title={dashboardTitle}
+            canEdit={userCanEdit &amp;&amp; editMode}
+            onSaveTitle={this.handleChangeText}
+            showTooltip={false}
+          /&gt;
+          &lt;span className="favstar"&gt;
+            &lt;FaveStar
+              itemId={dashboardInfo.id}
+              fetchFaveStar={this.props.fetchFaveStar}
+              saveFaveStar={this.props.saveFaveStar}
+              isStarred={this.props.isStarred}
+            /&gt;
+          &lt;/span&gt;
+          {isV2Preview &amp;&amp; (
+<span class="branch-1 cbranch-no" title="branch not covered" >            &lt;div</span>
+              role="none"
+              className="v2-preview-badge"
+              onClick={this.toggleShowV2PreviewModal}
+            &gt;
+              {t('v2 Preview')}
+              &lt;span className="fa fa-info-circle m-l-5" /&gt;
+            &lt;/div&gt;
+          )}
+          {isV2Preview &amp;&amp;
+<span class="branch-1 cbranch-no" title="branch not covered" >            this.state.showV2PreviewModal &amp;&amp; (</span>
+<span class="branch-2 cbranch-no" title="branch not covered" >              &lt;V2PreviewModal onClose={this.toggleShowV2PreviewModal} /&gt;</span>
+            )}
+        &lt;/div&gt;
+&nbsp;
+        {userCanSaveAs &amp;&amp; (
+          &lt;div className="button-container"&gt;
+            {editMode &amp;&amp; (
+<span class="branch-1 cbranch-no" title="branch not covered" >              &lt;Button</span>
+                bsSize="small"
+                onClick={onUndo}
+                disabled={undoLength &lt; 1}
+                bsStyle={this.state.emphasizeUndo ? 'primary' : undefined}
+              &gt;
+                &lt;div title="Undo" className="undo-action fa fa-reply" /&gt;
+              &lt;/Button&gt;
+            )}
+&nbsp;
+            {editMode &amp;&amp; (
+<span class="branch-1 cbranch-no" title="branch not covered" >              &lt;Button</span>
+                bsSize="small"
+                onClick={onRedo}
+                disabled={redoLength &lt; 1}
+                bsStyle={this.state.emphasizeRedo ? 'primary' : undefined}
+              &gt;
+                &lt;div title="Redo" className="redo-action fa fa-share" /&gt;
+              &lt;/Button&gt;
+            )}
+&nbsp;
+            {editMode &amp;&amp; (
+<span class="branch-1 cbranch-no" title="branch not covered" >              &lt;Button bsSize="small" onClick={this.props.toggleBuilderPane}&gt;</span>
+                {showBuilderPane
+                  ? t('Hide components')
+                  : t('Insert components')}
+              &lt;/Button&gt;
+            )}
+&nbsp;
+            {editMode &amp;&amp;
+              (<span class="branch-1 cbranch-no" title="branch not covered" >hasUnsavedChanges || <span class="branch-2 cbranch-no" title="branch not covered" >i</span>sV2Preview) &amp;&amp; (</span>
+<span class="branch-3 cbranch-no" title="branch not covered" >                &lt;Button</span>
+                  bsSize="small"
+                  bsStyle={popButton ? 'primary' : undefined}
+                  onClick={this.overwriteDashboard}
+                &gt;
+                  {isV2Preview
+                    ? t('Persist as Dashboard v2')
+                    : t('Save changes')}
+                &lt;/Button&gt;
+              )}
+&nbsp;
+            {!editMode &amp;&amp;
+              isV2Preview &amp;&amp; (
+<span class="branch-2 cbranch-no" title="branch not covered" >                &lt;Button</span>
+                  bsSize="small"
+                  onClick={this.toggleEditMode}
+                  bsStyle={popButton ? 'primary' : undefined}
+                  disabled={!userCanEdit}
+                &gt;
+                  {t('Edit to persist Dashboard v2')}
+                &lt;/Button&gt;
+              )}
+&nbsp;
+            {!editMode &amp;&amp;
+              !isV2Preview &amp;&amp;
+              !hasUnsavedChanges &amp;&amp; (
+                &lt;Button
+                  bsSize="small"
+                  onClick={this.toggleEditMode}
+                  bsStyle={p</span>opButton ? <span class="branch-0 cbranch-no" title="branch not covered" >'primary' : undefined}
+                  disabled={!userCanEdit}
+                &gt;
+                  {t('Edit dashboard')}
+                &lt;/Button&gt;
+              )}
+&nbsp;
+            {editMode &amp;&amp;
+<span class="branch-1 cbranch-no" title="branch not covered" >              !isV2Preview &amp;&amp;</span>
+<span class="branch-2 cbranch-no" title="branch not covered" >              !hasUnsavedChanges &amp;&amp; (</span>
+<span class="branch-3 cbranch-no" title="branch not covered" >                &lt;Button</span>
+                  bsSize="small"
+                  onClick={this.toggleEditMode}
+                  bsStyle={undefined}
+                  disabled={!userCanEdit}
+                &gt;
+                  {t('Switch to view mode')}
+                &lt;/Button&gt;
+              )}
+&nbsp;
+            &lt;HeaderActionsDropdown
+              addSuccessToast={this.props.addSuccessToast}
+              addDangerToast={this.props.addDangerToast}
+              dashboardId={dashboardInfo.id}
+              dashboardTitle={dashboardTitle}
+              layout={layout}
+              filters={filters}
+              expandedSlices={expandedSlices}
+              css={css}
+              onSave={onSave}
+              onChange={onChange}
+              forceRefreshAllCharts={this.forceRefresh}
+              startPeriodicRender={this.props.startPeriodicRender}
+              updateCss={updateCss}
+              editMode={editMode}
+              hasUnsavedChanges={hasUnsavedChanges}
+              userCanEdit={userCanEdit}
+              isV2Preview={isV2Preview}
+            /&gt;
+&nbsp;
+            {editMode &amp;&amp; (
+<span class="branch-1 cbranch-no" title="branch not covered" >              &lt;UndoRedoKeylisteners</span>
+                onUndo={this.handleCtrlZ}
+                onRedo={this.handleCtrlY}
+              /&gt;
+            )}
+          &lt;/div&gt;
+        )}
+      &lt;/div&gt;
+    );
+  }
+}
+&nbsp;
+Header.propTypes = propTypes;
+&nbsp;
+export default Header;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

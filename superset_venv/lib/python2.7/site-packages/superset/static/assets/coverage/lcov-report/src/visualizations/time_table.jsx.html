@@ -1,0 +1,788 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/visualizations/time_table.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/visualizations/</a> time_table.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/104</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/75</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/101</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import ReactDOM from 'react-dom';</span>
+<span class="cstat-no" title="statement not covered" >import React from 'react';</span>
+<span class="cstat-no" title="statement not covered" >import propTypes from 'prop-types';</span>
+<span class="cstat-no" title="statement not covered" >import { Table, Thead, Th, Tr, Td } from 'reactable';</span>
+<span class="cstat-no" title="statement not covered" >import d3 from 'd3';</span>
+<span class="cstat-no" title="statement not covered" >import Mustache from 'mustache';</span>
+<span class="cstat-no" title="statement not covered" >import { Sparkline, LineSeries, PointSeries, VerticalReferenceLine, WithTooltip } from '@data-ui/sparkline';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >import MetricOption from '../components/MetricOption';</span>
+<span class="cstat-no" title="statement not covered" >import { d3format } from '../modules/utils';</span>
+<span class="cstat-no" title="statement not covered" >import { formatDateThunk } from '../modules/dates';</span>
+<span class="cstat-no" title="statement not covered" >import InfoTooltipWithTrigger from '../components/InfoTooltipWithTrigger';</span>
+<span class="cstat-no" title="statement not covered" >import './time_table.css';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >const SPARKLINE_MARGIN = {</span>
+  top: 8,
+  right: 8,
+  bottom: 8,
+  left: 8,
+};
+<span class="cstat-no" title="statement not covered" >const sparklineTooltipProps = {</span>
+  style: {
+    opacity: 0.8,
+  },
+  offsetTop: 0,
+};
+&nbsp;
+<span class="cstat-no" title="statement not covered" >const ACCESSIBLE_COLOR_BOUNDS = ['#ca0020', '#0571b0'];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function FormattedNumber({ <span class="cstat-no" title="statement not covered" >num, format }) {</span></span></span>
+  if (<span class="cstat-no" title="statement not covered" >format) {</span>
+    return (
+<span class="cstat-no" title="statement not covered" >      &lt;span title={num}&gt;{d3format(format, num)}&lt;/span&gt;</span>
+    );
+  }
+  return <span class="cstat-no" title="statement not covered" >&lt;span&gt;{num}&lt;/span&gt;;</span>
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >FormattedNumber.propTypes = {</span>
+  num: propTypes.number,
+  format: propTypes.string,
+};
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function viz(slice, payload) {</span></span>
+  slice.<span class="cstat-no" title="statement not covered" >container.css('height', slice.height());</span>
+  const <span class="cstat-no" title="statement not covered" >records = payload.data.records;</span>
+  const <span class="cstat-no" title="statement not covered" >fd = payload.form_data;</span>
+  const <span class="cstat-no" title="statement not covered" >data = Object.keys(records).sort().map(<span class="fstat-no" title="function not covered" >iso =&gt; ({ ...<span class="cstat-no" title="statement not covered" >records[iso], iso }));</span></span></span>
+  const <span class="cstat-no" title="statement not covered" >reversedData = [...data].reverse();</span>
+  const <span class="cstat-no" title="statement not covered" >metricMap = {};</span>
+  slice.<span class="cstat-no" title="statement not covered" >datasource.metrics.forEach(<span class="fstat-no" title="function not covered" >(m) =&gt; {</span></span>
+    metricMap[<span class="cstat-no" title="statement not covered" >m.metric_name] = m;</span>
+  });
+&nbsp;
+  let <span class="cstat-no" title="statement not covered" >metrics;</span>
+  let <span class="cstat-no" title="statement not covered" >defaultSort = false;</span>
+  if (<span class="cstat-no" title="statement not covered" >payload.data.is_group_by) {</span>
+    metrics = <span class="cstat-no" title="statement not covered" >payload.data.columns;</span>
+    defaultSort = <span class="cstat-no" title="statement not covered" >{ column: fd.column_collection[0].key, direction: 'desc' };</span>
+  } else {
+    metrics = <span class="cstat-no" title="statement not covered" >fd.metrics;</span>
+  }
+  const <span class="cstat-no" title="statement not covered" >tableData = metrics.map(<span class="fstat-no" title="function not covered" >(metric) =&gt; {</span></span>
+    let <span class="cstat-no" title="statement not covered" >leftCell;</span>
+    const <span class="cstat-no" title="statement not covered" >context = { ...fd, metric };</span>
+    const <span class="cstat-no" title="statement not covered" >url = fd.url ? Mustache.render(fd.url, context) : null;</span>
+    const <span class="cstat-no" title="statement not covered" >metricLabel = metric.label || metric;</span>
+    const <span class="cstat-no" title="statement not covered" >metricData = typeof metric === 'object' ? metric : metricMap[metric];</span>
+    if (<span class="cstat-no" title="statement not covered" >!payload.data.is_group_by) {</span>
+      leftCell = (
+<span class="cstat-no" title="statement not covered" >        &lt;MetricOption metric={metricData} url={url} showFormula={false} openInNewWindow /&gt;</span>
+      );
+    } else {
+      leftCell = <span class="cstat-no" title="statement not covered" >url</span>
+        ? &lt;a href={url} rel="noopener noreferrer" target="_blank"&gt;{metricLabel}&lt;/a&gt;
+        : metric;
+    }
+    const <span class="cstat-no" title="statement not covered" >row = { metric: leftCell };</span>
+    fd.<span class="cstat-no" title="statement not covered" >column_collection.forEach(<span class="fstat-no" title="function not covered" >(column) =&gt; {</span></span>
+      if (<span class="cstat-no" title="statement not covered" >column.colType === 'spark') {</span>
+        let <span class="cstat-no" title="statement not covered" >sparkData;</span>
+        if (<span class="cstat-no" title="statement not covered" >!column.timeRatio) {</span>
+          sparkData = <span class="cstat-no" title="statement not covered" >data.map(<span class="fstat-no" title="function not covered" >d =&gt; <span class="cstat-no" title="statement not covered" >d[metricLabel]);</span></span></span>
+        } else {
+          // Period ratio sparkline
+          sparkData = <span class="cstat-no" title="statement not covered" >[];</span>
+          for (<span class="cstat-no" title="statement not covered" >let i = column.timeRatio; i &lt; data.length; i++) {</span>
+            const <span class="cstat-no" title="statement not covered" >prevData = data[i - column.timeRatio][metricLabel];</span>
+            if (<span class="cstat-no" title="statement not covered" >prevData &amp;&amp; prevData !== 0) {</span>
+              sparkData.<span class="cstat-no" title="statement not covered" >push(data[i][metricLabel] / prevData);</span>
+            } else {
+              sparkData.<span class="cstat-no" title="statement not covered" >push(null);</span>
+            }
+          }
+        }
+        const <span class="cstat-no" title="statement not covered" >formatDate = formatDateThunk(column.dateFormat);</span>
+        row[<span class="cstat-no" title="statement not covered" >column.key] = {</span>
+          data: sparkData[sparkData.length - 1],
+          display: (
+            &lt;WithTooltip
+              tooltipProps={sparklineTooltipProps}
+              hoverStyles={null}
+              renderTooltip={({ <span class="cstat-no" title="statement not covered" >index }) =&gt; (</span>
+<span class="cstat-no" title="statement not covered" >                &lt;div&gt;</span>
+                  &lt;strong&gt;{d3format(column.d3format, sparkData[index])}&lt;/strong&gt;
+                  &lt;div&gt;{formatDate(data[index].iso)}&lt;/div&gt;
+                &lt;/div&gt;
+              )}
+            &gt;
+              {({ <span class="cstat-no" title="statement not covered" >onMouseLeave, onMouseMove, tooltipData }) =&gt; (</span>
+<span class="cstat-no" title="statement not covered" >                &lt;Sparkline</span>
+                  ariaLabel={`spark-${metricLabel}`}
+                  width={parseInt(column.width, 10) || 300}
+                  height={parseInt(column.height, 10) || 50}
+                  margin={SPARKLINE_MARGIN}
+                  data={sparkData}
+                  onMouseLeave={onMouseLeave}
+                  onMouseMove={onMouseMove}
+                &gt;
+                  &lt;LineSeries
+                    showArea={false}
+                    stroke="#767676"
+                  /&gt;
+                  {tooltipData &amp;&amp;
+                    &lt;VerticalReferenceLine
+                      reference={tooltipData.index}
+                      strokeDasharray="3 3"
+                      strokeWidth={1}
+                    /&gt;}
+                  {tooltipData &amp;&amp;
+                    &lt;PointSeries
+                      points={[tooltipData.index]}
+                      fill="#767676"
+                      strokeWidth={1}
+                    /&gt;}
+                &lt;/Sparkline&gt;
+              )}
+            &lt;/WithTooltip&gt;
+          ),
+        };
+      } else {
+        const <span class="cstat-no" title="statement not covered" >recent = reversedData[0][metricLabel];</span>
+        let <span class="cstat-no" title="statement not covered" >v;</span>
+        let <span class="cstat-no" title="statement not covered" >errorMsg;</span>
+        if (<span class="cstat-no" title="statement not covered" >column.colType === 'time') {</span>
+          // Time lag ratio
+          const <span class="cstat-no" title="statement not covered" >timeLag = parseInt(column.timeLag, 10);</span>
+          const <span class="cstat-no" title="statement not covered" >totalLag = Object.keys(reversedData).length;</span>
+          if (<span class="cstat-no" title="statement not covered" >timeLag &gt; totalLag) {</span>
+            errorMsg = `The time lag set at ${<span class="cstat-no" title="statement not covered" >timeLag} exceeds the length of data at ${reversedData.length}. No data available.`;</span>
+          } else {
+            v = <span class="cstat-no" title="statement not covered" >reversedData[timeLag][metricLabel];</span>
+          }
+          if (<span class="cstat-no" title="statement not covered" >column.comparisonType === 'diff') {</span>
+            v = <span class="cstat-no" title="statement not covered" >recent - v;</span>
+          } else <span class="cstat-no" title="statement not covered" >if (column.comparisonType === 'perc') {</span>
+            v = <span class="cstat-no" title="statement not covered" >recent / v;</span>
+          } else <span class="cstat-no" title="statement not covered" >if (column.comparisonType === 'perc_change') {</span>
+            v = (<span class="cstat-no" title="statement not covered" >recent / v) - 1;</span>
+          }
+        } else <span class="cstat-no" title="statement not covered" >if (column.colType === 'contrib') {</span>
+          // contribution to column total
+          v = <span class="cstat-no" title="statement not covered" >recent / Object.keys(reversedData[0])</span>
+            .map(<span class="fstat-no" title="function not covered" >k =&gt; <span class="cstat-no" title="statement not covered" >k !== 'iso' ? reversedData[0][k] : null)</span></span>
+            .reduce(<span class="fstat-no" title="function not covered" >(a, b) =&gt; <span class="cstat-no" title="statement not covered" >a + b);</span></span>
+        } else <span class="cstat-no" title="statement not covered" >if (column.colType === 'avg') {</span>
+          // Average over the last {timeLag}
+          v = <span class="cstat-no" title="statement not covered" >reversedData</span>
+          .map(<span class="fstat-no" title="function not covered" >(k, i) =&gt; <span class="cstat-no" title="statement not covered" >i &lt; column.timeLag ? k[metricLabel] : 0)</span></span>
+          .reduce(<span class="fstat-no" title="function not covered" >(a, b) =&gt; <span class="cstat-no" title="statement not covered" >a + b) / column.timeLag;</span></span>
+        }
+        let <span class="cstat-no" title="statement not covered" >color;</span>
+        if (<span class="cstat-no" title="statement not covered" >column.bounds &amp;&amp; column.bounds[0] !== null &amp;&amp; column.bounds[1] !== null) {</span>
+          const <span class="cstat-no" title="statement not covered" >scaler = d3.scale.linear()</span>
+            .domain([
+              column.bounds[0],
+              column.bounds[0] + ((column.bounds[1] - column.bounds[0]) / 2),
+              column.bounds[1],
+            ])
+            .range([ACCESSIBLE_COLOR_BOUNDS[0], 'grey', ACCESSIBLE_COLOR_BOUNDS[1]]);
+          color = <span class="cstat-no" title="statement not covered" >scaler(v);</span>
+        } else <span class="cstat-no" title="statement not covered" >if (column.bounds &amp;&amp; column.bounds[0] !== null) {</span>
+          color = <span class="cstat-no" title="statement not covered" >v &gt;= column.bounds[0] ? ACCESSIBLE_COLOR_BOUNDS[1] : ACCESSIBLE_COLOR_BOUNDS[0];</span>
+        } else <span class="cstat-no" title="statement not covered" >if (column.bounds &amp;&amp; column.bounds[1] !== null) {</span>
+          color = <span class="cstat-no" title="statement not covered" >v &lt; column.bounds[1] ? ACCESSIBLE_COLOR_BOUNDS[1] : ACCESSIBLE_COLOR_BOUNDS[0];</span>
+        }
+        row[<span class="cstat-no" title="statement not covered" >column.key] = {</span>
+          data: v,
+          display: errorMsg ?
+            (&lt;div&gt;{errorMsg}&lt;/div&gt;) :
+            (&lt;div style={{ color }}&gt;
+              &lt;FormattedNumber num={v} format={column.d3format} /&gt;
+            &lt;/div&gt;),
+          style: color &amp;&amp; {
+            boxShadow: `inset 0px -2.5px 0px 0px ${color}`,
+            borderRight: '2px solid #fff',
+          },
+        };
+      }
+    });
+    return <span class="cstat-no" title="statement not covered" >row;</span>
+  });
+  ReactDOM.<span class="cstat-no" title="statement not covered" >render(</span>
+    &lt;Table
+      className="table table-no-hover"
+      defaultSort={defaultSort}
+      sortBy={defaultSort}
+      sortable={fd.column_collection.map(<span class="fstat-no" title="function not covered" >c =&gt; <span class="cstat-no" title="statement not covered" >c.key)}</span></span>
+    &gt;
+      &lt;Thead&gt;
+        &lt;Th column="metric"&gt;Metric&lt;/Th&gt;
+        {fd.column_collection.map(<span class="fstat-no" title="function not covered" >(c, i) =&gt; (</span>
+<span class="cstat-no" title="statement not covered" >          &lt;Th column={c.key} key={c.key} width={c.colType === 'spark' ? '1%' : null}&gt;</span>
+            {c.label} {c.tooltip &amp;&amp; (
+              &lt;InfoTooltipWithTrigger
+                tooltip={c.tooltip}
+                label={`tt-col-${i}`}
+                placement="top"
+              /&gt;
+            )}
+          &lt;/Th&gt;))}
+      &lt;/Thead&gt;
+      {tableData.map(<span class="fstat-no" title="function not covered" >row =&gt; (</span>
+<span class="cstat-no" title="statement not covered" >        &lt;Tr key={row.metric}&gt;</span>
+          &lt;Td column="metric" data={row.metric}&gt;{row.metric}&lt;/Td&gt;
+          {fd.column_collection.map(<span class="fstat-no" title="function not covered" >c =&gt; (</span>
+<span class="cstat-no" title="statement not covered" >            &lt;Td</span>
+              column={c.key}
+              key={c.key}
+              value={row[c.key].data}
+              style={row[c.key].style}
+            &gt;
+              {row[c.key].display}
+            &lt;/Td&gt;))}
+        &lt;/Tr&gt;))}
+    &lt;/Table&gt;,
+    document.getElementById(slice.containerId),
+  );
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >module.exports = viz;</span>
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/explore/actions/exploreActions.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/explore/actions/</a> exploreActions.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">65.56% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>59/90</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">4.17% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">56.94% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>41/72</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* eslint camelcase: 0 */
+const $ = window.$ = require('jquery');
+&nbsp;
+const FAVESTAR_BASE_URL = '/superset/favstar/slice';
+&nbsp;
+export const SET_DATASOURCE_TYPE = 'SET_DATASOURCE_TYPE';
+export <span class="fstat-no" title="function not covered" >function setDatasourceType(datasourceType) {</span>
+  return <span class="cstat-no" title="statement not covered" >{ type: SET_DATASOURCE_TYPE, datasourceType };</span>
+}
+&nbsp;
+export const SET_DATASOURCE = 'SET_DATASOURCE';
+export <span class="fstat-no" title="function not covered" >function setDatasource(datasource) {</span>
+  return <span class="cstat-no" title="statement not covered" >{ type: SET_DATASOURCE, datasource };</span>
+}
+&nbsp;
+export const SET_DATASOURCES = 'SET_DATASOURCES';
+export <span class="fstat-no" title="function not covered" >function setDatasources(datasources) {</span>
+  return <span class="cstat-no" title="statement not covered" >{ type: SET_DATASOURCES, datasources };</span>
+}
+&nbsp;
+export const POST_DATASOURCE_STARTED = 'POST_DATASOURCE_STARTED';
+export const FETCH_DATASOURCE_SUCCEEDED = 'FETCH_DATASOURCE_SUCCEEDED';
+export <span class="fstat-no" title="function not covered" >function fetchDatasourceSucceeded() {</span>
+  return <span class="cstat-no" title="statement not covered" >{ type: FETCH_DATASOURCE_SUCCEEDED };</span>
+}
+&nbsp;
+export const FETCH_DATASOURCES_STARTED = 'FETCH_DATASOURCES_STARTED';
+export <span class="fstat-no" title="function not covered" >function fetchDatasourcesStarted() {</span>
+  return <span class="cstat-no" title="statement not covered" >{ type: FETCH_DATASOURCES_STARTED };</span>
+}
+&nbsp;
+export const FETCH_DATASOURCES_SUCCEEDED = 'FETCH_DATASOURCES_SUCCEEDED';
+export <span class="fstat-no" title="function not covered" >function fetchDatasourcesSucceeded() {</span>
+  return <span class="cstat-no" title="statement not covered" >{ type: FETCH_DATASOURCES_SUCCEEDED };</span>
+}
+&nbsp;
+export const POST_DATASOURCES_FAILED = 'POST_DATASOURCES_FAILED';
+export <span class="fstat-no" title="function not covered" >function postDatasourcesFailed(error) {</span>
+  return <span class="cstat-no" title="statement not covered" >{ type: POST_DATASOURCES_FAILED, error };</span>
+}
+&nbsp;
+export const RESET_FIELDS = 'RESET_FIELDS';
+export <span class="fstat-no" title="function not covered" >function resetControls() {</span>
+  return <span class="cstat-no" title="statement not covered" >{ type: RESET_FIELDS };</span>
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function fetchDatasources() {</span>
+  return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function (dispatch) {</span></span>
+    dispatch(<span class="cstat-no" title="statement not covered" >fetchDatasourcesStarted());</span>
+    const <span class="cstat-no" title="statement not covered" >url = '/superset/datasources/';</span>
+    $.<span class="cstat-no" title="statement not covered" >ajax({</span>
+      type: 'GET',
+      url,
+      success: (<span class="fstat-no" title="function not covered" >data) =&gt; {</span>
+        dispatch(<span class="cstat-no" title="statement not covered" >setDatasources(data));</span>
+        dispatch(<span class="cstat-no" title="statement not covered" >fetchDatasourcesSucceeded());</span>
+      },
+      error(<span class="fstat-no" title="function not covered" >error) {</span>
+        dispatch(<span class="cstat-no" title="statement not covered" >fetchDatasourcesFailed(error.responseJSON.error));</span>
+      },
+    });
+  };
+}
+&nbsp;
+export const TOGGLE_FAVE_STAR = 'TOGGLE_FAVE_STAR';
+export <span class="fstat-no" title="function not covered" >function toggleFaveStar(isStarred) {</span>
+  return <span class="cstat-no" title="statement not covered" >{ type: TOGGLE_FAVE_STAR, isStarred };</span>
+}
+&nbsp;
+export const FETCH_FAVE_STAR = 'FETCH_FAVE_STAR';
+export <span class="fstat-no" title="function not covered" >function fetchFaveStar(sliceId) {</span>
+  return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function (dispatch) {</span></span>
+    const <span class="cstat-no" title="statement not covered" >url = `${FAVESTAR_BASE_URL}/${sliceId}/count`;</span>
+    $.<span class="cstat-no" title="statement not covered" >get(url, <span class="fstat-no" title="function not covered" >(data) =&gt; {</span></span>
+      if (<span class="cstat-no" title="statement not covered" >data.count &gt; 0) {</span>
+        dispatch(<span class="cstat-no" title="statement not covered" >toggleFaveStar(true));</span>
+      }
+    });
+  };
+}
+&nbsp;
+export const SAVE_FAVE_STAR = 'SAVE_FAVE_STAR';
+export <span class="fstat-no" title="function not covered" >function saveFaveStar(sliceId, isStarred) {</span>
+  return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function (dispatch) {</span></span>
+    const <span class="cstat-no" title="statement not covered" >urlSuffix = isStarred ? 'unselect' : 'select';</span>
+    const <span class="cstat-no" title="statement not covered" >url = `${FAVESTAR_BASE_URL}/${sliceId}/${urlSuffix}/`;</span>
+    $.<span class="cstat-no" title="statement not covered" >get(url);</span>
+    dispatch(<span class="cstat-no" title="statement not covered" >toggleFaveStar(!isStarred));</span>
+  };
+}
+&nbsp;
+export const SET_FIELD_VALUE = 'SET_FIELD_VALUE';
+export function setControlValue(controlName, value, validationErrors) {
+  return { type: SET_FIELD_VALUE, controlName, value, validationErrors };
+}
+&nbsp;
+export const UPDATE_EXPLORE_ENDPOINTS = 'UPDATE_EXPLORE_ENDPOINTS';
+export <span class="fstat-no" title="function not covered" >function updateExploreEndpoints(jsonUrl, csvUrl, standaloneUrl) {</span>
+  return <span class="cstat-no" title="statement not covered" >{ type: UPDATE_EXPLORE_ENDPOINTS, jsonUrl, csvUrl, standaloneUrl };</span>
+}
+&nbsp;
+export const SET_EXPLORE_CONTROLS = 'UPDATE_EXPLORE_CONTROLS';
+export <span class="fstat-no" title="function not covered" >function setExploreControls(formData) {</span>
+  return <span class="cstat-no" title="statement not covered" >{ type: SET_EXPLORE_CONTROLS, formData };</span>
+}
+&nbsp;
+export const REMOVE_CONTROL_PANEL_ALERT = 'REMOVE_CONTROL_PANEL_ALERT';
+export <span class="fstat-no" title="function not covered" >function removeControlPanelAlert() {</span>
+  return <span class="cstat-no" title="statement not covered" >{ type: REMOVE_CONTROL_PANEL_ALERT };</span>
+}
+&nbsp;
+export const UPDATE_CHART_TITLE = 'UPDATE_CHART_TITLE';
+export <span class="fstat-no" title="function not covered" >function updateChartTitle(slice_name) {</span>
+  return <span class="cstat-no" title="statement not covered" >{ type: UPDATE_CHART_TITLE, slice_name };</span>
+}
+&nbsp;
+export const CREATE_NEW_SLICE = 'CREATE_NEW_SLICE';
+export <span class="fstat-no" title="function not covered" >function createNewSlice(can_add, can_download, can_overwrite, slice, form_data) {</span>
+  return <span class="cstat-no" title="statement not covered" >{ type: CREATE_NEW_SLICE, can_add, can_download, can_overwrite, slice, form_data };</span>
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

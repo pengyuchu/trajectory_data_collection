@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/dashboard/deprecated/v1/actions.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">src/dashboard/deprecated/v1/</a> actions.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/84</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/67</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* global window */
+<span class="cstat-no" title="statement not covered" >import $ from 'jquery';</span>
+<span class="cstat-no" title="statement not covered" >import { getExploreUrlAndPayload } from '../../../explore/exploreUtils';</span>
+<span class="cstat-no" title="statement not covered" >import { addSuccessToast, addDangerToast } from '../../../messageToasts/actions';</span>
+&nbsp;
+export <span class="cstat-no" title="statement not covered" >const ADD_FILTER = 'ADD_FILTER';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >addFilter(sliceId, col, vals, <span class="cstat-no" title="statement not covered" >merge = true, <span class="cstat-no" title="statement not covered" >refresh = true) {</span></span></span></span></span>
+  return <span class="cstat-no" title="statement not covered" >{ type: ADD_FILTER, sliceId, col, vals, merge, refresh };</span>
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" >const CLEAR_FILTER = 'CLEAR_FILTER';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >clearFilter(sliceId) {</span></span></span>
+  return <span class="cstat-no" title="statement not covered" >{ type: CLEAR_FILTER, sliceId };</span>
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" >const REMOVE_FILTER = 'REMOVE_FILTER';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >removeFilter(sliceId, col, vals, <span class="cstat-no" title="statement not covered" >refresh = true) {</span></span></span></span>
+  return <span class="cstat-no" title="statement not covered" >{ type: REMOVE_FILTER, sliceId, col, vals, refresh };</span>
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" >const UPDATE_DASHBOARD_LAYOUT = 'UPDATE_DASHBOARD_LAYOUT';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >updateDashboardLayout(layout) {</span></span></span>
+  return <span class="cstat-no" title="statement not covered" >{ type: UPDATE_DASHBOARD_LAYOUT, layout };</span>
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" >const UPDATE_DASHBOARD_TITLE = 'UPDATE_DASHBOARD_TITLE';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >updateDashboardTitle(title) {</span></span></span>
+  return <span class="cstat-no" title="statement not covered" >{ type: UPDATE_DASHBOARD_TITLE, title };</span>
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >addSlicesToDashboard(dashboardId, sliceIds) {</span></span></span>
+  return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >() =&gt; (</span></span>
+<span class="cstat-no" title="statement not covered" >    $.ajax({</span>
+      type: 'POST',
+      url: `/superset/add_slices/${dashboardId}/`,
+      data: {
+        data: JSON.stringify({ slice_ids: sliceIds }),
+      },
+    })
+    .done(<span class="fstat-no" title="function not covered" >() =&gt; {</span>
+      // Refresh page to allow for slices to re-render
+      window.<span class="cstat-no" title="statement not covered" >location.reload();</span>
+    })
+  );
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" >const REMOVE_SLICE = 'REMOVE_SLICE';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >removeSlice(slice) {</span></span></span>
+  return <span class="cstat-no" title="statement not covered" >{ type: REMOVE_SLICE, slice };</span>
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" >const UPDATE_SLICE_NAME = 'UPDATE_SLICE_NAME';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >updateSliceName(slice, sliceName) {</span></span></span>
+  return <span class="cstat-no" title="statement not covered" >{ type: UPDATE_SLICE_NAME, slice, sliceName };</span>
+}
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >saveSlice(slice, sliceName) {</span></span></span>
+  const <span class="cstat-no" title="statement not covered" >oldName = slice.slice_name;</span>
+  return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(dispatch) =&gt; {</span></span>
+    const <span class="cstat-no" title="statement not covered" >sliceParams = {};</span>
+    sliceParams.<span class="cstat-no" title="statement not covered" >slice_id = slice.slice_id;</span>
+    sliceParams.<span class="cstat-no" title="statement not covered" >action = 'overwrite';</span>
+    sliceParams.<span class="cstat-no" title="statement not covered" >slice_name = sliceName;</span>
+&nbsp;
+    const { url, payload } = <span class="cstat-no" title="statement not covered" >getExploreUrlAndPayload({</span>
+      formData: slice.form_data,
+      endpointType: 'base',
+      force: false,
+      curUrl: null,
+      requestParams: sliceParams,
+    });
+    return <span class="cstat-no" title="statement not covered" >$.ajax({</span>
+      url,
+      type: 'POST',
+      data: {
+        form_data: JSON.stringify(payload),
+      },
+      success: () =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >{</span></span>
+        dispatch(<span class="cstat-no" title="statement not covered" >updateSliceName(slice, sliceName));</span>
+        dispatch(<span class="cstat-no" title="statement not covered" >addSuccessToast('This slice name was saved successfully.'));</span>
+      },
+      error: () =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >{</span></span>
+        // if server-side reject the overwrite action,
+        // revert to old state
+        dispatch(<span class="cstat-no" title="statement not covered" >updateSliceName(slice, oldName));</span>
+        dispatch(<span class="cstat-no" title="statement not covered" >addDangerToast("You don't have the rights to alter this slice"));</span>
+      },
+    });
+  };
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >const FAVESTAR_BASE_URL = '/superset/favstar/Dashboard';</span>
+export <span class="cstat-no" title="statement not covered" >const TOGGLE_FAVE_STAR = 'TOGGLE_FAVE_STAR';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >toggleFaveStar(isStarred) {</span></span></span>
+  return <span class="cstat-no" title="statement not covered" >{ type: TOGGLE_FAVE_STAR, isStarred };</span>
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" >const FETCH_FAVE_STAR = 'FETCH_FAVE_STAR';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >fetchFaveStar(id) {</span></span></span>
+  return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function (dispatch) {</span></span>
+    const <span class="cstat-no" title="statement not covered" >url = `${FAVESTAR_BASE_URL}/${id}/count`;</span>
+    return <span class="cstat-no" title="statement not covered" >$.get(url)</span>
+      .done(<span class="fstat-no" title="function not covered" >(data) =&gt; {</span>
+        if (<span class="cstat-no" title="statement not covered" >data.count &gt; 0) {</span>
+          dispatch(<span class="cstat-no" title="statement not covered" >toggleFaveStar(true));</span>
+        }
+      });
+  };
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" >const SAVE_FAVE_STAR = 'SAVE_FAVE_STAR';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >saveFaveStar(id, isStarred) {</span></span></span>
+  return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function (dispatch) {</span></span>
+    const <span class="cstat-no" title="statement not covered" >urlSuffix = isStarred ? 'unselect' : 'select';</span>
+    const <span class="cstat-no" title="statement not covered" >url = `${FAVESTAR_BASE_URL}/${id}/${urlSuffix}/`;</span>
+    $.<span class="cstat-no" title="statement not covered" >get(url);</span>
+    dispatch(<span class="cstat-no" title="statement not covered" >toggleFaveStar(!isStarred));</span>
+  };
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" >const TOGGLE_EXPAND_SLICE = 'TOGGLE_EXPAND_SLICE';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >toggleExpandSlice(slice, isExpanded) {</span></span></span>
+  return <span class="cstat-no" title="statement not covered" >{ type: TOGGLE_EXPAND_SLICE, slice, isExpanded };</span>
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" >const SET_EDIT_MODE = 'SET_EDIT_MODE';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >setEditMode(editMode) {</span></span></span>
+  return <span class="cstat-no" title="statement not covered" >{ type: SET_EDIT_MODE, editMode };</span>
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

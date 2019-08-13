@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/explore/components/controls/DatasourceControl.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">src/explore/components/controls/</a> DatasourceControl.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">66.67% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>46/69</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>10/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">20% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">66.67% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>42/63</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="branch-1 cbranch-no" title="branch not covered" ><span class="missing-if-branch" title="else path not taken" >E</span><span class="branch-1 cbranch-no" title="branch not covered" ><span class="missing-if-branch" title="if path not taken" >I</span>/</span></span></span>* eslint no-undef: 2 */
+import React from 'react';
+import PropTypes from 'prop-types';
+import {
+  Col,
+  Collapse,
+  Label,
+  OverlayTrigger,
+  Row,
+  Tooltip,
+  Well,
+} from 'react-bootstrap';
+import $ from 'jquery';
+&nbsp;
+import ControlHeader from '../ControlHeader';
+import { t } from '../../../locales';
+import DatasourceModal from '../../../datasource/DatasourceModal';
+import ColumnOption from '../../../components/ColumnOption';
+import MetricOption from '../../../components/MetricOption';
+import withToasts from '../../../messageToasts/enhancers/withToasts';
+&nbsp;
+&nbsp;
+const propTypes = {
+  onChange: PropTypes.func,
+  value: PropTypes.string.isRequired,
+  addDangerToast: PropTypes.func.isRequired,
+  datasource: PropTypes.object.isRequired,
+  onDatasourceSave: PropTypes.func,
+};
+&nbsp;
+const defaultProps = {
+  onChange: () =&gt; <span class="fstat-no" title="function not covered" >{</span>},
+  onDatasourceSave: () =&gt; <span class="fstat-no" title="function not covered" >{</span>},
+};
+&nbsp;
+class DatasourceControl extends React.PureComponent {
+  constructor(props) {
+    super(<span class="branch-1 cbranch-no" title="branch not covered" >p</span>rops);
+    this.state = {
+      showEditDatasourceModal: false,
+      filter: '',
+      loading: true,
+      showDatasource: false,
+    };
+    this.toggleShowDatasource = this.toggleShowDatasource.bind(this);
+    this.toggleEditDatasourceModal = this.toggleEditDatasourceModal.bind(this);
+    this.setSearchRef = this.setSearchRef.bind(this);
+    this.selectDatasource = this.selectDatasource.bind(this);
+  }
+  onChange(<span class="fstat-no" title="function not covered" >vizType) {</span>
+    this.<span class="cstat-no" title="statement not covered" >props.onChange(vizType);</span>
+    this.<span class="cstat-no" title="statement not covered" >setState({ showModal: false });</span>
+  }
+  onEnterModal() <span class="fstat-no" title="function not covered" >{</span>
+    if (<span class="cstat-no" title="statement not covered" >this.searchRef) {</span>
+      this.<span class="cstat-no" title="statement not covered" >searchRef.focus();</span>
+    }
+    const <span class="cstat-no" title="statement not covered" >url = '/superset/datasources/';</span>
+    const <span class="cstat-no" title="statement not covered" >that = this;</span>
+    if (<span class="cstat-no" title="statement not covered" >!this.state.datasources) {</span>
+      $.<span class="cstat-no" title="statement not covered" >ajax({</span>
+        type: 'GET',
+        url,
+        success: (<span class="fstat-no" title="function not covered" >data) =&gt; {</span>
+          const <span class="cstat-no" title="statement not covered" >datasources = data.map(<span class="fstat-no" title="function not covered" >ds =&gt; (<span class="cstat-no" title="statement not covered" >{</span></span></span>
+            rawName: ds.name,
+            connection: ds.connection,
+            schema: ds.schema,
+            name: (
+              &lt;a
+                href="#"
+                onClick={this.selectDatasource.bind(this, ds.uid)}
+                className="datasource-link"
+              &gt;
+                {ds.name}
+              &lt;/a&gt;
+            ),
+            type: ds.type,
+          }));
+&nbsp;
+          that.<span class="cstat-no" title="statement not covered" >setState({ loading: false, datasources });</span>
+        },
+        error() <span class="fstat-no" title="function not covered" >{</span>
+          that.<span class="cstat-no" title="statement not covered" >setState({ loading: false });</span>
+          this.<span class="cstat-no" title="statement not covered" >props.addDangerToast(t('Something went wrong while fetching the datasource list'));</span>
+        },
+      });
+    }
+  }
+  setSearchRef(<span class="fstat-no" title="function not covered" >searchRef) {</span>
+    this.<span class="cstat-no" title="statement not covered" >searchRef = searchRef;</span>
+  }
+  toggleShowDatasource() <span class="fstat-no" title="function not covered" >{</span>
+    this.<span class="cstat-no" title="statement not covered" >setState({ showDatasource: !this.state.showDatasource });</span>
+  }
+  toggleModal() <span class="fstat-no" title="function not covered" >{</span>
+    this.<span class="cstat-no" title="statement not covered" >setState({ showModal: !this.state.showModal });</span>
+  }
+  changeSearch(<span class="fstat-no" title="function not covered" >event) {</span>
+    this.<span class="cstat-no" title="statement not covered" >setState({ filter: event.target.value });</span>
+  }
+  selectDatasource(<span class="fstat-no" title="function not covered" >datasourceId) {</span>
+    this.<span class="cstat-no" title="statement not covered" >setState({ showModal: false });</span>
+    this.<span class="cstat-no" title="statement not covered" >props.onChange(datasourceId);</span>
+  }
+  toggleEditDatasourceModal() <span class="fstat-no" title="function not covered" >{</span>
+    this.<span class="cstat-no" title="statement not covered" >setState({ showEditDatasourceModal: !this.state.showEditDatasourceModal });</span>
+  }
+  renderModal() <span class="fstat-no" title="function not covered" >{</span>
+  }
+  renderDatasource() {
+    const datasource = this.props.datasource;
+    return (
+      &lt;div className="m-t-10"&gt;
+        &lt;Well className="m-t-0"&gt;
+          &lt;div className="m-b-10"&gt;
+            &lt;Label&gt;
+              &lt;i className="fa fa-database" /&gt; {datasource.database.backend}
+            &lt;/Label&gt;
+            {` ${datasource.database.name} `}
+          &lt;/div&gt;
+          &lt;Row className="datasource-container"&gt;
+            &lt;Col md={6}&gt;
+              &lt;strong&gt;Columns&lt;/strong&gt;
+              {datasource.columns.map(<span class="fstat-no" title="function not covered" >col =&gt; (</span>
+<span class="cstat-no" title="statement not covered" >                &lt;div key={col.column_name}&gt;</span>
+                  &lt;ColumnOption showType column={col} /&gt;
+                &lt;/div&gt;
+              ))}
+            &lt;/Col&gt;
+            &lt;Col md={6}&gt;
+              &lt;strong&gt;Metrics&lt;/strong&gt;
+              {datasource.metrics.map(<span class="fstat-no" title="function not covered" >m =&gt; (</span>
+<span class="cstat-no" title="statement not covered" >                &lt;div key={m.metric_name}&gt;</span>
+                  &lt;MetricOption metric={m} showType /&gt;
+                &lt;/div&gt;
+              ))}
+            &lt;/Col&gt;
+          &lt;/Row&gt;
+        &lt;/Well&gt;
+      &lt;/div&gt;
+    );
+  }
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;ControlHeader {...this.props} /&gt;
+        &lt;OverlayTrigger
+          placement="right"
+          overlay={
+            &lt;Tooltip id={'error-tooltip'}&gt;{t('Click to point to another datasource')}&lt;/Tooltip&gt;
+          }
+        &gt;
+          &lt;Label onClick={this.toggleEditDatasourceModal} style={{ cursor: 'pointer' }} className="m-r-5"&gt;
+            {this.props.datasource.name}
+          &lt;/Label&gt;
+        &lt;/OverlayTrigger&gt;
+        &lt;OverlayTrigger
+          placement="right"
+          overlay={
+            &lt;Tooltip id={'toggle-datasource-tooltip'}&gt;
+              {t('Expand/collapse datasource configuration')}
+            &lt;/Tooltip&gt;
+          }
+        &gt;
+          &lt;a href="#"&gt;
+            &lt;i
+              className={`fa fa-${t</span>his.state.showDatasource ? <span class="branch-0 cbranch-no" title="branch not covered" >'minus' : 'plus'}-square m-r-5`}
+              onClick={this.toggleShowDatasource}
+            /&gt;
+          &lt;/a&gt;
+        &lt;/OverlayTrigger&gt;
+        {this.props.datasource.type === 'table' &amp;&amp;
+          &lt;OverlayTrigger
+            placement="right"
+            overlay={
+              &lt;Tooltip id={'datasource-sqllab'}&gt;
+                {t('Run SQL queries against this datasource')}
+              &lt;/Tooltip&gt;
+            }
+          &gt;
+            &lt;a href={'/superset/sqllab?datasourceKey=' + this.props.value}&gt;
+              &lt;i className="fa fa-flask m-r-5" /&gt;
+            &lt;/a&gt;
+          &lt;/OverlayTrigger&gt;}
+        &lt;Collapse in={this.state.showDatasource}&gt;{this.renderDatasource()}&lt;/Collapse&gt;
+        &lt;DatasourceModal
+          datasource={this.props.datasource}
+          show={this.state.showEditDatasourceModal}
+          onDatasourceSave={this.props.onDatasourceSave}
+          onHide={this.toggleEditDatasourceModal}
+        /&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+&nbsp;
+DatasourceControl.propTypes = propTypes;
+DatasourceControl.defaultProps = defaultProps;
+&nbsp;
+export default withToasts(DatasourceControl);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

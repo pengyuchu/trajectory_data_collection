@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/explore/components/controls/SpatialControl.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">src/explore/components/controls/</a> SpatialControl.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">38.16% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>29/76</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/44</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">37.33% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>28/75</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import PropTypes from 'prop-types';
+import {
+  Row, Col, Button, Label, OverlayTrigger, Popover,
+} from 'react-bootstrap';
+import 'react-datetime/css/react-datetime.css';
+&nbsp;
+import ControlHeader from '../ControlHeader';
+import SelectControl from './SelectControl';
+import PopoverSection from '../../../components/PopoverSection';
+import Checkbox from '../../../components/Checkbox';
+import { t } from '../../../locales';
+&nbsp;
+const spatialTypes = {
+  latlong: 'latlong',
+  delimited: 'delimited',
+  geohash: 'geohash',
+};
+&nbsp;
+const propTypes = {
+  onChange: PropTypes.func,
+  value: PropTypes.object,
+  animation: PropTypes.bool,
+  choices: PropTypes.array,
+};
+&nbsp;
+const defaultProps = {
+  onChange: () =&gt; <span class="fstat-no" title="function not covered" >{</span>},
+  animation: true,
+  choices: [],
+};
+&nbsp;
+export default class SpatialControl extends React.Component {
+  constructor(<span class="fstat-no" title="function not covered" >props) {</span>
+    super(<span class="cstat-no" title="statement not covered" >props);</span>
+    const <span class="cstat-no" title="statement not covered" >v = props.value || {};</span>
+    let <span class="cstat-no" title="statement not covered" >defaultCol;</span>
+    if (<span class="cstat-no" title="statement not covered" >props.choices.length &gt; 0) {</span>
+      defaultCol = <span class="cstat-no" title="statement not covered" >props.choices[0][0];</span>
+    }
+    this.<span class="cstat-no" title="statement not covered" >state = {</span>
+      type: v.type || spatialTypes.latlong,
+      delimiter: v.delimiter || ',',
+      latCol: v.latCol || defaultCol,
+      lonCol: v.lonCol || defaultCol,
+      lonlatCol: v.lonlatCol || defaultCol,
+      reverseCheckbox: v.reverseCheckbox || false,
+      geohashCol: v.geohashCol || defaultCol,
+      value: null,
+      errors: [],
+    };
+    this.<span class="cstat-no" title="statement not covered" >toggleCheckbox = this.toggleCheckbox.bind(this);</span>
+    this.<span class="cstat-no" title="statement not covered" >onChange = this.onChange.bind(this);</span>
+  }
+  componentDidMount() <span class="fstat-no" title="function not covered" >{</span>
+    this.<span class="cstat-no" title="statement not covered" >onChange();</span>
+  }
+  onChange() <span class="fstat-no" title="function not covered" >{</span>
+    const <span class="cstat-no" title="statement not covered" >type = this.state.type;</span>
+    const <span class="cstat-no" title="statement not covered" >value = { type };</span>
+    const <span class="cstat-no" title="statement not covered" >errors = [];</span>
+    const <span class="cstat-no" title="statement not covered" >errMsg = t('Invalid lat/long configuration.');</span>
+    if (<span class="cstat-no" title="statement not covered" >type === spatialTypes.latlong) {</span>
+      value.<span class="cstat-no" title="statement not covered" >latCol = this.state.latCol;</span>
+      value.<span class="cstat-no" title="statement not covered" >lonCol = this.state.lonCol;</span>
+      if (<span class="cstat-no" title="statement not covered" >!value.lonCol || !value.latCol) {</span>
+        errors.<span class="cstat-no" title="statement not covered" >push(errMsg);</span>
+      }
+    } else <span class="cstat-no" title="statement not covered" >if (type === spatialTypes.delimited) {</span>
+      value.<span class="cstat-no" title="statement not covered" >lonlatCol = this.state.lonlatCol;</span>
+      value.<span class="cstat-no" title="statement not covered" >delimiter = this.state.delimiter;</span>
+      value.<span class="cstat-no" title="statement not covered" >reverseCheckbox = this.state.reverseCheckbox;</span>
+      if (<span class="cstat-no" title="statement not covered" >!value.lonlatCol || !value.delimiter) {</span>
+        errors.<span class="cstat-no" title="statement not covered" >push(errMsg);</span>
+      }
+    } else <span class="cstat-no" title="statement not covered" >if (type === spatialTypes.geohash) {</span>
+      value.<span class="cstat-no" title="statement not covered" >geohashCol = this.state.geohashCol;</span>
+      if (<span class="cstat-no" title="statement not covered" >!value.geohashCol) {</span>
+        errors.<span class="cstat-no" title="statement not covered" >push(errMsg);</span>
+      }
+    }
+    this.<span class="cstat-no" title="statement not covered" >setState({ value, errors });</span>
+    this.<span class="cstat-no" title="statement not covered" >props.onChange(value, errors);</span>
+  }
+  setType(<span class="fstat-no" title="function not covered" >type) {</span>
+    this.<span class="cstat-no" title="statement not covered" >setState({ type }, this.onChange);</span>
+  }
+  close() <span class="fstat-no" title="function not covered" >{</span>
+    this.<span class="cstat-no" title="statement not covered" >refs.trigger.hide();</span>
+  }
+  toggleCheckbox() <span class="fstat-no" title="function not covered" >{</span>
+    this.<span class="cstat-no" title="statement not covered" >setState({ reverseCheckbox: !this.state.reverseCheckbox }, this.onChange);</span>
+  }
+  renderLabelContent() <span class="fstat-no" title="function not covered" >{</span>
+    if (<span class="cstat-no" title="statement not covered" >this.state.errors.length &gt; 0) {</span>
+      return <span class="cstat-no" title="statement not covered" >'N/A';</span>
+    }
+    if (<span class="cstat-no" title="statement not covered" >this.state.type === spatialTypes.latlong) {</span>
+      return `${<span class="cstat-no" title="statement not covered" >this.state.lonCol} | ${this.state.latCol}`;</span>
+    } else <span class="cstat-no" title="statement not covered" >if (this.state.type === spatialTypes.delimited) {</span>
+      return `${<span class="cstat-no" title="statement not covered" >this.state.lonlatCol}`;</span>
+    } else <span class="cstat-no" title="statement not covered" >if (this.state.type === spatialTypes.geohash) {</span>
+      return `${<span class="cstat-no" title="statement not covered" >this.state.geohashCol}`;</span>
+    }
+    return <span class="cstat-no" title="statement not covered" >null;</span>
+  }
+  renderSelect(<span class="fstat-no" title="function not covered" >name, type) {</span>
+    return (
+<span class="cstat-no" title="statement not covered" >      &lt;SelectControl</span>
+        name={name}
+        choices={this.props.choices}
+        value={this.state[name]}
+        clearable={false}
+        onFocus={() =&gt; <span class="fstat-no" title="function not covered" >{</span>
+          this.<span class="cstat-no" title="statement not covered" >setType(type);</span>
+        }}
+        onChange={(<span class="fstat-no" title="function not covered" >value) =&gt; {</span>
+          this.<span class="cstat-no" title="statement not covered" >setState({ [name]: value }, this.onChange);</span>
+        }}
+      /&gt;
+    );
+  }
+  renderPopover() <span class="fstat-no" title="function not covered" >{</span>
+    return (
+<span class="cstat-no" title="statement not covered" >      &lt;Popover id="filter-popover"&gt;</span>
+        &lt;div style={{ width: '300px' }}&gt;
+          &lt;PopoverSection
+            title={t('Longitude &amp; Latitude columns')}
+            isSelected={this.state.type === spatialTypes.latlong}
+            onSelect={this.setType.bind(this, spatialTypes.latlong)}
+          &gt;
+            &lt;Row&gt;
+              &lt;Col md={6}&gt;
+                Longitude
+                {this.renderSelect('lonCol', spatialTypes.latlong)}
+              &lt;/Col&gt;
+              &lt;Col md={6}&gt;
+                Latitude
+                {this.renderSelect('latCol', spatialTypes.latlong)}
+              &lt;/Col&gt;
+            &lt;/Row&gt;
+          &lt;/PopoverSection&gt;
+          &lt;PopoverSection
+            title={t('Delimited long &amp; lat single column')}
+            info={t(
+              'Multiple formats accepted, look the geopy.points ' +
+              'Python library for more details')}
+            isSelected={this.state.type === spatialTypes.delimited}
+            onSelect={this.setType.bind(this, spatialTypes.delimited)}
+          &gt;
+            &lt;Row&gt;
+              &lt;Col md={6}&gt;
+                Column
+                {this.renderSelect('lonlatCol', spatialTypes.delimited)}
+              &lt;/Col&gt;
+              &lt;Col md={6}&gt;
+                {t('Reverse lat/long ')}
+                &lt;Checkbox checked={this.state.reverseCheckbox} onChange={this.toggleCheckbox} /&gt;
+              &lt;/Col&gt;
+            &lt;/Row&gt;
+          &lt;/PopoverSection&gt;
+          &lt;PopoverSection
+            title={t('Geohash')}
+            isSelected={this.state.type === spatialTypes.geohash}
+            onSelect={this.setType.bind(this, spatialTypes.geohash)}
+          &gt;
+            &lt;Row&gt;
+              &lt;Col md={6}&gt;
+                Column
+                {this.renderSelect('geohashCol', spatialTypes.geohash)}
+              &lt;/Col&gt;
+            &lt;/Row&gt;
+          &lt;/PopoverSection&gt;
+          &lt;div className="clearfix"&gt;
+            &lt;Button
+              bsSize="small"
+              className="float-left ok"
+              bsStyle="primary"
+              onClick={this.close.bind(this)}
+            &gt;
+              Ok
+            &lt;/Button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/Popover&gt;
+    );
+  }
+  render() <span class="fstat-no" title="function not covered" >{</span>
+    return (
+<span class="cstat-no" title="statement not covered" >      &lt;div&gt;</span>
+        &lt;ControlHeader {...this.props} /&gt;
+        &lt;OverlayTrigger
+          animation={this.props.animation}
+          container={document.body}
+          trigger="click"
+          rootClose
+          ref="trigger"
+          placement="right"
+          overlay={this.renderPopover()}
+        &gt;
+          &lt;Label style={{ cursor: 'pointer' }}&gt;
+            {this.renderLabelContent()}
+          &lt;/Label&gt;
+        &lt;/OverlayTrigger&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+&nbsp;
+SpatialControl.propTypes = propTypes;
+SpatialControl.defaultProps = defaultProps;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

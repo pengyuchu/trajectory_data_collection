@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/dashboard/util/logging/findNonTabChildChartIds.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">src/dashboard/util/logging/</a> findNonTabChildChartIds.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/27</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/24</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import { TABS_TYPE, CHART_TYPE } from '../componentTypes';</span>
+&nbsp;
+// This function traverses the layout from the passed id, returning an array
+// of any child chartIds NOT nested within a Tabs component. These helps us identify
+// if the charts at a given "Tabs" level are loaded
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function findNonTabChildChartIds({ <span class="cstat-no" title="statement not covered" >id, layout }) {</span></span></span>
+  const <span class="cstat-no" title="statement not covered" >chartIds = [];</span>
+  function <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >recurseFromNode(node) {</span></span>
+    if (<span class="cstat-no" title="statement not covered" >node &amp;&amp; node.type === CHART_TYPE) {</span>
+      if (<span class="cstat-no" title="statement not covered" >node.meta &amp;&amp; node.meta.chartId) {</span>
+        chartIds.<span class="cstat-no" title="statement not covered" >push(node.meta.chartId);</span>
+      }
+    } else <span class="cstat-no" title="statement not covered" >if (</span>
+      node &amp;&amp;
+      node.type !== TABS_TYPE &amp;&amp;
+      node.children &amp;&amp;
+      node.children.length
+    ) {
+      node.<span class="cstat-no" title="statement not covered" >children.forEach(<span class="fstat-no" title="function not covered" >childId =&gt; {</span></span>
+        const <span class="cstat-no" title="statement not covered" >child = layout[childId];</span>
+        if (<span class="cstat-no" title="statement not covered" >child) {</span>
+          recurseFromNode(<span class="cstat-no" title="statement not covered" >child);</span>
+        }
+      });
+    }
+  }
+&nbsp;
+  recurseFromNode(<span class="cstat-no" title="statement not covered" >layout[id]);</span>
+&nbsp;
+  return <span class="cstat-no" title="statement not covered" >chartIds;</span>
+}
+&nbsp;
+// This method is called frequently, so cache results
+<span class="cstat-no" title="statement not covered" >let cachedLayout;</span>
+<span class="cstat-no" title="statement not covered" >let cachedIdsLookup = {};</span>
+export default <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >findNonTabChildChartIdsWithCache({ <span class="cstat-no" title="statement not covered" >id, layout }) {</span></span></span></span>
+  if (<span class="cstat-no" title="statement not covered" >cachedLayout === layout &amp;&amp; cachedIdsLookup[id]) {</span>
+    return <span class="cstat-no" title="statement not covered" >cachedIdsLookup[id];</span>
+  } else <span class="cstat-no" title="statement not covered" >if (layout !== cachedLayout) {</span>
+    cachedLayout = <span class="cstat-no" title="statement not covered" >layout;</span>
+    cachedIdsLookup = <span class="cstat-no" title="statement not covered" >{};</span>
+  }
+  cachedIdsLookup[<span class="cstat-no" title="statement not covered" >id] = findNonTabChildChartIds({ layout, id });</span>
+  return <span class="cstat-no" title="statement not covered" >cachedIdsLookup[id];</span>
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,1004 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/SqlLab/components/VisualizeModal.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/SqlLab/components/</a> VisualizeModal.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">98.47% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>129/131</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">83.08% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>54/65</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">93.1% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>27/29</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">99.17% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>120/121</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">48×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">38×</span>
+<span class="cline-any cline-yes">38×</span>
+<span class="cline-any cline-yes">38×</span>
+<span class="cline-any cline-yes">38×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">38×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">38×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">72×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="branch-1 cbranch-no" title="branch not covered" ><span class="missing-if-branch" title="else path not taken" >E</span><span class="branch-1 cbranch-no" title="branch not covered" ><span class="missing-if-branch" title="if path not taken" >I</span>/</span></span></span>* eslint no-undef: 2 */
+import moment from 'moment';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { Alert, Button, Col, Modal } from 'react-bootstrap';
+&nbsp;
+import Select from 'react-select';
+import { Table } from 'reactable';
+import shortid from 'shortid';
+import { exportChart } from '../../explore/exploreUtils';
+import * as actions from '../actions';
+import { VISUALIZE_VALIDATION_ERRORS } from '../constants';
+import visTypes from '../../explore/visTypes';
+import { t } from '../../locales';
+&nbsp;
+const CHART_TYPES = Object.keys(visTypes)
+  .filter(typeName =&gt; !!visTypes[typeName].showOnExplore)
+  .map((typeName) =&gt; {
+    const vis = visTypes[typeName];
+    return {
+      value: typeName,
+      label: vis.label,
+      requiresTime: !!vis.requiresTime,
+    };
+  });
+&nbsp;
+const propTypes = {
+  actions: PropTypes.object.isRequired,
+  onHide: PropTypes.func,
+  query: PropTypes.object,
+  show: PropTypes.bool,
+  schema: PropTypes.string,
+  datasource: PropTypes.string,
+  errorMessage: PropTypes.string,
+  timeout: PropTypes.number,
+};
+const defaultProps = {
+  show: false,
+  query: {},
+  onHide: () =&gt; <span class="fstat-no" title="function not covered" >{</span>},
+};
+&nbsp;
+class VisualizeModal extends React.PureComponent {
+  constructor(props) {
+    super(<span class="branch-1 cbranch-no" title="branch not covered" >p</span>rops);
+    this.state = {
+      chartType: CHART_TYPES[0],
+      datasourceName: this.datasourceName(),
+      columns: this.getColumnFromProps(),
+      schema: props.query ? props.query.schema : <span class="branch-1 cbranch-no" title="branch not covered" >null,</span>
+      hints: [],
+    };
+  }
+  componentDidMount() <span class="fstat-no" title="function not covered" >{</span>
+    this.<span class="cstat-no" title="statement not covered" >validate();</span>
+  }
+  getColumnFromProps() {
+    const props = this.props;
+    if (!props ||
+        !props.query ||
+        !props.query.results ||
+        !props.query.results.columns) {
+      return {};
+    }
+    const columns = {};
+    props.query.results.columns.forEach((col) =&gt; {
+      columns[col.name] = col;
+    });
+    return columns;
+  }
+  datasourceName() {
+    const { query } = this.props;
+    const uniqueId = shortid.generate();
+    let datasourceName = uniqueId;
+    if (<span class="missing-if-branch" title="else path not taken" >E</span>query) {
+      datasourceName = query.user ? `${query.user}-` : '';
+      datasourceName += query.db ? `${query.db}-` : '';
+      datasourceName += `${query.tab}-${uniqueId}`;
+    }
+    return datasourceName;
+  }
+  validate() {
+    const hints = [];
+    const cols = this.mergedColumns();
+    const re = /^\w+$/;
+    Object.keys(cols).forEach((colName) =&gt; {
+      if (!re.test(colName)) {
+        hints.push(
+          &lt;div&gt;
+            {t('%s is not right as a column name, please alias it ' +
+            '(as in SELECT count(*) ', colName)} &lt;strong&gt;{t('AS my_alias')}&lt;/strong&gt;) {t('using only ' +
+            'alphanumeric characters and underscores')}
+          &lt;/div&gt;);
+      }
+    });
+    if (this.state.chartType === null) {
+      hints.push(VISUALIZE_VALIDATION_ERRORS.REQUIRE_CHART_TYPE);
+    } else if (this.state.chartType.requiresTime) {
+      let hasTime = false;
+      for (const colName in cols) {
+        const col = cols[colName];
+        if (col.hasOwnProperty('is_date') &amp;&amp; col.is_date) {
+          hasTime = true;
+        }
+      }
+      if (!hasTime) {
+        hints.push(VISUALIZE_VALIDATION_ERRORS.REQUIRE_TIME);
+      }
+    }
+    this.setState({ hints });
+  }
+  changeChartType(option) {
+    this.setState({ chartType: option }, this.validate);
+  }
+  mergedColumns() {
+    const columns = Object.assign({}, this.state.columns);
+    if (<span class="missing-if-branch" title="else path not taken" >E</span>this.props.query &amp;&amp; this.props.query.results.columns) {
+      this.props.query.results.columns.forEach((col) =&gt; {
+        if (columns[col.name] === undefined) {
+          columns[col.name] = col;
+        }
+      });
+    }
+    return columns;
+  }
+  buildVizOptions() {
+    return {
+      chartType: this.state.chartType.value,
+      schema: this.state.schema,
+      datasourceName: this.state.datasourceName,
+      columns: this.state.columns,
+      sql: this.props.query.sql,
+      dbId: this.props.query.dbId,
+      templateParams: this.props.query.templateParams,
+    };
+  }
+  buildVisualizeAdvise() {
+    let advise;
+    const timeout = this.props.timeout;
+    const queryDuration = moment.duration(this.props.query.endDttm - this.props.query.startDttm);
+    if (Math.round(queryDuration.asMilliseconds()) &gt; timeout * 1000) {
+      advise = (
+        &lt;Alert bsStyle="warning"&gt;
+          This query took {Math.round(queryDuration.asSeconds())} seconds to run,
+          and the explore view times out at {timeout} seconds,
+          following this flow will most likely lead to your query timing out.
+          We recommend your summarize your data further before following that flow.
+          If activated you can use the &lt;strong&gt;CREATE TABLE AS&lt;/strong&gt; feature
+          to store a summarized data set that you can then explore.
+        &lt;/Alert&gt;);
+    }
+    return advise;
+  }
+  visualize() {
+    this.props.actions.createDatasource(this.buildVizOptions(), this)
+      .done((resp) =&gt; {
+        const columns = Object.keys(this.state.columns).map(k =&gt; this.state.columns[k]);
+        const data = JSON.parse(resp);
+        const mainGroupBy = columns.filter(d =&gt; d.is_dim)[0];
+        const formData = {
+          datasource: `${data.table_id}__table`,
+          viz_type: this.state.chartType.value,
+          since: '100 years ago',
+          limit: '0',
+        };
+        if (<span class="missing-if-branch" title="else path not taken" >E</span>mainGroupBy) {
+          formData.groupby = [mainGroupBy.name];
+        }
+        this.props.actions.addInfoToast(t('Creating a data source and creating a new tab'));
+&nbsp;
+        // open new window for data visualization
+        exportChart(formData);
+      })
+      .fail(() =&gt; {
+        this.props.actions.addDangerToast(this.props.errorMessage);
+      });
+  }
+  changeDatasourceName(event) {
+    this.setState({ datasourceName: event.target.value }, this.validate);
+  }
+  changeCheckbox(attr, columnName, event) {
+    let columns = this.mergedColumns();
+    const column = Object.assign({}, columns[columnName], { [attr]: event.target.checked });
+    columns = Object.assign({}, columns, { [columnName]: column });
+    this.setState({ columns }, this.validate);
+  }
+  changeAggFunction(columnName, option) {
+    let columns = this.mergedColumns();
+    c</span>onst val = (option) ? option.value : <span class="branch-1 cbranch-no" title="branch not covered" >null;
+    const column = Object.assign({}, columns[columnName], { agg: val });
+    columns = Object.assign({}, columns, { [columnName]: column });
+    this.setState({ columns }, this.validate);
+  }
+  render() {
+    if (!(this.props.query) || !(this.props.query.results) || !(this.props.query.results.columns)) {
+      return (
+        &lt;div className="VisualizeModal"&gt;
+          &lt;Modal show={this.props.show} onHide={this.props.onHide}&gt;
+            &lt;Modal.Body&gt;
+              {t('No results available for this query')}
+            &lt;/Modal.Body&gt;
+          &lt;/Modal&gt;
+        &lt;/div&gt;
+      );
+    }
+    const tableData = this.props.query.results.columns.map(col =&gt; ({
+      column: col.name,
+      is_dimension: (
+        &lt;input
+          type="checkbox"
+          onChange={this.changeCheckbox.bind(this, 'is_dim', col.name)}
+          checked={(this.state.columns[col.name]) ? this.state.columns[col.name].is_dim : false}
+          className="form-control"
+        /&gt;
+      ),
+      is_date: (
+        &lt;input
+          type="checkbox"
+          className="form-control"
+          onChange={this.changeCheckbox.bind(this, 'is_date', col.name)}
+          checked={(this.state.columns[col.name]) ? this.state.columns[col.name].is_date : false}
+        /&gt;
+      ),
+      agg_func: (
+        &lt;Select
+          options={[
+            { value: 'sum', label: 'SUM(x)' },
+            { value: 'min', label: 'MIN(x)' },
+            { value: 'max', label: 'MAX(x)' },
+            { value: 'avg', label: 'AVG(x)' },
+            { value: 'count_distinct', label: 'COUNT(DISTINCT x)' },
+          ]}
+          onChange={this.changeAggFunction.bind(this, col.name)}
+          value={(this.state.columns[col.name]) ? this.state.columns[col.name].agg : null}
+        /&gt;
+      ),
+    }));
+    const alerts = this.state.hints.map((hint, i) =&gt; (
+      &lt;Alert bsStyle="warning" key={i}&gt;{hint}&lt;/Alert&gt;
+    ));
+    const modal = (
+      &lt;div className="VisualizeModal"&gt;
+        &lt;Modal show={this.props.show} onHide={this.props.onHide}&gt;
+          &lt;Modal.Header closeButton&gt;
+            &lt;Modal.Title&gt;{t('Visualize')}&lt;/Modal.Title&gt;
+          &lt;/Modal.Header&gt;
+          &lt;Modal.Body&gt;
+            {alerts}
+            {this.buildVisualizeAdvise()}
+            &lt;div className="row"&gt;
+              &lt;Col md={6}&gt;
+                {t('Chart Type')}
+                &lt;Select
+                  name="select-chart-type"
+                  placeholder={t('[Chart Type]')}
+                  options={CHART_TYPES}
+                  value={(this.state.chartType) ? this.state.chartType.value : null}
+                  autosize={false}
+                  onChange={this.changeChartType.bind(this)}
+                /&gt;
+              &lt;/Col&gt;
+              &lt;Col md={6}&gt;
+                {t('Datasource Name')}
+                &lt;input
+                  type="text"
+                  className="form-control input-sm"
+                  placeholder={t('datasource name')}
+                  onChange={this.changeDatasourceName.bind(this)}
+                  value={this.state.datasourceName}
+                /&gt;
+              &lt;/Col&gt;
+            &lt;/div&gt;
+            &lt;hr /&gt;
+            &lt;Table
+              className="table table-condensed"
+              columns={['column', 'is_dimension', 'is_date', 'agg_func']}
+              data={tableData}
+            /&gt;
+            &lt;Button
+              onClick={this.visualize.bind(this)}
+              bsStyle="primary"
+              disabled={(this.state.hints.length &gt; 0)}
+            &gt;
+              {t('Visualize')}
+            &lt;/Button&gt;
+          &lt;/Modal.Body&gt;
+        &lt;/Modal&gt;
+      &lt;/div&gt;
+    );
+    return modal;
+  }
+}
+VisualizeModal.propTypes = propTypes;
+VisualizeModal.defaultProps = defaultProps;
+&nbsp;
+function mapStateToProps({ sqlLab }) {
+  return {
+    datasource: sqlLab.datasource,
+    errorMessage: sqlLab.errorMessage,
+    timeout: sqlLab.common ? sqlLab.common.conf.SUPERSET_WEBSERVER_TIMEOUT : <span class="branch-1 cbranch-no" title="branch not covered" >null,</span>
+  };
+}
+&nbsp;
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(actions, dispatch),
+  };
+}
+&nbsp;
+export { VisualizeModal };
+export default connect(mapStateToProps, mapDispatchToProps)(VisualizeModal);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

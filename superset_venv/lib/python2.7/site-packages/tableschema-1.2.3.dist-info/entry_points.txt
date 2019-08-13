@@ -1,0 +1,3 @@
+[console_scripts]
+tableschema = tableschema.cli:main
+

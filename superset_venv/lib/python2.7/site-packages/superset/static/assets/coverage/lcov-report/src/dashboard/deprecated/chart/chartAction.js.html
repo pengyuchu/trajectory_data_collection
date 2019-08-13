@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/dashboard/deprecated/chart/chartAction.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">src/dashboard/deprecated/chart/</a> chartAction.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/122</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/54</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/25</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/98</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import { getExploreUrlAndPayload, getAnnotationJsonUrl } from '../../../explore/exploreUtils';</span>
+<span class="cstat-no" title="statement not covered" >import { requiresQuery, ANNOTATION_SOURCE_TYPES } from '../../../modules/AnnotationTypes';</span>
+<span class="cstat-no" title="statement not covered" >import { Logger, LOG_ACTIONS_LOAD_CHART } from '../../../logger';</span>
+<span class="cstat-no" title="statement not covered" >import { COMMON_ERR_MESSAGES } from '../../../common';</span>
+<span class="cstat-no" title="statement not covered" >import { t } from '../../../locales';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >const $ = window.$ = require('jquery');</span>
+&nbsp;
+export <span class="cstat-no" title="statement not covered" >const CHART_UPDATE_STARTED = 'CHART_UPDATE_STARTED';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >chartUpdateStarted(queryRequest, latestQueryFormData, key) {</span></span></span>
+  return <span class="cstat-no" title="statement not covered" >{ type: CHART_UPDATE_STARTED, queryRequest, latestQueryFormData, key };</span>
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" >const CHART_UPDATE_SUCCEEDED = 'CHART_UPDATE_SUCCEEDED';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >chartUpdateSucceeded(queryResponse, key) {</span></span></span>
+  return <span class="cstat-no" title="statement not covered" >{ type: CHART_UPDATE_SUCCEEDED, queryResponse, key };</span>
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" >const CHART_UPDATE_STOPPED = 'CHART_UPDATE_STOPPED';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >chartUpdateStopped(key) {</span></span></span>
+  return <span class="cstat-no" title="statement not covered" >{ type: CHART_UPDATE_STOPPED, key };</span>
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" >const CHART_UPDATE_TIMEOUT = 'CHART_UPDATE_TIMEOUT';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >chartUpdateTimeout(statusText, timeout, key) {</span></span></span>
+  return <span class="cstat-no" title="statement not covered" >{ type: CHART_UPDATE_TIMEOUT, statusText, timeout, key };</span>
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" >const CHART_UPDATE_FAILED = 'CHART_UPDATE_FAILED';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >chartUpdateFailed(queryResponse, key) {</span></span></span>
+  return <span class="cstat-no" title="statement not covered" >{ type: CHART_UPDATE_FAILED, queryResponse, key };</span>
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" >const CHART_RENDERING_FAILED = 'CHART_RENDERING_FAILED';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >chartRenderingFailed(error, key) {</span></span></span>
+  return <span class="cstat-no" title="statement not covered" >{ type: CHART_RENDERING_FAILED, error, key };</span>
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" >const CHART_RENDERING_SUCCEEDED = 'CHART_RENDERING_SUCCEEDED';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >chartRenderingSucceeded(key) {</span></span></span>
+  return <span class="cstat-no" title="statement not covered" >{ type: CHART_RENDERING_SUCCEEDED, key };</span>
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" >const REMOVE_CHART = 'REMOVE_CHART';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >removeChart(key) {</span></span></span>
+  return <span class="cstat-no" title="statement not covered" >{ type: REMOVE_CHART, key };</span>
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" >const ANNOTATION_QUERY_SUCCESS = 'ANNOTATION_QUERY_SUCCESS';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >annotationQuerySuccess(annotation, queryResponse, key) {</span></span></span>
+  return <span class="cstat-no" title="statement not covered" >{ type: ANNOTATION_QUERY_SUCCESS, annotation, queryResponse, key };</span>
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" >const ANNOTATION_QUERY_STARTED = 'ANNOTATION_QUERY_STARTED';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >annotationQueryStarted(annotation, queryRequest, key) {</span></span></span>
+  return <span class="cstat-no" title="statement not covered" >{ type: ANNOTATION_QUERY_STARTED, annotation, queryRequest, key };</span>
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" >const ANNOTATION_QUERY_FAILED = 'ANNOTATION_QUERY_FAILED';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >annotationQueryFailed(annotation, queryResponse, key) {</span></span></span>
+  return <span class="cstat-no" title="statement not covered" >{ type: ANNOTATION_QUERY_FAILED, annotation, queryResponse, key };</span>
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >runAnnotationQuery(annotation, <span class="cstat-no" title="statement not covered" >timeout = 60, <span class="cstat-no" title="statement not covered" >formData = null, <span class="cstat-no" title="statement not covered" >key) {</span></span></span></span></span></span>
+  return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function (dispatch, getState) {</span></span>
+    const <span class="cstat-no" title="statement not covered" >sliceKey = key || Object.keys(getState().charts)[0];</span>
+    const <span class="cstat-no" title="statement not covered" >fd = formData || getState().charts[sliceKey].latestQueryFormData;</span>
+&nbsp;
+    if (<span class="cstat-no" title="statement not covered" >!requiresQuery(annotation.sourceType)) {</span>
+      return <span class="cstat-no" title="statement not covered" >Promise.resolve();</span>
+    }
+&nbsp;
+    const <span class="cstat-no" title="statement not covered" >granularity = fd.time_grain_sqla || fd.granularity;</span>
+    fd.<span class="cstat-no" title="statement not covered" >time_grain_sqla = granularity;</span>
+    fd.<span class="cstat-no" title="statement not covered" >granularity = granularity;</span>
+&nbsp;
+    const <span class="cstat-no" title="statement not covered" >sliceFormData = Object.keys(annotation.overrides)</span>
+      .reduce(<span class="fstat-no" title="function not covered" >(d, k) =&gt; ({</span>
+        ...<span class="cstat-no" title="statement not covered" >d,</span>
+        [k]: annotation.overrides[k] || fd[k],
+      }), {});
+    const <span class="cstat-no" title="statement not covered" >isNative = annotation.sourceType === ANNOTATION_SOURCE_TYPES.NATIVE;</span>
+    const <span class="cstat-no" title="statement not covered" >url = getAnnotationJsonUrl(annotation.value, sliceFormData, isNative);</span>
+    const <span class="cstat-no" title="statement not covered" >queryRequest = $.ajax({</span>
+      url,
+      dataType: 'json',
+      timeout: timeout * 1000,
+    });
+    dispatch(<span class="cstat-no" title="statement not covered" >annotationQueryStarted(annotation, queryRequest, sliceKey));</span>
+    return <span class="cstat-no" title="statement not covered" >queryRequest</span>
+      .then(<span class="fstat-no" title="function not covered" >queryResponse =&gt; <span class="cstat-no" title="statement not covered" >dispatch(annotationQuerySuccess(annotation, queryResponse, sliceKey)))</span></span>
+      .catch(<span class="fstat-no" title="function not covered" >(err) =&gt; {</span>
+        if (<span class="cstat-no" title="statement not covered" >err.statusText === 'timeout') {</span>
+          dispatch(<span class="cstat-no" title="statement not covered" >annotationQueryFailed(annotation, { error: 'Query Timeout' }, sliceKey));</span>
+        } else <span class="cstat-no" title="statement not covered" >if ((err.responseJSON.error || '').toLowerCase().startsWith('no data')) {</span>
+          dispatch(<span class="cstat-no" title="statement not covered" >annotationQuerySuccess(annotation, err, sliceKey));</span>
+        } else <span class="cstat-no" title="statement not covered" >if (err.statusText !== 'abort') {</span>
+          dispatch(<span class="cstat-no" title="statement not covered" >annotationQueryFailed(annotation, err.responseJSON, sliceKey));</span>
+        }
+      });
+  };
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" >const TRIGGER_QUERY = 'TRIGGER_QUERY';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >triggerQuery(<span class="cstat-no" title="statement not covered" >value = true, <span class="cstat-no" title="statement not covered" >key) {</span></span></span></span></span>
+  return <span class="cstat-no" title="statement not covered" >{ type: TRIGGER_QUERY, value, key };</span>
+}
+&nbsp;
+// this action is used for forced re-render without fetch data
+export <span class="cstat-no" title="statement not covered" >const RENDER_TRIGGERED = 'RENDER_TRIGGERED';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >renderTriggered(value, key) {</span></span></span>
+  return <span class="cstat-no" title="statement not covered" >{ type: RENDER_TRIGGERED, value, key };</span>
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" >const UPDATE_QUERY_FORM_DATA = 'UPDATE_QUERY_FORM_DATA';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >updateQueryFormData(value, key) {</span></span></span>
+  return <span class="cstat-no" title="statement not covered" >{ type: UPDATE_QUERY_FORM_DATA, value, key };</span>
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" >const RUN_QUERY = 'RUN_QUERY';</span>
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >runQuery(formData, <span class="cstat-no" title="statement not covered" >force = false, <span class="cstat-no" title="statement not covered" >timeout = 60, <span class="cstat-no" title="statement not covered" >key) {</span></span></span></span></span></span>
+  return <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(dispatch) =&gt; {</span></span>
+    const { url, payload } = <span class="cstat-no" title="statement not covered" >getExploreUrlAndPayload({</span>
+      formData,
+      endpointType: 'json',
+      force,
+    });
+    const <span class="cstat-no" title="statement not covered" >logStart = Logger.getTimestamp();</span>
+    const <span class="cstat-no" title="statement not covered" >queryRequest = $.ajax({</span>
+      type: 'POST',
+      url,
+      dataType: 'json',
+      data: {
+        form_data: JSON.stringify(payload),
+      },
+      timeout: timeout * 1000,
+    });
+    const <span class="cstat-no" title="statement not covered" >queryPromise = Promise.resolve(dispatch(chartUpdateStarted(queryRequest, payload, key)))</span>
+      .then(<span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" >queryRequest)</span></span>
+      .then(<span class="fstat-no" title="function not covered" >(queryResponse) =&gt; {</span>
+        Logger.<span class="cstat-no" title="statement not covered" >append(LOG_ACTIONS_LOAD_CHART, {</span>
+          slice_id: key,
+          is_cached: queryResponse.is_cached,
+          force_refresh: force,
+          row_count: queryResponse.rowcount,
+          datasource: formData.datasource,
+          start_offset: logStart,
+          duration: Logger.getTimestamp() - logStart,
+          has_extra_filters: formData.extra_filters &amp;&amp; formData.extra_filters.length &gt; 0,
+          viz_type: formData.viz_type,
+        });
+        return <span class="cstat-no" title="statement not covered" >dispatch(chartUpdateSucceeded(queryResponse, key));</span>
+      })
+      .catch(<span class="fstat-no" title="function not covered" >(err) =&gt; {</span>
+        Logger.<span class="cstat-no" title="statement not covered" >append(LOG_ACTIONS_LOAD_CHART, {</span>
+          slice_id: key,
+          has_err: true,
+          datasource: formData.datasource,
+          start_offset: logStart,
+          duration: Logger.getTimestamp() - logStart,
+        });
+        if (<span class="cstat-no" title="statement not covered" >err.statusText === 'timeout') {</span>
+          dispatch(<span class="cstat-no" title="statement not covered" >chartUpdateTimeout(err.statusText, timeout, key));</span>
+        } else <span class="cstat-no" title="statement not covered" >if (err.statusText === 'abort') {</span>
+          dispatch(<span class="cstat-no" title="statement not covered" >chartUpdateStopped(key));</span>
+        } else {
+          let <span class="cstat-no" title="statement not covered" >errObject;</span>
+          if (<span class="cstat-no" title="statement not covered" >err.responseJSON) {</span>
+            errObject = <span class="cstat-no" title="statement not covered" >err.responseJSON;</span>
+          } else <span class="cstat-no" title="statement not covered" >if (err.stack) {</span>
+            errObject = <span class="cstat-no" title="statement not covered" >{</span>
+              error: t('Unexpected error: ') + err.description,
+              stacktrace: err.stack,
+            };
+          } else <span class="cstat-no" title="statement not covered" >if (err.responseText &amp;&amp; err.responseText.indexOf('CSRF') &gt;= 0) {</span>
+            errObject = <span class="cstat-no" title="statement not covered" >{</span>
+              error: COMMON_ERR_MESSAGES.SESSION_TIMED_OUT,
+            };
+          } else {
+            errObject = <span class="cstat-no" title="statement not covered" >{</span>
+              error: t('Unexpected error.'),
+            };
+          }
+          dispatch(<span class="cstat-no" title="statement not covered" >chartUpdateFailed(errObject, key));</span>
+        }
+      });
+    const <span class="cstat-no" title="statement not covered" >annotationLayers = formData.annotation_layers || [];</span>
+    return <span class="cstat-no" title="statement not covered" >Promise.all([</span>
+      queryPromise,
+      dispatch(triggerQuery(false, key)),
+      dispatch(updateQueryFormData(payload, key)),
+      ...annotationLayers.map(<span class="fstat-no" title="function not covered" >x =&gt; <span class="cstat-no" title="statement not covered" >dispatch(runAnnotationQuery(x, timeout, formData, key))),</span></span>
+    ]);
+  };
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

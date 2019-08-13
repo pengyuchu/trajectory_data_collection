@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/visualizations/deckgl/layers/common.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">src/visualizations/deckgl/layers/</a> common.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/34</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/28</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import dompurify from 'dompurify';</span>
+<span class="cstat-no" title="statement not covered" >import { fitBounds } from 'viewport-mercator-project';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >import sandboxedEval from '../../../modules/sandbox';</span>
+&nbsp;
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >getBounds(points) {</span></span></span>
+  const <span class="cstat-no" title="statement not covered" >latExt = d3.extent(points, <span class="fstat-no" title="function not covered" >d =&gt; <span class="cstat-no" title="statement not covered" >d[1]);</span></span></span>
+  const <span class="cstat-no" title="statement not covered" >lngExt = d3.extent(points, <span class="fstat-no" title="function not covered" >d =&gt; <span class="cstat-no" title="statement not covered" >d[0]);</span></span></span>
+  return <span class="cstat-no" title="statement not covered" >[</span>
+    [lngExt[0], latExt[0]],
+    [lngExt[1], latExt[1]],
+  ];
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >fitViewport(viewport, points, <span class="cstat-no" title="statement not covered" >padding = 10) {</span></span></span></span>
+  try <span class="cstat-no" title="statement not covered" >{</span>
+    const <span class="cstat-no" title="statement not covered" >bounds = getBounds(points);</span>
+    return {
+      ...<span class="cstat-no" title="statement not covered" >viewport,</span>
+      ...fitBounds({
+        height: viewport.height,
+        width: viewport.width,
+        padding,
+        bounds,
+      }),
+    };
+  } catch (e) {
+    /* eslint no-console: 0 */
+    console.<span class="cstat-no" title="statement not covered" >error('Could not auto zoom', e);</span>
+    return <span class="cstat-no" title="statement not covered" >viewport;</span>
+  }
+}
+&nbsp;
+export <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function <span class="cstat-no" title="statement not covered" >commonLayerProps(formData, slice) {</span></span></span>
+  const <span class="cstat-no" title="statement not covered" >fd = formData;</span>
+  let <span class="cstat-no" title="statement not covered" >onHover;</span>
+  if (<span class="cstat-no" title="statement not covered" >fd.js_tooltip) {</span>
+    const <span class="cstat-no" title="statement not covered" >jsTooltip = sandboxedEval(fd.js_tooltip);</span>
+    onHover = (<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >o) =&gt; {</span></span>
+      if (<span class="cstat-no" title="statement not covered" >o.picked) {</span>
+        slice.<span class="cstat-no" title="statement not covered" >setTooltip({</span>
+          content: dompurify.sanitize(jsTooltip(o)),
+          x: o.x,
+          y: o.y,
+        });
+      } else {
+        slice.<span class="cstat-no" title="statement not covered" >setTooltip(null);</span>
+      }
+    };
+  }
+  let <span class="cstat-no" title="statement not covered" >onClick;</span>
+  if (<span class="cstat-no" title="statement not covered" >fd.js_onclick_href) {</span>
+    onClick = (<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >o) =&gt; {</span></span>
+      const <span class="cstat-no" title="statement not covered" >href = sandboxedEval(fd.js_onclick_href)(o);</span>
+      window.<span class="cstat-no" title="statement not covered" >open(href);</span>
+    };
+  }
+  return <span class="cstat-no" title="statement not covered" >{</span>
+    onClick,
+    onHover,
+    pickable: Boolean(onHover),
+  };
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

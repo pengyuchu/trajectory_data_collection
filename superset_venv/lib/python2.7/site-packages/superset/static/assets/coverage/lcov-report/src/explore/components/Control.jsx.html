@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/explore/components/Control.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/explore/components/</a> Control.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">39.53% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>17/43</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">38.1% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>16/42</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import PropTypes from 'prop-types';
+&nbsp;
+import controlMap from './controls';
+&nbsp;
+const controlTypes = Object.keys(controlMap);
+&nbsp;
+const propTypes = {
+  actions: PropTypes.object.isRequired,
+  name: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(controlTypes).isRequired,
+  hidden: PropTypes.bool,
+  label: PropTypes.string.isRequired,
+  choices: PropTypes.arrayOf(PropTypes.array),
+  description: PropTypes.string,
+  tooltipOnClick: PropTypes.func,
+  places: PropTypes.number,
+  validators: PropTypes.array,
+  validationErrors: PropTypes.array,
+  renderTrigger: PropTypes.bool,
+  rightNode: PropTypes.node,
+  formData: PropTypes.object,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.object,
+    PropTypes.bool,
+    PropTypes.array,
+    PropTypes.func]),
+};
+&nbsp;
+const defaultProps = {
+  renderTrigger: false,
+  validators: [],
+  hidden: false,
+  validationErrors: [],
+};
+&nbsp;
+export default class Control extends React.PureComponent {
+  constructor(<span class="fstat-no" title="function not covered" >props) {</span>
+    super(<span class="cstat-no" title="statement not covered" >props);</span>
+    this.<span class="cstat-no" title="statement not covered" >state = { hovered: false };</span>
+    this.<span class="cstat-no" title="statement not covered" >validate = this.validate.bind(this);</span>
+    this.<span class="cstat-no" title="statement not covered" >onChange = this.onChange.bind(this);</span>
+  }
+  componentDidMount() <span class="fstat-no" title="function not covered" >{</span>
+    this.<span class="cstat-no" title="statement not covered" >validateAndSetValue(this.props.value, []);</span>
+  }
+  onChange(<span class="fstat-no" title="function not covered" >value, errors) {</span>
+    this.<span class="cstat-no" title="statement not covered" >validateAndSetValue(value, errors);</span>
+  }
+  setHover(<span class="fstat-no" title="function not covered" >hovered) {</span>
+    this.<span class="cstat-no" title="statement not covered" >setState({ hovered });</span>
+  }
+  validateAndSetValue(<span class="fstat-no" title="function not covered" >value, errors) {</span>
+    let <span class="cstat-no" title="statement not covered" >validationErrors = this.props.validationErrors;</span>
+    let <span class="cstat-no" title="statement not covered" >currentErrors = this.validate(value);</span>
+    if (<span class="cstat-no" title="statement not covered" >errors &amp;&amp; errors.length &gt; 0) {</span>
+      currentErrors = <span class="cstat-no" title="statement not covered" >validationErrors.concat(errors);</span>
+    }
+    if (<span class="cstat-no" title="statement not covered" >validationErrors.length + currentErrors.length &gt; 0) {</span>
+      validationErrors = <span class="cstat-no" title="statement not covered" >currentErrors;</span>
+    }
+&nbsp;
+    if (<span class="cstat-no" title="statement not covered" >value !== this.props.value || validationErrors !== this.props.validationErrors) {</span>
+      this.<span class="cstat-no" title="statement not covered" >props.actions.setControlValue(this.props.name, value, validationErrors);</span>
+    }
+  }
+  validate(<span class="fstat-no" title="function not covered" >value) {</span>
+    const <span class="cstat-no" title="statement not covered" >validators = this.props.validators;</span>
+    const <span class="cstat-no" title="statement not covered" >validationErrors = [];</span>
+    if (<span class="cstat-no" title="statement not covered" >validators &amp;&amp; validators.length &gt; 0) {</span>
+      validators.<span class="cstat-no" title="statement not covered" >forEach(<span class="fstat-no" title="function not covered" >(f) =&gt; {</span></span>
+        const <span class="cstat-no" title="statement not covered" >v = f(value);</span>
+        if (<span class="cstat-no" title="statement not covered" >v) {</span>
+          validationErrors.<span class="cstat-no" title="statement not covered" >push(v);</span>
+        }
+      });
+    }
+    return <span class="cstat-no" title="statement not covered" >validationErrors;</span>
+  }
+  render() <span class="fstat-no" title="function not covered" >{</span>
+    const <span class="cstat-no" title="statement not covered" >ControlType = controlMap[this.props.type];</span>
+    const <span class="cstat-no" title="statement not covered" >divStyle = this.props.hidden ? { display: 'none' } : null;</span>
+    return (
+<span class="cstat-no" title="statement not covered" >      &lt;div</span>
+        style={divStyle}
+        onMouseEnter={this.setHover.bind(this, true)}
+        onMouseLeave={this.setHover.bind(this, false)}
+      &gt;
+        &lt;ControlType
+          onChange={this.onChange}
+          hovered={this.state.hovered}
+          {...this.props}
+        /&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+&nbsp;
+Control.propTypes = propTypes;
+Control.defaultProps = defaultProps;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

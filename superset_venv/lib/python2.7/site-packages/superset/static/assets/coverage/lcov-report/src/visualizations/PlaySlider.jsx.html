@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/visualizations/PlaySlider.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/visualizations/</a> PlaySlider.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/71</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/67</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import React from 'react';</span>
+<span class="cstat-no" title="statement not covered" >import PropTypes from 'prop-types';</span>
+<span class="cstat-no" title="statement not covered" >import { Row, Col } from 'react-bootstrap';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >import Mousetrap from 'mousetrap';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >import 'bootstrap-slider/dist/css/bootstrap-slider.min.css';</span>
+<span class="cstat-no" title="statement not covered" >import ReactBootstrapSlider from 'react-bootstrap-slider';</span>
+<span class="cstat-no" title="statement not covered" >import './PlaySlider.css';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >import { t } from '../locales';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >const propTypes = {</span>
+  start: PropTypes.number.isRequired,
+  step: PropTypes.number.isRequired,
+  end: PropTypes.number.isRequired,
+  values: PropTypes.array.isRequired,
+  onChange: PropTypes.func,
+  loopDuration: PropTypes.number,
+  maxFrames: PropTypes.number,
+  orientation: PropTypes.oneOf(['horizontal', 'vertical']),
+  reversed: PropTypes.bool,
+  disabled: PropTypes.bool,
+};
+&nbsp;
+<span class="cstat-no" title="statement not covered" >const defaultProps = {</span>
+  onChange: () =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >{</span>},</span>
+  loopDuration: 15000,
+  maxFrames: 100,
+  orientation: 'horizontal',
+  reversed: false,
+  disabled: false,
+};
+&nbsp;
+export default class <span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" >PlaySlider extends React.PureComponent {</span></span>
+  constructor(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >props) {</span></span>
+    super(<span class="cstat-no" title="statement not covered" >props);</span>
+    this.<span class="cstat-no" title="statement not covered" >state = { intervalId: null };</span>
+&nbsp;
+    const <span class="cstat-no" title="statement not covered" >range = props.end - props.start;</span>
+    const <span class="cstat-no" title="statement not covered" >frames = Math.min(props.maxFrames, range / props.step);</span>
+    const <span class="cstat-no" title="statement not covered" >width = range / frames;</span>
+    this.<span class="cstat-no" title="statement not covered" >intervalMilliseconds = props.loopDuration / frames;</span>
+    this.<span class="cstat-no" title="statement not covered" >increment = width &lt; props.step ? props.step : width - (width % props.step);</span>
+&nbsp;
+    this.<span class="cstat-no" title="statement not covered" >onChange = this.onChange.bind(this);</span>
+    this.<span class="cstat-no" title="statement not covered" >play = this.play.bind(this);</span>
+    this.<span class="cstat-no" title="statement not covered" >pause = this.pause.bind(this);</span>
+    this.<span class="cstat-no" title="statement not covered" >step = this.step.bind(this);</span>
+    this.<span class="cstat-no" title="statement not covered" >getPlayClass = this.getPlayClass.bind(this);</span>
+    this.<span class="cstat-no" title="statement not covered" >formatter = this.formatter.bind(this);</span>
+  }
+  componentDidMount() <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >{</span></span>
+    Mousetrap.<span class="cstat-no" title="statement not covered" >bind(['space'], this.play);</span>
+  }
+  componentWillUnmount() <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >{</span></span>
+    Mousetrap.<span class="cstat-no" title="statement not covered" >unbind(['space']);</span>
+  }
+  onChange(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >event) {</span></span>
+    this.<span class="cstat-no" title="statement not covered" >props.onChange(event.target.value);</span>
+    if (<span class="cstat-no" title="statement not covered" >this.state.intervalId != null) {</span>
+      this.<span class="cstat-no" title="statement not covered" >pause();</span>
+    }
+  }
+  getPlayClass() <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >{</span></span>
+    if (<span class="cstat-no" title="statement not covered" >this.state.intervalId == null) {</span>
+      return <span class="cstat-no" title="statement not covered" >'fa fa-play fa-lg slider-button';</span>
+    }
+    return <span class="cstat-no" title="statement not covered" >'fa fa-pause fa-lg slider-button';</span>
+  }
+  play() <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >{</span></span>
+    if (<span class="cstat-no" title="statement not covered" >this.props.disabled) {</span>
+      return;
+    }
+    if (<span class="cstat-no" title="statement not covered" >this.state.intervalId != null) {</span>
+      this.<span class="cstat-no" title="statement not covered" >pause();</span>
+    } else {
+      const <span class="cstat-no" title="statement not covered" >id = setInterval(this.step, this.intervalMilliseconds);</span>
+      this.<span class="cstat-no" title="statement not covered" >setState({ intervalId: id });</span>
+    }
+  }
+  pause() <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >{</span></span>
+    clearInterval(<span class="cstat-no" title="statement not covered" >this.state.intervalId);</span>
+    this.<span class="cstat-no" title="statement not covered" >setState({ intervalId: null });</span>
+  }
+  step() <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >{</span></span>
+    if (<span class="cstat-no" title="statement not covered" >this.props.disabled) {</span>
+      return;
+    }
+    let <span class="cstat-no" title="statement not covered" >values = this.props.values.map(<span class="fstat-no" title="function not covered" >value =&gt; <span class="cstat-no" title="statement not covered" >value + this.increment);</span></span></span>
+    if (<span class="cstat-no" title="statement not covered" >values[1] &gt; this.props.end) {</span>
+      const <span class="cstat-no" title="statement not covered" >cr = values[0] - this.props.start;</span>
+      values = <span class="cstat-no" title="statement not covered" >values.map(<span class="fstat-no" title="function not covered" >value =&gt; <span class="cstat-no" title="statement not covered" >value - cr);</span></span></span>
+    }
+    this.<span class="cstat-no" title="statement not covered" >props.onChange(values);</span>
+  }
+  formatter(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >values) {</span></span>
+    if (<span class="cstat-no" title="statement not covered" >this.props.disabled) {</span>
+      return <span class="cstat-no" title="statement not covered" >t('Data has no time steps');</span>
+    }
+&nbsp;
+    let <span class="cstat-no" title="statement not covered" >parts = values;</span>
+    if (<span class="cstat-no" title="statement not covered" >!Array.isArray(values)) {</span>
+      parts = <span class="cstat-no" title="statement not covered" >[values];</span>
+    } else <span class="cstat-no" title="statement not covered" >if (values[0] === values[1]) {</span>
+      parts = <span class="cstat-no" title="statement not covered" >[values[0]];</span>
+    }
+    return <span class="cstat-no" title="statement not covered" >parts.map(<span class="fstat-no" title="function not covered" >value =&gt; (<span class="cstat-no" title="statement not covered" >new Date(value)).toUTCString()).join(' : ');</span></span></span>
+  }
+  render() <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >{</span></span>
+    return (
+<span class="cstat-no" title="statement not covered" >      &lt;Row className="play-slider"&gt;</span>
+        &lt;Col md={1} className="padded"&gt;
+          &lt;i className={this.getPlayClass()} onClick={this.play} /&gt;
+          &lt;i className="fa fa-step-forward fa-lg slider-button " onClick={this.step} /&gt;
+        &lt;/Col&gt;
+        &lt;Col md={11} className="padded"&gt;
+          &lt;ReactBootstrapSlider
+            value={this.props.values}
+            formatter={this.formatter}
+            change={this.onChange}
+            min={this.props.start}
+            max={this.props.end}
+            step={this.props.step}
+            orientation={this.props.orientation}
+            reversed={this.props.reversed}
+            disabled={this.props.disabled ? 'disabled' : 'enabled'}
+          /&gt;
+        &lt;/Col&gt;
+      &lt;/Row&gt;
+    );
+  }
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >PlaySlider.propTypes = propTypes;</span>
+<span class="cstat-no" title="statement not covered" >PlaySlider.defaultProps = defaultProps;</span>
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

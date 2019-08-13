@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/visualizations/chord.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/visualizations/</a> chord.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/42</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/39</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* eslint-disable no-param-reassign */
+<span class="cstat-no" title="statement not covered" >import d3 from 'd3';</span>
+<span class="cstat-no" title="statement not covered" >import { getColorFromScheme } from '../modules/colors';</span>
+<span class="cstat-no" title="statement not covered" >import './chord.css';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function chordViz(slice, json) {</span></span>
+  slice.<span class="cstat-no" title="statement not covered" >container.html('');</span>
+&nbsp;
+  const <span class="cstat-no" title="statement not covered" >div = d3.select(slice.selector);</span>
+  const <span class="cstat-no" title="statement not covered" >nodes = json.data.nodes;</span>
+  const <span class="cstat-no" title="statement not covered" >fd = slice.formData;</span>
+  const <span class="cstat-no" title="statement not covered" >f = d3.format(fd.y_axis_format);</span>
+&nbsp;
+  const <span class="cstat-no" title="statement not covered" >width = slice.width();</span>
+  const <span class="cstat-no" title="statement not covered" >height = slice.height();</span>
+&nbsp;
+  const <span class="cstat-no" title="statement not covered" >outerRadius = Math.min(width, height) / 2 - 10;</span>
+  const <span class="cstat-no" title="statement not covered" >innerRadius = outerRadius - 24;</span>
+&nbsp;
+  let <span class="cstat-no" title="statement not covered" >chord;</span>
+&nbsp;
+  const <span class="cstat-no" title="statement not covered" >arc = d3.svg.arc()</span>
+  .innerRadius(innerRadius)
+  .outerRadius(outerRadius);
+&nbsp;
+  const <span class="cstat-no" title="statement not covered" >layout = d3.layout.chord()</span>
+  .padding(0.04)
+  .sortSubgroups(d3.descending)
+  .sortChords(d3.descending);
+&nbsp;
+  const <span class="cstat-no" title="statement not covered" >path = d3.svg.chord()</span>
+  .radius(innerRadius);
+&nbsp;
+  const <span class="cstat-no" title="statement not covered" >svg = div.append('svg')</span>
+  .attr('width', width)
+  .attr('height', height)
+  .on('mouseout', <span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" >chord.classed('fade', false))</span></span>
+  .append('g')
+  .attr('id', 'circle')
+  .attr('transform', `translate(${width / 2}, ${height / 2})`);
+&nbsp;
+  svg.<span class="cstat-no" title="statement not covered" >append('circle')</span>
+  .attr('r', outerRadius);
+&nbsp;
+  // Compute the chord layout.
+  layout.<span class="cstat-no" title="statement not covered" >matrix(json.data.matrix);</span>
+&nbsp;
+  const <span class="cstat-no" title="statement not covered" >group = svg.selectAll('.group')</span>
+  .data(layout.groups)
+  .enter().append('g')
+  .attr('class', 'group')
+  .on('mouseover', <span class="fstat-no" title="function not covered" >(d, i) =&gt; {</span>
+    chord.<span class="cstat-no" title="statement not covered" >classed('fade', <span class="fstat-no" title="function not covered" >p =&gt; <span class="cstat-no" title="statement not covered" >p.source.index !== i &amp;&amp; p.target.index !== i);</span></span></span>
+  });
+&nbsp;
+  // Add a mouseover title.
+  group.<span class="cstat-no" title="statement not covered" >append('title').text(<span class="fstat-no" title="function not covered" >(d, i) =&gt; `${<span class="cstat-no" title="statement not covered" >nodes[i]}: ${f(d.value)}`);</span></span></span>
+&nbsp;
+  // Add the group arc.
+  const <span class="cstat-no" title="statement not covered" >groupPath = group.append('path')</span>
+  .attr('id', <span class="fstat-no" title="function not covered" >(d, i) =&gt; <span class="cstat-no" title="statement not covered" >'group' + i)</span></span>
+  .attr('d', arc)
+  .style('fill', <span class="fstat-no" title="function not covered" >(d, i) =&gt; <span class="cstat-no" title="statement not covered" >getColorFromScheme(nodes[i], slice.formData.color_scheme));</span></span>
+&nbsp;
+  // Add a text label.
+  const <span class="cstat-no" title="statement not covered" >groupText = group.append('text')</span>
+  .attr('x', 6)
+  .attr('dy', 15);
+&nbsp;
+  groupText.<span class="cstat-no" title="statement not covered" >append('textPath')</span>
+  .attr('xlink:href', <span class="fstat-no" title="function not covered" >(d, i) =&gt; `#group${<span class="cstat-no" title="statement not covered" >i}`)</span></span>
+  .text(<span class="fstat-no" title="function not covered" >(d, i) =&gt; <span class="cstat-no" title="statement not covered" >nodes[i]);</span></span>
+  // Remove the labels that don't fit. :(
+  groupText.<span class="cstat-no" title="statement not covered" >filter(<span class="fstat-no" title="function not covered" >function (d, i) {</span></span>
+    return <span class="cstat-no" title="statement not covered" >groupPath[0][i].getTotalLength() / 2 - 16 &lt; this.getComputedTextLength();</span>
+  })
+  .remove();
+&nbsp;
+  // Add the chords.
+  chord = <span class="cstat-no" title="statement not covered" >svg.selectAll('.chord')</span>
+  .data(layout.chords)
+  .enter().append('path')
+  .attr('class', 'chord')
+  .on('mouseover', <span class="fstat-no" title="function not covered" >(d) =&gt; {</span>
+    chord.<span class="cstat-no" title="statement not covered" >classed('fade', <span class="fstat-no" title="function not covered" >p =&gt; <span class="cstat-no" title="statement not covered" >p !== d);</span></span></span>
+  })
+  .style('fill', <span class="fstat-no" title="function not covered" >d =&gt; <span class="cstat-no" title="statement not covered" >getColorFromScheme(nodes[d.source.index], slice.formData.color_scheme))</span></span>
+  .attr('d', path);
+&nbsp;
+  // Add an elaborate mouseover title for each chord.
+  chord.<span class="cstat-no" title="statement not covered" >append('title').text(<span class="fstat-no" title="function not covered" >function (d) {</span></span>
+    return <span class="cstat-no" title="statement not covered" >nodes[d.source.index]</span>
+    + ' → ' + nodes[d.target.index]
+    + ': ' + f(d.source.value)
+    + '\n' + nodes[d.target.index]
+    + ' → ' + nodes[d.source.index]
+    + ': ' + f(d.target.value);
+  });
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >module.exports = chordViz;</span>
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

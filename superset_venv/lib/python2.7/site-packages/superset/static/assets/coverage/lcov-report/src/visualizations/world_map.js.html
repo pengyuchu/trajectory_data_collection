@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/visualizations/world_map.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/visualizations/</a> world_map.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/34</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/32</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// JS
+<span class="cstat-no" title="statement not covered" >const d3 = require('d3');</span>
+<span class="cstat-no" title="statement not covered" >const Datamap = require('datamaps');</span>
+&nbsp;
+// CSS
+<span class="cstat-no" title="statement not covered" >require('./world_map.css');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function worldMapChart(slice, payload) {</span></span>
+  const <span class="cstat-no" title="statement not covered" >container = slice.container;</span>
+  const <span class="cstat-no" title="statement not covered" >div = d3.select(slice.selector);</span>
+&nbsp;
+  container.<span class="cstat-no" title="statement not covered" >css('height', slice.height());</span>
+  div.<span class="cstat-no" title="statement not covered" >selectAll('*').remove();</span>
+  const <span class="cstat-no" title="statement not covered" >fd = slice.formData;</span>
+  // Ignore XXX's to get better normalization
+  let <span class="cstat-no" title="statement not covered" >data = payload.data.filter(<span class="fstat-no" title="function not covered" >d =&gt; (<span class="cstat-no" title="statement not covered" >d.country &amp;&amp; d.country !== 'XXX'));</span></span></span>
+&nbsp;
+  const <span class="cstat-no" title="statement not covered" >ext = d3.extent(data, <span class="fstat-no" title="function not covered" >function (d) {</span></span>
+    return <span class="cstat-no" title="statement not covered" >d.m1;</span>
+  });
+  const <span class="cstat-no" title="statement not covered" >extRadius = d3.extent(data, <span class="fstat-no" title="function not covered" >function (d) {</span></span>
+    return <span class="cstat-no" title="statement not covered" >d.m2;</span>
+  });
+  const <span class="cstat-no" title="statement not covered" >radiusScale = d3.scale.linear()</span>
+    .domain([extRadius[0], extRadius[1]])
+    .range([1, fd.max_bubble_size]);
+&nbsp;
+  const <span class="cstat-no" title="statement not covered" >colorScale = d3.scale.linear()</span>
+    .domain([ext[0], ext[1]])
+    .range(['#FFF', 'black']);
+&nbsp;
+  data = <span class="cstat-no" title="statement not covered" >data.map(<span class="fstat-no" title="function not covered" >d =&gt; <span class="cstat-no" title="statement not covered" >Object.assign({}, d, {</span></span></span>
+    radius: radiusScale(d.m2),
+    fillColor: colorScale(d.m1),
+  }));
+&nbsp;
+  const <span class="cstat-no" title="statement not covered" >mapData = {};</span>
+  data.<span class="cstat-no" title="statement not covered" >forEach(<span class="fstat-no" title="function not covered" >(d) =&gt; {</span></span>
+    mapData[<span class="cstat-no" title="statement not covered" >d.country] = d;</span>
+  });
+&nbsp;
+  const <span class="cstat-no" title="statement not covered" >formatter = d3.format('.3s');</span>
+&nbsp;
+  container.<span class="cstat-no" title="statement not covered" >show();</span>
+&nbsp;
+  const <span class="cstat-no" title="statement not covered" >map = new Datamap({</span>
+    element: slice.container.get(0),
+    data,
+    fills: {
+      defaultFill: '#ddd',
+    },
+    geographyConfig: {
+      popupOnHover: true,
+      highlightOnHover: true,
+      borderWidth: 1,
+      borderColor: '#fff',
+      highlightBorderColor: '#fff',
+      highlightFillColor: '#005a63',
+      highlightBorderWidth: 1,
+      popupTemplate: (<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >geo, d) =&gt; (</span></span>
+        `&lt;div class="hoverinfo"&gt;&lt;strong&gt;${<span class="cstat-no" title="statement not covered" >d.name}&lt;/strong&gt;&lt;br&gt;${formatter(d.m1)}&lt;/div&gt;`</span>
+      ),
+    },
+    bubblesConfig: {
+      borderWidth: 1,
+      borderOpacity: 1,
+      borderColor: '#005a63',
+      popupOnHover: true,
+      radius: null,
+      popupTemplate: (<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >geo, d) =&gt; (</span></span>
+        `&lt;div class="hoverinfo"&gt;&lt;strong&gt;${<span class="cstat-no" title="statement not covered" >d.name}&lt;/strong&gt;&lt;br&gt;${formatter(d.m2)}&lt;/div&gt;`</span>
+      ),
+      fillOpacity: 0.5,
+      animate: true,
+      highlightOnHover: true,
+      highlightFillColor: '#005a63',
+      highlightBorderColor: 'black',
+      highlightBorderWidth: 2,
+      highlightBorderOpacity: 1,
+      highlightFillOpacity: 0.85,
+      exitDelay: 100,
+      key: JSON.stringify,
+    },
+  });
+&nbsp;
+  map.<span class="cstat-no" title="statement not covered" >updateChoropleth(mapData);</span>
+&nbsp;
+  if (<span class="cstat-no" title="statement not covered" >fd.show_bubbles) {</span>
+    map.<span class="cstat-no" title="statement not covered" >bubbles(data);</span>
+    div.<span class="cstat-no" title="statement not covered" >selectAll('circle.datamaps-bubble').style('fill', '#005a63');</span>
+  }
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >module.exports = worldMapChart;</span>
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

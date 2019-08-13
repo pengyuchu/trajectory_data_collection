@@ -1,0 +1,830 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/dashboard/components/SliceAdder.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/dashboard/components/</a> SliceAdder.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">83.53% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>71/85</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">64.86% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>24/37</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">86.67% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>13/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">84.81% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>67/79</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">148×</span>
+<span class="cline-any cline-yes">103×</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">20×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">80×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="branch-1 cbranch-no" title="branch not covered" ><span class="missing-if-branch" title="else path not taken" >E</span><span class="branch-1 cbranch-no" title="branch not covered" ><span class="missing-if-branch" title="if path not taken" >I</span>/</span></span></span>* eslint-env browser */
+import React from 'react';
+import PropTypes from 'prop-types';
+import { DropdownButton, MenuItem } from 'react-bootstrap';
+import { CellMeasurer, CellMeasurerCache, List } from 'react-virtualized';
+import SearchInput, { createFilter } from 'react-search-input';
+&nbsp;
+import AddSliceCard from './AddSliceCard';
+import AddSliceDragPreview from './dnd/AddSliceDragPreview';
+import DragDroppable from './dnd/DragDroppable';
+import Loading from '../../components/Loading';
+import { CHART_TYPE, NEW_COMPONENT_SOURCE_TYPE } from '../util/componentTypes';
+import { NEW_CHART_ID, NEW_COMPONENTS_SOURCE_ID } from '../util/constants';
+import { slicePropShape } from '../util/propShapes';
+&nbsp;
+const propTypes = {
+  fetchAllSlices: PropTypes.func.isRequired,
+  isLoading: PropTypes.bool.isRequired,
+  slices: PropTypes.objectOf(slicePropShape).isRequired,
+  lastUpdated: PropTypes.number.isRequired,
+  errorMessage: PropTypes.string,
+  userId: PropTypes.string.isRequired,
+  selectedSliceIds: PropTypes.arrayOf(PropTypes.number).isRequired,
+  editMode: PropTypes.bool,
+  height: PropTypes.number,
+};
+&nbsp;
+const defaultProps = {
+  selectedSliceIds: [],
+  editMode: false,
+  errorMessage: '',
+  height: window.innerHeight,
+};
+&nbsp;
+const KEYS_TO_FILTERS = ['slice_name', 'viz_type', 'datasource_name'];
+const KEYS_TO_SORT = [
+  { key: 'slice_name', label: 'Name' },
+  { key: 'viz_type', label: 'Vis type' },
+  { key: 'datasource_name', label: 'Datasource' },
+  { key: 'changed_on', label: 'Recent' },
+];
+&nbsp;
+const MARGIN_BOTTOM = 16;
+const SIDEPANE_HEADER_HEIGHT = 55;
+const SLICE_ADDER_CONTROL_HEIGHT = 64;
+const DEFAULT_CELL_HEIGHT = 136;
+&nbsp;
+const cache = new CellMeasurerCache({
+  defaultHeight: DEFAULT_CELL_HEIGHT,
+  fixedWidth: true,
+});
+&nbsp;
+class SliceAdder extends React.Component {
+  static sortByComparator(attr) {
+    const desc = attr === 'changed_on' ? -1 : 1;
+&nbsp;
+    return (a, b) =&gt; {
+      if (a[attr] &lt; b[attr]) {
+        return -1 * desc;
+      } else <span class="missing-if-branch" title="else path not taken" >E</span>if (a[attr] &gt; b[attr]) {
+        return 1 * desc;
+      }
+      return <span class="cstat-no" title="statement not covered" >0;</span>
+    };
+  }
+&nbsp;
+  constructor(props) {
+    super(<span class="branch-1 cbranch-no" title="branch not covered" >p</span>rops);
+    this.state = {
+      filteredSlices: [],
+      searchTerm: '',
+      sortBy: KEYS_TO_SORT.findIndex(item =&gt; item.key === 'changed_on'),
+      selectedSliceIdsSet: new Set(props.selectedSliceIds),
+    };
+&nbsp;
+    this.rowRenderer = this.rowRenderer.bind(this);
+    this.searchUpdated = this.searchUpdated.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
+  }
+&nbsp;
+  componentDidMount() {
+    this.slicesRequest = this.props.fetchAllSlices(this.props.userId);
+  }
+&nbsp;
+  componentWillReceiveProps(nextProps) {
+    const nextState = {};
+    if (nextProps.lastUpdated !== this.props.lastUpdated) {
+      nextState.filteredSlices = Object.values(nextProps.slices)
+        .filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS))
+        .sort(SliceAdder.sortByComparator(KEYS_TO_SORT[this.state.sortBy].key));
+    }
+&nbsp;
+    if (nextProps.selectedSliceIds !== this.props.selectedSliceIds) {
+      nextState.selectedSliceIdsSet = new Set(nextProps.selectedSliceIds);
+    }
+&nbsp;
+    if (<span class="missing-if-branch" title="else path not taken" >E</span>Object.keys(nextState).length) {
+      this.setState(nextState);
+    }
+  }
+&nbsp;
+  componentWillUnmount() <span class="fstat-no" title="function not covered" >{</span>
+    if (<span class="cstat-no" title="statement not covered" >this.slicesRequest &amp;&amp; this.slicesRequest.abort) {</span>
+      this.<span class="cstat-no" title="statement not covered" >slicesRequest.abort();</span>
+    }
+  }
+&nbsp;
+  getFilteredSortedSlices(searchTerm, sortBy) {
+    return Object.values(this.props.slices)
+      .filter(createFilter(searchTerm, KEYS_TO_FILTERS))
+      .sort(SliceAdder.sortByComparator(KEYS_TO_SORT[sortBy].key));
+  }
+&nbsp;
+  handleKeyPress(ev) {
+    if (<span class="missing-if-branch" title="else path not taken" >E</span>ev.key === 'Enter') {
+      ev.preventDefault();
+&nbsp;
+      this.searchUpdated(ev.target.value);
+    }
+  }
+&nbsp;
+  searchUpdated(searchTerm) {
+    this.setState({
+      searchTerm,
+      filteredSlices: this.getFilteredSortedSlices(
+        searchTerm,
+        this.state.sortBy,
+      ),
+    });
+  }
+&nbsp;
+  handleSelect(sortBy) {
+    this.setState({
+      sortBy,
+      filteredSlices: this.getFilteredSortedSlices(
+        this.state.searchTerm,
+        sortBy,
+      ),
+    });
+  }
+&nbsp;
+  rowRenderer({ <span class="cstat-no" title="statement not covered" >key, index, style, parent }) <span class="fstat-no" title="function not covered" >{</span></span>
+    const { filteredSlices, selectedSliceIdsSet } = <span class="cstat-no" title="statement not covered" >this.state;</span>
+    const <span class="cstat-no" title="statement not covered" >cellData = filteredSlices[index];</span>
+    const <span class="cstat-no" title="statement not covered" >isSelected = selectedSliceIdsSet.has(cellData.slice_id);</span>
+    const <span class="cstat-no" title="statement not covered" >type = CHART_TYPE;</span>
+    const <span class="cstat-no" title="statement not covered" >id = NEW_CHART_ID;</span>
+&nbsp;
+    const <span class="cstat-no" title="statement not covered" >meta = {</span>
+      chartId: cellData.slice_id,
+      sliceName: cellData.slice_name,
+    };
+&nbsp;
+    return (
+<span class="cstat-no" title="statement not covered" >      &lt;DragDroppable</span>
+        key={key}
+        component={{ type, id, meta }}
+        parentComponent={{
+          id: NEW_COMPONENTS_SOURCE_ID,
+          type: NEW_COMPONENT_SOURCE_TYPE,
+        }}
+        index={index}
+        depth={0}
+        disableDragDrop={isSelected}
+        editMode={this.props.editMode}
+        // we must use a custom drag preview within the List because
+        // it does not seem to work within a fixed-position container
+        useEmptyDragPreview
+        // List library expect style props here
+        // actual style should be applied to nested AddSliceCard component
+        style={{}}
+      &gt;
+        {({ <span class="cstat-no" title="statement not covered" >dragSourceRef }) =&gt; (</span>
+<span class="cstat-no" title="statement not covered" >          &lt;CellMeasurer</span>
+            cache={cache}
+            columnIndex={0}
+            key={key}
+            parent={parent}
+            rowIndex={index}
+          &gt;
+            &lt;AddSliceCard
+              innerRef={dragSourceRef}
+              style={style}
+              sliceName={cellData.slice_name}
+              lastModified={cellData.modified}
+              visType={cellData.viz_type}
+              datasourceLink={cellData.datasource_link}
+              isSelected={isSelected}
+            /&gt;
+          &lt;/CellMeasurer&gt;
+        )}
+      &lt;/DragDroppable&gt;
+    );
+  }
+&nbsp;
+  render() {
+    const slicesListHeight =
+      this.props.height -
+      SIDEPANE_HEADER_HEIGHT -
+      SLICE_ADDER_CONTROL_HEIGHT -
+      MARGIN_BOTTOM;
+    return (
+      &lt;div className="slice-adder-container"&gt;
+        &lt;div className="controls"&gt;
+          &lt;SearchInput
+            placeholder="Filter your charts"
+            className="search-input"
+            onChange={this.searchUpdated}
+            onKeyPress={this.handleKeyPress}
+          /&gt;
+&nbsp;
+          &lt;DropdownButton
+            title={`Sort by ${KEYS_TO_SORT[this.state.sortBy].label}`}
+            onSelect={this.handleSelect}
+            id="slice-adder-sortby"
+          &gt;
+            {KEYS_TO_SORT.map((item, index) =&gt; (
+              &lt;MenuItem key={item.key} eventKey={index}&gt;
+                Sort by {item.label}
+              &lt;/MenuItem&gt;
+            ))}
+          &lt;/DropdownButton&gt;
+        &lt;/div&gt;
+&nbsp;
+        {this.props.isLoading &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;Loading /&gt;}</span>
+&nbsp;
+        {this.props.errorMessage &amp;&amp; &lt;div&gt;{this.props.errorMessage}&lt;/div&gt;}
+&nbsp;
+        {!this.props.isLoading &amp;&amp;
+          this.state.filteredSlices.length &gt; 0 &amp;&amp; (
+            &lt;List
+              width={376}
+              height={slicesListHeight}
+              rowCount={this.state.filteredSlices.length}
+              deferredMeasurementCache={cache}
+              rowHeight={cache.rowHeight}
+              rowRenderer={this.rowRenderer}
+              searchTerm={this.state.searchTerm}
+              sortBy={this.state.sortBy}
+              selectedSliceIds={this.props.selectedSliceIds}
+            /&gt;
+          )}
+&nbsp;
+        {/* Drag preview is just a single fixed-position element */}
+        &lt;AddSliceDragPreview slices={this.state.filteredSlices} /&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+&nbsp;
+SliceAdder.propTypes = propTypes;
+SliceAdder.defaultProps = defaultProps;
+&nbsp;
+export default SliceAdder;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

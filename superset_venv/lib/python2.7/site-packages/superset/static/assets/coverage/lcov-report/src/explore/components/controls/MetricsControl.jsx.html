@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/explore/components/controls/MetricsControl.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">src/explore/components/controls/</a> MetricsControl.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">78.87% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>112/142</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">64.04% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>57/89</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">76% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>19/25</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">79.29% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>111/140</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">114×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-yes">209×</span>
+<span class="cline-any cline-yes">38×</span>
+<span class="cline-any cline-yes">171×</span>
+<span class="cline-any cline-yes">57×</span>
+<span class="cline-any cline-yes">114×</span>
+<span class="cline-any cline-yes">114×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">209×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import PropTypes from 'prop-types';
+import VirtualizedSelect from 'react-virtualized-select';
+import ControlHeader from '../ControlHeader';
+import { t } from '../../../locales';
+import VirtualizedRendererWrap from '../../../components/VirtualizedRendererWrap';
+import OnPasteSelect from '../../../components/OnPasteSelect';
+import MetricDefinitionOption from '../MetricDefinitionOption';
+import MetricDefinitionValue from '../MetricDefinitionValue';
+import AdhocMetric from '../../AdhocMetric';
+import columnType from '../../propTypes/columnType';
+import savedMetricType from '../../propTypes/savedMetricType';
+import adhocMetricType from '../../propTypes/adhocMetricType';
+import {
+  AGGREGATES,
+  sqlaAutoGeneratedMetricNameRegex,
+  druidAutoGeneratedMetricRegex,
+} from '../../constants';
+&nbsp;
+const propTypes = {
+  name: PropTypes.string.isRequired,
+  onChange: PropTypes.func,
+  value: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, adhocMetricType])),
+    PropTypes.oneOfType([PropTypes.string, adhocMetricType]),
+  ]),
+  columns: PropTypes.arrayOf(columnType),
+  savedMetrics: PropTypes.arrayOf(savedMetricType),
+  multi: PropTypes.bool,
+  datasourceType: PropTypes.string,
+};
+&nbsp;
+const defaultProps = {
+  onChange: () =&gt; <span class="fstat-no" title="function not covered" >{</span>},
+};
+&nbsp;
+function isDictionaryForAdhocMetric(value) {
+  return value &amp;&amp; !(value instanceof AdhocMetric) &amp;&amp; value.expressionType;
+}
+&nbsp;
+// adhoc metrics are stored as dictionaries in URL params. We convert them back into the
+// AdhocMetric class for typechecking, consistency and instance method access.
+function coerceAdhocMetrics(value) {
+  if (!value) {
+    return [];
+  }
+  if (<span class="missing-if-branch" title="if path not taken" >I</span>!Array.isArray(value)) {
+    if (<span class="cstat-no" title="statement not covered" >isDictionaryForAdhocMetric(value)) {</span>
+      return <span class="cstat-no" title="statement not covered" >[new AdhocMetric(value)];</span>
+    }
+    return <span class="cstat-no" title="statement not covered" >[value];</span>
+  }
+  return value.map((val) =&gt; {
+    if (isDictionaryForAdhocMetric(val)) {
+      return new AdhocMetric(val);
+    }
+    return val;
+  });
+}
+&nbsp;
+function getDefaultAggregateForColumn(column) {
+  const type = column.type;
+  if (<span class="missing-if-branch" title="if path not taken" >I</span>typeof type !== 'string') {
+    return <span class="cstat-no" title="statement not covered" >AGGREGATES.COUNT;</span>
+  } else <span class="missing-if-branch" title="if path not taken" >I</span>if (type === '' || type === 'expression') {
+    return <span class="cstat-no" title="statement not covered" >AGGREGATES.SUM;</span>
+  } else <span class="missing-if-branch" title="if path not taken" >I</span>if (type.match(/.*char.*/i) || type.match(/string.*/i) || type.match(/.*text.*/i)) {
+    return <span class="cstat-no" title="statement not covered" >AGGREGATES.COUNT_DISTINCT;</span>
+  } else <span class="missing-if-branch" title="else path not taken" >E</span>i</span>f (type.match(/.*int.*/i) || type === 'LONG' || type === 'DOUBLE' || <span class="branch-3 cbranch-no" title="branch not covered" >type === 'FLOAT') {
+    return AGGREGATES.SUM;
+  } else <span class="cstat-no" title="statement not covered" >if (type.match(/.*bool.*/i)) {</span>
+    return <span class="cstat-no" title="statement not covered" >AGGREGATES.MAX;</span>
+  } else <span class="cstat-no" title="statement not covered" >if (type.match(/.*time.*/i)) {</span>
+    return <span class="cstat-no" title="statement not covered" >AGGREGATES.COUNT;</span>
+  } else <span class="cstat-no" title="statement not covered" >if (type.match(/unknown/i)) {</span>
+    return <span class="cstat-no" title="statement not covered" >AGGREGATES.COUNT;</span>
+  }
+  return <span class="cstat-no" title="statement not covered" >null;</span>
+}
+&nbsp;
+export default class MetricsControl extends React.PureComponent {
+  constructor(props) {
+    super(<span class="branch-1 cbranch-no" title="branch not covered" >p</span>rops);
+    this.onChange = this.onChange.bind(this);
+    this.onMetricEdit = this.onMetricEdit.bind(this);
+    this.checkIfAggregateInInput = this.checkIfAggregateInInput.bind(this);
+    this.optionsForSelect = this.optionsForSelect.bind(this);
+    this.selectFilterOption = this.selectFilterOption.bind(this);
+    this.isAutoGeneratedMetric = this.isAutoGeneratedMetric.bind(this);
+    this.optionRenderer = VirtualizedRendererWrap(<span class="fstat-no" title="function not covered" >option =&gt; (</span>
+<span class="cstat-no" title="statement not covered" >      &lt;MetricDefinitionOption option={option} /&gt;</span>
+    ), { ignoreAutogeneratedMetrics: true });
+    this.valueRenderer = <span class="fstat-no" title="function not covered" >option =&gt; (</span>
+<span class="cstat-no" title="statement not covered" >      &lt;MetricDefinitionValue</span>
+        option={option}
+        onMetricEdit={this.onMetricEdit}
+        columns={this.props.columns}
+        multi={this.props.multi}
+        datasourceType={this.props.datasourceType}
+      /&gt;
+    );
+    this.refFunc = <span class="fstat-no" title="function not covered" >(ref) =&gt; {</span>
+      if (<span class="cstat-no" title="statement not covered" >ref) {</span>
+        // eslint-disable-next-line no-underscore-dangle
+        this.<span class="cstat-no" title="statement not covered" >select = ref._selectRef;</span>
+      }
+    };
+    this.state = {
+      aggregateInInput: null,
+      options: this.optionsForSelect(this.props),
+      value: coerceAdhocMetrics(this.props.value),
+    };
+  }
+&nbsp;
+  componentWillReceiveProps(<span class="fstat-no" title="function not covered" >nextProps) {</span>
+    if (
+<span class="cstat-no" title="statement not covered" >      this.props.columns !== nextProps.columns ||</span>
+      this.props.savedMetrics !== nextProps.savedMetrics
+    ) {
+      this.<span class="cstat-no" title="statement not covered" >setState({ options: this.optionsForSelect(nextProps) });</span>
+      this.<span class="cstat-no" title="statement not covered" >props.onChange([]);</span>
+    }
+    if (<span class="cstat-no" title="statement not covered" >this.props.value !== nextProps.value) {</span>
+      this.<span class="cstat-no" title="statement not covered" >setState({ value: coerceAdhocMetrics(nextProps.value) });</span>
+    }
+  }
+&nbsp;
+  onMetricEdit(changedMetric) {
+    let newValue = this.state.value.map((value) =&gt; {
+      if (<span class="missing-if-branch" title="else path not taken" >E</span>value.optionName === changedMetric.optionName) {
+        return changedMetric;
+      }
+      return <span class="cstat-no" title="statement not covered" >value;</span>
+    });
+    if (<span class="missing-if-branch" title="if path not taken" >I</span>!this.props.multi) {
+      newValue = <span class="cstat-no" title="statement not covered" >newValue[0];</span>
+    }
+    this.props.onChange(newValue);
+  }
+&nbsp;
+  onChange(opts) {
+    // if clear out options
+    if (<span class="missing-if-branch" title="if path not taken" >I</span>opts === null) {
+      this.<span class="cstat-no" title="statement not covered" >props.onChange(null);</span>
+      return;
+    }
+&nbsp;
+    let transformedOpts = opts;
+    if (<span class="missing-if-branch" title="if path not taken" >I</span>!this.props.multi) {
+      transformedOpts = <span class="cstat-no" title="statement not covered" >[opts].filter(<span class="fstat-no" title="function not covered" >option =&gt; <span class="cstat-no" title="statement not covered" >option);</span></span></span>
+    }
+    let optionValues = transformedOpts.map((option) =&gt; {
+      if (option.metric_name) {
+        return option.metric_name;
+      } else if (option.column_name) {
+        const clearedAggregate = this.clearedAggregateInInput;
+        this.clearedAggregateInInput = null;
+        return new AdhocMetric({
+          column: option,
+          aggregate: clearedAggregate || getDefaultAggregateForColumn(option),
+        });
+      } else if (option instanceof AdhocMetric) {
+        return option;
+      } else <span class="missing-if-branch" title="else path not taken" >E</span>if (option.aggregate_name) {
+        const newValue = `${option.aggregate_name}()`;
+        this.select.setInputValue(newValue);
+        this.select.handleInputChange({ target: { value: newValue } });
+        // we need to set a timeout here or the selectionWill be overwritten
+        // by some browsers (e.g. Chrome)
+        setTimeout(() =&gt; {
+          this.select.input.input.selectionStart = newValue.length - 1;
+          this.select.input.input.selectionEnd = newValue.length - 1;
+        }, 0);
+        return null;
+      }
+      return <span class="cstat-no" title="statement not covered" >null;</span>
+    }).filter(option =&gt; option);
+    if (<span class="missing-if-branch" title="if path not taken" >I</span>!this.props.multi) {
+      optionValues = <span class="cstat-no" title="statement not covered" >optionValues[0];</span>
+    }
+    this.props.onChange(optionValues);
+  }
+&nbsp;
+  checkIfAggregateInInput(input) {
+    let nextState = { aggregateInInput: null };
+    Object.keys(AGGREGATES).forEach((aggregate) =&gt; {
+      if (input.toLowerCase().startsWith(aggregate.toLowerCase() + '(')) {
+        nextState = { aggregateInInput: aggregate };
+      }
+    });
+    this.clearedAggregateInInput = this.state.aggregateInInput;
+    this.setState(nextState);
+  }
+&nbsp;
+  optionsForSelect(props) {
+    const options = [
+      ...props.columns,
+      ...Object.keys(AGGREGATES).map(aggregate =&gt; ({ aggregate_name: aggregate })),
+      ...props.savedMetrics,
+    ];
+&nbsp;
+    return options.reduce((results, option) =&gt; {
+      if (option.metric_name) {
+        results.push({ ...option, optionName: option.metric_name });
+      } else if (option.column_name) {
+        results.push({ ...option, optionName: '_col_' + option.column_name });
+      } else <span class="missing-if-branch" title="else path not taken" >E</span>if (option.aggregate_name) {
+        results.push({ ...option, optionName: '_aggregate_' + option.aggregate_name });
+      }
+      return results;
+    }, []);
+  }
+&nbsp;
+  isAutoGeneratedMetric(savedMetric) {
+    if (this.props.datasourceType === 'druid') {
+      return druidAutoGeneratedMetricRegex.test(savedMetric.verbose_name);
+    }
+    return sqlaAutoGeneratedMetricNameRegex.test(savedMetric.metric_name);
+  }
+&nbsp;
+  selectFilterOption(option, filterValue) {
+    if (this.state.aggregateInInput) {
+      let endIndex = filterValue.length;
+      if (<span class="missing-if-branch" title="if path not taken" >I</span>filterValue.endsWith(')')) {
+        endIndex = <span class="cstat-no" title="statement not covered" >filterValue.length - 1;</span>
+      }
+      const valueAfterAggregate = filterValue.substring(filterValue.indexOf('(') + 1, endIndex);
+      return option.column_name &amp;&amp;
+        (option.column_name.toLowerCase().indexOf(valueAfterAggregate) &gt;= 0);
+    }
+    return option.optionName &amp;&amp;
+      (!option.metric_name || !this.isAutoGeneratedMetric(option) || option.verbose_name) &amp;&amp; (
+        option.optionName.toLowerCase().indexOf(filterValue) &gt;= 0 ||
+        (
+          option.verbose_name &amp;&amp; option.verbose_name.toLowerCase().indexOf(filterValue) &gt;= 0
+        )
+      );
+  }
+&nbsp;
+  render() {
+    // TODO figure out why the dropdown isnt appearing as soon as a metric is selected
+    return (
+      &lt;div className="metrics-select"&gt;
+        &lt;ControlHeader {...this.props} /&gt;
+        &lt;OnPasteSelect
+          multi={this.props.multi}
+          name={`select-${this.props.name}`}
+          placeholder={t('choose a column or aggregate function')}
+          options={this.state.options}
+          value={this.props.multi ? this.state.value : <span class="branch-1 cbranch-no" title="branch not covered" >this.state.value[0]}</span>
+          labelKey="label"
+          valueKey="optionName"
+          clearable
+          closeOnSelect
+          onChange={this.onChange}
+          optionRenderer={this.optionRenderer}
+          valueRenderer={this.valueRenderer}
+          onInputChange={this.checkIfAggregateInInput}
+          filterOption={this.selectFilterOption}
+          refFunc={this.refFunc}
+          selectWrap={VirtualizedSelect}
+        /&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+&nbsp;
+MetricsControl.propTypes = propTypes;
+MetricsControl.defaultProps = defaultProps;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

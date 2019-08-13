@@ -1,0 +1,971 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/chart/Chart.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/chart/</a> Chart.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60.83% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>73/120</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">32.93% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>27/82</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">32% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/25</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">61.61% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>69/112</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="branch-1 cbranch-no" title="branch not covered" ><span class="missing-if-branch" title="else path not taken" >E</span><span class="branch-1 cbranch-no" title="branch not covered" ><span class="missing-if-branch" title="if path not taken" >I</span>/</span></span></span>* eslint no-undef: 2 */
+import React from 'react';
+import PropTypes from 'prop-types';
+import Mustache from 'mustache';
+import { Tooltip } from 'react-bootstrap';
+&nbsp;
+import { d3format } from '../modules/utils';
+import ChartBody from './ChartBody';
+import Loading from '../components/Loading';
+import { Logger, LOG_ACTIONS_RENDER_CHART } from '../logger';
+import StackTraceMessage from '../components/StackTraceMessage';
+import RefreshChartOverlay from '../components/RefreshChartOverlay';
+import visPromiseLookup from '../visualizations';
+import sandboxedEval from '../modules/sandbox';
+import './chart.css';
+&nbsp;
+const propTypes = {
+  annotationData: PropTypes.object,
+  actions: PropTypes.object,
+  chartId: PropTypes.number.isRequired,
+  containerId: PropTypes.string.isRequired,
+  datasource: PropTypes.object.isRequired,
+  formData: PropTypes.object.isRequired,
+  headerHeight: PropTypes.number,
+  height: PropTypes.number,
+  width: PropTypes.number,
+  setControlValue: PropTypes.func,
+  timeout: PropTypes.number,
+  vizType: PropTypes.string.isRequired,
+  // state
+  chartAlert: PropTypes.string,
+  chartStatus: PropTypes.string,
+  chartUpdateEndTime: PropTypes.number,
+  chartUpdateStartTime: PropTypes.number,
+  latestQueryFormData: PropTypes.object,
+  queryRequest: PropTypes.object,
+  queryResponse: PropTypes.object,
+  lastRendered: PropTypes.number,
+  triggerQuery: PropTypes.bool,
+  refreshOverlayVisible: PropTypes.bool,
+  errorMessage: PropTypes.node,
+  // dashboard callbacks
+  addFilter: PropTypes.func,
+  getFilters: PropTypes.func,
+  onQuery: PropTypes.func,
+  onDismissRefreshOverlay: PropTypes.func,
+};
+&nbsp;
+const defaultProps = {
+  addFilter: () =&gt; (<span class="cstat-no" title="statement not covered" >{}),</span>
+  getFilters: () =&gt; (<span class="cstat-no" title="statement not covered" >{}),</span>
+};
+&nbsp;
+class Chart extends React.PureComponent {
+  constructor(props) {
+    super(<span class="branch-1 cbranch-no" title="branch not covered" >p</span>rops);
+    // visualizations are lazy-loaded with promises that resolve to a renderVis function
+    this.state = {
+      renderVis: null,
+    };
+&nbsp;
+    // these properties are used by visualizations
+    this.annotationData = props.annotationData;
+    this.containerId = props.containerId;
+    this.selector = `#${this.containerId}`;
+    this.formData = props.formData;
+    this.datasource = props.datasource;
+    this.addFilter = this.addFilter.bind(this);
+    this.getFilters = this.getFilters.bind(this);
+    this.headerHeight = this.headerHeight.bind(this);
+    this.height = this.height.bind(this);
+    this.width = this.width.bind(this);
+    this.visPromise = null;
+  }
+&nbsp;
+  componentDidMount() <span class="fstat-no" title="function not covered" >{</span>
+    if (<span class="cstat-no" title="statement not covered" >this.props.triggerQuery) {</span>
+      this.<span class="cstat-no" title="statement not covered" >props.actions.runQuery(</span>
+        this.props.formData,
+        false,
+        this.props.timeout,
+        this.props.chartId,
+      );
+    } else {
+      // when drag/dropping in a dashboard, a chart may be unmounted/remounted but still have data
+      this.<span class="cstat-no" title="statement not covered" >renderVis();</span>
+    }
+&nbsp;
+    this.<span class="cstat-no" title="statement not covered" >loadAsyncVis(this.props.vizType);</span>
+  }
+&nbsp;
+  componentWillReceiveProps(nextProps) {
+    this.annotationData = nextProps.annotationData;
+    this.containerId = nextProps.containerId;
+    this.selector = `#${this.containerId}`;
+    this.formData = nextProps.formData;
+    this.datasource = nextProps.datasource;
+    if (<span class="missing-if-branch" title="if path not taken" >I</span>nextProps.vizType !== this.props.vizType) {
+      this.<span class="cstat-no" title="statement not covered" >setState(<span class="fstat-no" title="function not covered" >() =&gt; (<span class="cstat-no" title="statement not covered" >{ renderVis: null }));</span></span></span>
+      this.<span class="cstat-no" title="statement not covered" >loadAsyncVis(nextProps.vizType);</span>
+    }
+  }
+&nbsp;
+  componentDidUpdate(prevProps) {
+    if (
+      this.props.queryResponse &amp;&amp;
+      ['success', 'rendered'].indexOf(this.props.chartStatus) &gt; -1 &amp;&amp;
+      !this.props.queryResponse.error &amp;&amp;
+      (prevProps.annotationData !== this.props.annotationData ||
+        prevProps.queryResponse !== this.props.queryResponse ||
+<span class="branch-5 cbranch-no" title="branch not covered" >        prevProps.height !== this.props.height ||</span>
+<span class="branch-6 cbranch-no" title="branch not covered" >        prevProps.width !== this.props.width ||</span>
+<span class="branch-7 cbranch-no" title="branch not covered" >        prevProps.lastRendered !== this.props.lastRendered)</span>
+    ) {
+      this.renderVis();
+    }
+  }
+&nbsp;
+  componentWillUnmount() <span class="fstat-no" title="function not covered" >{</span>
+    this.<span class="cstat-no" title="statement not covered" >visPromise = null;</span>
+  }
+&nbsp;
+  getFilters() <span class="fstat-no" title="function not covered" >{</span>
+    return <span class="cstat-no" title="statement not covered" >this.props.getFilters();</span>
+  }
+&nbsp;
+  setTooltip(<span class="fstat-no" title="function not covered" >tooltip) {</span>
+    this.<span class="cstat-no" title="statement not covered" >setState({ tooltip });</span>
+  }
+&nbsp;
+  loadAsyncVis(<span class="fstat-no" title="function not covered" >visType) {</span>
+    this.<span class="cstat-no" title="statement not covered" >visPromise = visPromiseLookup[visType];</span>
+&nbsp;
+    this.<span class="cstat-no" title="statement not covered" >visPromise()</span>
+      .then(<span class="fstat-no" title="function not covered" >(renderVis) =&gt; {</span>
+        // ensure Component is still mounted
+        if (<span class="cstat-no" title="statement not covered" >this.visPromise) {</span>
+          this.<span class="cstat-no" title="statement not covered" >setState({ renderVis }, this.renderVis);</span>
+        }
+      })
+      .catch(<span class="fstat-no" title="function not covered" >(error) =&gt; {</span>
+        console.<span class="cstat-no" title="statement not covered" >warn(error); // eslint-disable-line</span>
+        this.<span class="cstat-no" title="statement not covered" >props.actions.chartRenderingFailed(error, this.props.chartId);</span>
+      });
+  }
+&nbsp;
+  addFilter(<span class="fstat-no" title="function not covered" >col, vals, <span class="cstat-no" title="statement not covered" >merge = true, <span class="cstat-no" title="statement not covered" >refresh = true) {</span></span></span>
+    this.<span class="cstat-no" title="statement not covered" >props.addFilter(col, vals, merge, refresh);</span>
+  }
+&nbsp;
+  clearError() <span class="fstat-no" title="function not covered" >{</span>
+    this.<span class="cstat-no" title="statement not covered" >setState({ errorMsg: null });</span>
+  }
+&nbsp;
+  width() {
+    return (
+      this.props.width || (<span class="branch-1 cbranch-no" title="branch not covered" >t</span></span>his.container &amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >this.container.el &amp;&amp; <span class="branch-3 cbranch-no" title="branch not covered" >this.container.el.offsetWidth)</span>
+    );
+  }
+&nbsp;
+  headerHeight() <span class="fstat-no" title="function not covered" >{</span>
+    return <span class="cstat-no" title="statement not covered" >this.props.headerHeight || 0;</span>
+  }
+&nbsp;
+  height() {
+    return (
+      this.props.height || (<span class="branch-1 cbranch-no" title="branch not covered" >t</span></span>his.container &amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >this.container.el &amp;&amp; <span class="branch-3 cbranch-no" title="branch not covered" >this.container.el.offsetHeight)</span>
+    );
+  }
+&nbsp;
+  d3format(<span class="fstat-no" title="function not covered" >col, number) {</span>
+    const { <span class="cstat-no" title="statement not covered" >datasource } = this.props;</span>
+    const <span class="cstat-no" title="statement not covered" >format = (datasource.column_formats &amp;&amp; datasource.column_formats[col]) || '0.3s';</span>
+&nbsp;
+    return <span class="cstat-no" title="statement not covered" >d3format(format, number);</span>
+  }
+&nbsp;
+  error(<span class="fstat-no" title="function not covered" >e) {</span>
+    this.<span class="cstat-no" title="statement not covered" >props.actions.chartRenderingFailed(e, this.props.chartId);</span>
+  }
+&nbsp;
+  verboseMetricName(<span class="fstat-no" title="function not covered" >metric) {</span>
+    return <span class="cstat-no" title="statement not covered" >this.props.datasource.verbose_map[metric] || metric;</span>
+  }
+&nbsp;
+  // eslint-disable-next-line camelcase
+  render_template(<span class="fstat-no" title="function not covered" >s) {</span>
+    const <span class="cstat-no" title="statement not covered" >context = {</span>
+      width: this.width(),
+      height: this.height(),
+    };
+    return <span class="cstat-no" title="statement not covered" >Mustache.render(s, context);</span>
+  }
+&nbsp;
+  renderTooltip() {
+    if (<span class="missing-if-branch" title="if path not taken" >I</span>this.state.tooltip) {
+      return (
+<span class="cstat-no" title="statement not covered" >        &lt;Tooltip</span>
+          className="chart-tooltip"
+          id="chart-tooltip"
+          placement="right"
+          positionTop={this.state.tooltip.y - 10}
+          positionLeft={this.state.tooltip.x + 30}
+          arrowOffsetTop={10}
+        &gt;
+          &lt;div // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{ __html: this.state.tooltip.content }}
+          /&gt;
+        &lt;/Tooltip&gt;
+      );
+    }
+    return null;
+  }
+&nbsp;
+  renderVis() <span class="fstat-no" title="function not covered" >{</span>
+    const { <span class="cstat-no" title="statement not covered" >chartStatus } = this.props;</span>
+    const <span class="cstat-no" title="statement not covered" >hasVisPromise = !!this.state.renderVis;</span>
+    // check that we have the render function and data
+    if (<span class="cstat-no" title="statement not covered" >hasVisPromise &amp;&amp; ['success', 'rendered'].indexOf(chartStatus) &gt; -1) {</span>
+      const { vizType, formData, queryResponse, setControlValue, chartId } = <span class="cstat-no" title="statement not covered" >this.props;</span>
+      const <span class="cstat-no" title="statement not covered" >renderStart = Logger.getTimestamp();</span>
+&nbsp;
+      try <span class="cstat-no" title="statement not covered" >{</span>
+        // Executing user-defined data mutator function
+        if (<span class="cstat-no" title="statement not covered" >formData.js_data) {</span>
+          queryResponse.<span class="cstat-no" title="statement not covered" >data = sandboxedEval(formData.js_data)(queryResponse.data);</span>
+        }
+        // [re]rendering the visualization
+        this.<span class="cstat-no" title="statement not covered" >state.renderVis(this, queryResponse, setControlValue);</span>
+&nbsp;
+        if (<span class="cstat-no" title="statement not covered" >chartStatus !== 'rendered') {</span>
+          this.<span class="cstat-no" title="statement not covered" >props.actions.chartRenderingSucceeded(chartId);</span>
+        }
+&nbsp;
+        Logger.<span class="cstat-no" title="statement not covered" >append(LOG_ACTIONS_RENDER_CHART, {</span>
+          slice_id: chartId,
+          viz_type: vizType,
+          start_offset: renderStart,
+          duration: Logger.getTimestamp() - renderStart,
+        });
+      } catch (e) {
+        console.<span class="cstat-no" title="statement not covered" >warn(e); // eslint-disable-line</span>
+        this.<span class="cstat-no" title="statement not covered" >props.actions.chartRenderingFailed(e, chartId);</span>
+      }
+    }
+  }
+&nbsp;
+  render() {
+    const isLoading = this.props.chartStatus === 'loading' || !this.state.renderVis;
+&nbsp;
+    // this allows &lt;Loading /&gt; to be positioned in the middle of the chart
+    c</span>onst containerStyles = isLoading ? { height: this.height(), width: this.width() } : <span class="branch-1 cbranch-no" title="branch not covered" >null;
+    return (
+      &lt;div c</span>lassName={`chart-container ${isLoading ? 'is-loading' : <span class="branch-1 cbranch-no" title="branch not covered" >''}`} style={containerStyles}&gt;
+        {this.renderTooltip()}
+&nbsp;
+        {isLoading &amp;&amp; &lt;Loading size={50} /&gt;}
+&nbsp;
+        {this.props.chartAlert &amp;&amp; (
+<span class="branch-1 cbranch-no" title="branch not covered" >          &lt;StackTraceMessage</span>
+            message={this.props.chartAlert}
+            queryResponse={this.props.queryResponse}
+          /&gt;
+        )}
+&nbsp;
+        {!isLoading &amp;&amp;
+<span class="branch-1 cbranch-no" title="branch not covered" >          !this.props.chartAlert &amp;&amp;</span>
+<span class="branch-2 cbranch-no" title="branch not covered" >          this.props.refreshOverlayVisible &amp;&amp;</span>
+<span class="branch-3 cbranch-no" title="branch not covered" >          !this.props.errorMessage &amp;&amp;</span>
+<span class="branch-4 cbranch-no" title="branch not covered" >          this.container &amp;&amp; (</span>
+<span class="branch-5 cbranch-no" title="branch not covered" >            &lt;RefreshChartOverlay</span>
+              height={this.height()}
+              width={this.width()}
+              onQuery={this.props.onQuery}
+              onDismiss={this.props.onDismissRefreshOverlay}
+            /&gt;
+          )}
+&nbsp;
+        {!isLoading &amp;&amp;
+<span class="branch-1 cbranch-no" title="branch not covered" >          !this.props.chartAlert &amp;&amp; (</span>
+<span class="branch-2 cbranch-no" title="branch not covered" >            &lt;ChartBody</span>
+              containerId={this.containerId}
+              vizType={this.props.vizType}
+              height={this.height}
+              width={this.width}
+              faded={
+                this.props.refreshOverlayVisible &amp;&amp; !this.props.errorMessage
+              }
+              ref={(<span class="fstat-no" title="function not covered" >inner) =&gt; {</span>
+                this.<span class="cstat-no" title="statement not covered" >container = inner;</span>
+              }}
+            /&gt;
+          )}
+      &lt;/div&gt;
+    );
+  }
+}
+&nbsp;
+Chart.propTypes = propTypes;
+Chart.defaultProps = defaultProps;
+&nbsp;
+export default Chart;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

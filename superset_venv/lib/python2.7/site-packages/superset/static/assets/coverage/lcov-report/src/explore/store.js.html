@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/explore/store.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/explore/</a> store.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">28.4% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>23/81</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/53</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">21.43% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">24% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>18/75</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">392×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">196×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* eslint camelcase: 0 */
+import isReact from 'is-react';
+import controls from './controls';
+import visTypes, { sectionsToRender } from './visTypes';
+&nbsp;
+export function getFormDataFromControls(controlsState) {
+  const formData = {};
+  Object.keys(controlsState).forEach((controlName) =&gt; {
+    formData[controlName] = controlsState[controlName].value;
+  });
+  return formData;
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function getControlNames(vizType, datasourceType) {</span>
+  const <span class="cstat-no" title="statement not covered" >controlNames = [];</span>
+  sectionsToRender(<span class="cstat-no" title="statement not covered" >vizType, datasourceType).forEach(</span>
+<span class="fstat-no" title="function not covered" >    section =&gt; <span class="cstat-no" title="statement not covered" >section.controlSetRows.forEach(</span></span>
+<span class="fstat-no" title="function not covered" >      fsr =&gt; <span class="cstat-no" title="statement not covered" >fsr.forEach(</span></span>
+<span class="fstat-no" title="function not covered" >        f =&gt; <span class="cstat-no" title="statement not covered" >controlNames.push(f))));</span></span>
+  return <span class="cstat-no" title="statement not covered" >controlNames;</span>
+}
+&nbsp;
+<span class="fstat-no" title="function not covered" >function handleDeprecatedControls(formData) {</span>
+  // Reacffectation / handling of deprecated controls
+  /* eslint-disable no-param-reassign */
+&nbsp;
+  // y_axis_zero was a boolean forcing 0 to be part of the Y Axis
+  if (<span class="cstat-no" title="statement not covered" >formData.y_axis_zero) {</span>
+    formData.<span class="cstat-no" title="statement not covered" >y_axis_bounds = [0, null];</span>
+  }
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function getControlsState(state, form_data) {</span>
+  /*
+  * Gets a new controls object to put in the state. The controls object
+  * is similar to the configuration control with only the controls
+  * related to the current viz_type, materializes mapStateToProps functions,
+  * adds value keys coming from form_data passed here. This can't be an action creator
+  * just yet because it's used in both the explore and dashboard views.
+  * */
+&nbsp;
+  // Getting a list of active control names for the current viz
+  const <span class="cstat-no" title="statement not covered" >formData = Object.assign({}, form_data);</span>
+  const <span class="cstat-no" title="statement not covered" >vizType = formData.viz_type || 'table';</span>
+&nbsp;
+  handleDeprecatedControls(<span class="cstat-no" title="statement not covered" >formData);</span>
+&nbsp;
+  const <span class="cstat-no" title="statement not covered" >controlNames = getControlNames(vizType, state.datasource.type);</span>
+&nbsp;
+  const <span class="cstat-no" title="statement not covered" >viz = visTypes[vizType];</span>
+  const <span class="cstat-no" title="statement not covered" >controlOverrides = viz.controlOverrides || {};</span>
+  const <span class="cstat-no" title="statement not covered" >controlsState = {};</span>
+  controlNames.<span class="cstat-no" title="statement not covered" >forEach(<span class="fstat-no" title="function not covered" >(k) =&gt; {</span></span>
+    if (<span class="cstat-no" title="statement not covered" >isReact.element(k)) {</span>
+      // no state
+      return;
+    }
+    const <span class="cstat-no" title="statement not covered" >control = Object.assign({}, controls[k], controlOverrides[k]);</span>
+    if (<span class="cstat-no" title="statement not covered" >control.mapStateToProps) {</span>
+      Object.<span class="cstat-no" title="statement not covered" >assign(control, control.mapStateToProps(state, control));</span>
+      delete <span class="cstat-no" title="statement not covered" >control.mapStateToProps;</span>
+    }
+&nbsp;
+    formData[<span class="cstat-no" title="statement not covered" >k] = (control.multi &amp;&amp; formData[k] &amp;&amp; !Array.isArray(formData[k])) ? [formData[k]]</span>
+      : formData[k];
+&nbsp;
+    // If the value is not valid anymore based on choices, clear it
+    if (<span class="cstat-no" title="statement not covered" >control.type === 'SelectControl' &amp;&amp; control.choices &amp;&amp; k !== 'datasource' &amp;&amp; formData[k]) {</span>
+      const <span class="cstat-no" title="statement not covered" >choiceValues = control.choices.map(<span class="fstat-no" title="function not covered" >c =&gt; <span class="cstat-no" title="statement not covered" >c[0]);</span></span></span>
+      if (<span class="cstat-no" title="statement not covered" >control.multi &amp;&amp; formData[k].length &gt; 0 &amp;&amp; choiceValues.indexOf(formData[k][0]) &lt; 0) {</span>
+        delete <span class="cstat-no" title="statement not covered" >formData[k];</span>
+      } else <span class="cstat-no" title="statement not covered" >if (!control.multi &amp;&amp; !control.freeForm &amp;&amp; choiceValues.indexOf(formData[k]) &lt; 0) {</span>
+        delete <span class="cstat-no" title="statement not covered" >formData[k];</span>
+      }
+    }
+&nbsp;
+    if (<span class="cstat-no" title="statement not covered" >typeof control.default === 'function') {</span>
+      control.default = <span class="cstat-no" title="statement not covered" >control.default(control);</span>
+    }
+    control.<span class="cstat-no" title="statement not covered" >validationErrors = [];</span>
+    control.<span class="cstat-no" title="statement not covered" >value = control.default;</span>
+    // formData[k]'s type should match control value type
+    if (<span class="cstat-no" title="statement not covered" >formData[k] !== undefined &amp;&amp;</span>
+      (Array.isArray(formData[k]) &amp;&amp; control.multi || !control.multi)
+    ) {
+      control.<span class="cstat-no" title="statement not covered" >value = formData[k];</span>
+    }
+    controlsState[<span class="cstat-no" title="statement not covered" >k] = control;</span>
+  });
+  if (<span class="cstat-no" title="statement not covered" >viz.onInit) {</span>
+    return <span class="cstat-no" title="statement not covered" >viz.onInit(controlsState);</span>
+  }
+  return <span class="cstat-no" title="statement not covered" >controlsState;</span>
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function applyDefaultFormData(form_data) {</span>
+  const <span class="cstat-no" title="statement not covered" >datasourceType = form_data.datasource.split('__')[1];</span>
+  const <span class="cstat-no" title="statement not covered" >vizType = form_data.viz_type || 'table';</span>
+  const <span class="cstat-no" title="statement not covered" >viz = visTypes[vizType];</span>
+  const <span class="cstat-no" title="statement not covered" >controlNames = getControlNames(vizType, datasourceType);</span>
+  const <span class="cstat-no" title="statement not covered" >controlOverrides = viz.controlOverrides || {};</span>
+  const <span class="cstat-no" title="statement not covered" >formData = {};</span>
+  controlNames.<span class="cstat-no" title="statement not covered" >forEach(<span class="fstat-no" title="function not covered" >(k) =&gt; {</span></span>
+    const <span class="cstat-no" title="statement not covered" >control = Object.assign({}, controls[k]);</span>
+    if (<span class="cstat-no" title="statement not covered" >controlOverrides[k]) {</span>
+      Object.<span class="cstat-no" title="statement not covered" >assign(control, controlOverrides[k]);</span>
+    }
+    if (<span class="cstat-no" title="statement not covered" >form_data[k] === undefined) {</span>
+      if (<span class="cstat-no" title="statement not covered" >typeof control.default === 'function') {</span>
+        formData[<span class="cstat-no" title="statement not covered" >k] = control.default(controls[k]);</span>
+      } else {
+        formData[<span class="cstat-no" title="statement not covered" >k] = control.default;</span>
+      }
+    } else {
+      formData[<span class="cstat-no" title="statement not covered" >k] = form_data[k];</span>
+    }
+  });
+  // fill in additional params stored in form_data but not used by control
+  Object.<span class="cstat-no" title="statement not covered" >keys(form_data)</span>
+    .forEach(<span class="fstat-no" title="function not covered" >(key) =&gt; {</span>
+      if (<span class="cstat-no" title="statement not covered" >formData[key] === undefined) {</span>
+        formData[<span class="cstat-no" title="statement not covered" >key] = form_data[key];</span>
+      }
+    });
+  return <span class="cstat-no" title="statement not covered" >formData;</span>
+}
+&nbsp;
+export const autoQueryControls = [
+  'datasource',
+  'viz_type',
+];
+&nbsp;
+const defaultControls = Object.assign({}, controls);
+Object.keys(controls).forEach((f) =&gt; {
+  defaultControls[f].value = controls[f].default;
+});
+&nbsp;
+const defaultState = {
+  controls: defaultControls,
+  form_data: getFormDataFromControls(defaultControls),
+};
+&nbsp;
+export { defaultControls, defaultState };
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

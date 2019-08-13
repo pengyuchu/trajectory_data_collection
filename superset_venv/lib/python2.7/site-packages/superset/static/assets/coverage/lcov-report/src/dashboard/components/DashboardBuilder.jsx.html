@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/dashboard/components/DashboardBuilder.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/dashboard/components/</a> DashboardBuilder.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">93.65% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>59/63</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">69.44% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>25/36</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">94.64% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>53/56</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="branch-1 cbranch-no" title="branch not covered" ><span class="missing-if-branch" title="else path not taken" >E</span><span class="branch-1 cbranch-no" title="branch not covered" ><span class="missing-if-branch" title="if path not taken" >I</span>/</span></span></span>* eslint-env browser */
+import cx from 'classnames';
+// ParentSize uses resize observer so the dashboard will update size
+// when its container size changes, due to e.g., builder side panel opening
+import ParentSize from '@vx/responsive/build/components/ParentSize';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Sticky, StickyContainer } from 'react-sticky';
+import { TabContainer, TabContent, TabPane } from 'react-bootstrap';
+&nbsp;
+import BuilderComponentPane from './BuilderComponentPane';
+import DashboardHeader from '../containers/DashboardHeader';
+import DashboardGrid from '../containers/DashboardGrid';
+import IconButton from './IconButton';
+import DragDroppable from './dnd/DragDroppable';
+import DashboardComponent from '../containers/DashboardComponent';
+import ToastPresenter from '../../messageToasts/containers/ToastPresenter';
+import WithPopoverMenu from './menu/WithPopoverMenu';
+&nbsp;
+import getDragDropManager from '../util/getDragDropManager';
+&nbsp;
+import {
+  DASHBOARD_GRID_ID,
+  DASHBOARD_ROOT_ID,
+  DASHBOARD_ROOT_DEPTH,
+} from '../util/constants';
+&nbsp;
+const TABS_HEIGHT = 47;
+const HEADER_HEIGHT = 67;
+&nbsp;
+const propTypes = {
+  // redux
+  dashboardLayout: PropTypes.object.isRequired,
+  deleteTopLevelTabs: PropTypes.func.isRequired,
+  editMode: PropTypes.bool.isRequired,
+  showBuilderPane: PropTypes.bool,
+  handleComponentDrop: PropTypes.func.isRequired,
+  toggleBuilderPane: PropTypes.func.isRequired,
+};
+&nbsp;
+const defaultProps = {
+  showBuilderPane: false,
+};
+&nbsp;
+class DashboardBuilder extends React.Component {
+  static shouldFocusTabs(<span class="fstat-no" title="function not covered" >event, container) {</span>
+    // don't focus the tabs when we click on a tab
+    return (
+<span class="cstat-no" title="statement not covered" >      event.target.tagName === 'UL' ||</span>
+      (/icon-button/.test(event.target.className) &amp;&amp;
+        container.contains(event.target))
+    );
+  }
+&nbsp;
+  constructor(props) {
+    super(<span class="branch-1 cbranch-no" title="branch not covered" >p</span>rops);
+    this.state = {
+      tabIndex: 0, // top-level tabs
+    };
+    this.handleChangeTab = this.handleChangeTab.bind(this);
+    this.handleDeleteTopLevelTabs = this.handleDeleteTopLevelTabs.bind(this);
+  }
+&nbsp;
+  getChildContext() {
+    return {
+      dragDropManager: this.context.dragDropManager || getDragDropManager(),
+    };
+  }
+&nbsp;
+  handleDeleteTopLevelTabs() <span class="fstat-no" title="function not covered" >{</span>
+    this.<span class="cstat-no" title="statement not covered" >props.deleteTopLevelTabs();</span>
+    this.<span class="cstat-no" title="statement not covered" >setState({ tabIndex: 0 });</span>
+  }
+&nbsp;
+  handleChangeTab({ tabIndex }) {
+    this.setState(() =&gt; ({ tabIndex }));
+    setTimeout(() =&gt; {
+      if (<span class="missing-if-branch" title="else path not taken" >E</span>window)
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+    }, 100);
+  }
+&nbsp;
+  render() {
+    const { handleComponentDrop, dashboardLayout, editMode } = this.props;
+    const { tabIndex } = this.state;
+    const dashboardRoot = dashboardLayout[DASHBOARD_ROOT_ID];
+    const rootChildId = dashboardRoot.children[0];
+    const topLevelTabs =
+      rootChildId !== DASHBOARD_GRID_ID &amp;&amp; dashboardLayout[rootChildId];
+&nbsp;
+    const childIds = topLevelTabs ? topLevelTabs.children : [DASHBOARD_GRID_ID];
+&nbsp;
+    return (
+      &lt;StickyContainer
+        className={cx('dashboard', editMode &amp;&amp; 'dashboard--editing')}
+      &gt;
+        &lt;Sticky&gt;
+          {({ style }) =&gt; (
+            &lt;DragDroppable
+              component={dashboardRoot}
+              parentComponent={null}
+              depth={DASHBOARD_ROOT_DEPTH}
+              index={0}
+              orientation="column"
+              onDrop={handleComponentDrop}
+              editMode={editMode}
+              // you cannot drop on/displace tabs if they already exist
+              disableDragdrop={!!topLevelTabs}
+              style={{ zIndex: 100, ...style }}
+            &gt;
+              {({ dropIndicatorProps }) =&gt; (
+                &lt;div&gt;
+                  &lt;DashboardHeader /&gt;
+                  {dropIndicatorProps &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;div {...dropIndicatorProps} /&gt;}</span>
+                  {topLevelTabs &amp;&amp; (
+                    &lt;WithPopoverMenu
+                      shouldFocus={DashboardBuilder.shouldFocusTabs}
+                      menuItems={[
+                        &lt;IconButton
+                          className="fa fa-level-down"
+                          label="Collapse tab content"
+                          onClick={this.handleDeleteTopLevelTabs}
+                        /&gt;,
+                      ]}
+                      editMode={editMode}
+                    &gt;
+                      &lt;DashboardComponent
+                        id={topLevelTabs.id}
+                        parentId={DASHBOARD_ROOT_ID}
+                        depth={DASHBOARD_ROOT_DEPTH + 1}
+                        index={0}
+                        renderTabContent={false}
+                        renderHoverMenu={false}
+                        onChangeTab={this.handleChangeTab}
+                      /&gt;
+                    &lt;/WithPopoverMenu&gt;
+                  )}
+                &lt;/div&gt;
+              )}
+            &lt;/DragDroppable&gt;
+          )}
+        &lt;/Sticky&gt;
+&nbsp;
+        &lt;div className="dashboard-content"&gt;
+          &lt;div className="grid-container"&gt;
+            &lt;ParentSize&gt;
+              {({ width }) =&gt; (
+                /*
+                  We use a TabContainer irrespective of whether top-level tabs exist to maintain
+                  a consistent React component tree. This avoids expensive mounts/unmounts of
+                  the entire dashboard upon adding/removing top-level tabs, which would otherwise
+                  happen because of React's diffing algorithm
+                */
+                &lt;TabContainer
+                  id={DASHBOARD_GRID_ID}
+                  activeKey={Math.min(tabIndex, childIds.length - 1)}
+                  onSelect={this.handleChangeTab}
+                  animation
+                  mountOnEnter
+                  unmountOnExit={false}
+                &gt;
+                  &lt;TabContent&gt;
+                    {childIds.map((id, index) =&gt; (
+                      // Matching the key of the first TabPane irrespective of topLevelTabs
+                      // lets us keep the same React component tree when !!topLevelTabs changes.
+                      // This avoids expensive mounts/unmounts of the entire dashboard.
+                      &lt;TabPane
+                        key={index === 0 ? DASHBOARD_GRID_ID : id}
+                        eventKey={index}
+                      &gt;
+                        &lt;DashboardGrid
+                          gridComponent={dashboardLayout[id]}
+                          // see isValidChild for why tabs do not increment the depth of their children
+                          depth={DASHBOARD_ROOT_DEPTH + 1} // (topLevelTabs ? 0 : 1)}
+                          width={width}
+                        /&gt;
+                      &lt;/TabPane&gt;
+                    ))}
+                  &lt;/TabContent&gt;
+                &lt;/TabContainer&gt;
+              )}
+            &lt;/ParentSize&gt;
+          &lt;/div&gt;
+&nbsp;
+          {this.props.editMode &amp;&amp;
+            this.props.showBuilderPane &amp;&amp; (
+              &lt;BuilderComponentPane
+                topOffset={HEADER_HEIGHT + (t</span>opLevelTabs ? <span class="branch-0 cbranch-no" title="branch not covered" >TABS_HEIGHT : 0)}
+                toggleBuilderPane={this.props.toggleBuilderPane}
+              /&gt;
+            )}
+        &lt;/div&gt;
+        &lt;ToastPresenter /&gt;
+      &lt;/StickyContainer&gt;
+    );
+  }
+}
+&nbsp;
+DashboardBuilder.propTypes = propTypes;
+DashboardBuilder.defaultProps = defaultProps;
+DashboardBuilder.childContextTypes = {
+  dragDropManager: PropTypes.object.isRequired,
+};
+&nbsp;
+export default DashboardBuilder;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

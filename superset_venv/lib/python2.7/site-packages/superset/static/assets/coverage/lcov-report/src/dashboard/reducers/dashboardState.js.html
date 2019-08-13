@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/dashboard/reducers/dashboardState.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/dashboard/reducers/</a> dashboardState.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">94.03% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>63/67</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">85.71% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>30/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">93.75% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>15/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">95% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>57/60</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152</td><td class="line-coverage quiet"><span class="cline-any cline-yes">271×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="if path not taken" >I</span>/</span>* eslint-disable camelcase */
+import {
+  ADD_SLICE,
+  CHANGE_FILTER,
+  ON_CHANGE,
+  ON_SAVE,
+  REMOVE_SLICE,
+  SET_EDIT_MODE,
+  SET_MAX_UNDO_HISTORY_EXCEEDED,
+  SET_UNSAVED_CHANGES,
+  TOGGLE_BUILDER_PANE,
+  TOGGLE_EXPAND_SLICE,
+  TOGGLE_FAVE_STAR,
+  UPDATE_CSS,
+} from '../actions/dashboardState';
+&nbsp;
+export default function dashboardStateReducer(state = {}, action) {
+  const actionHandlers = {
+    [UPDATE_CSS]() <span class="fstat-no" title="function not covered" >{</span>
+      return { ...<span class="cstat-no" title="statement not covered" >state, css: action.css };</span>
+    },
+    [ADD_SLICE]() {
+      const updatedSliceIds = new Set(state.sliceIds);
+      updatedSliceIds.add(action.slice.slice_id);
+      return {
+        ...state,
+        sliceIds: Array.from(updatedSliceIds),
+      };
+    },
+    [REMOVE_SLICE]() {
+      const sliceId = action.sliceId;
+      const updatedSliceIds = new Set(state.sliceIds);
+      updatedSliceIds.delete(sliceId);
+&nbsp;
+      const key = sliceId;
+      // if this slice is a filter
+      const newFilter = { ...state.filters };
+      let refresh = false;
+      if (state.filters[key]) {
+        delete newFilter[key];
+        refresh = true;
+      }
+      return {
+        ...state,
+        sliceIds: Array.from(updatedSliceIds),
+        filters: newFilter,
+        refresh,
+      };
+    },
+    [TOGGLE_FAVE_STAR]() {
+      return { ...state, isStarred: action.isStarred };
+    },
+    [SET_EDIT_MODE]() {
+      return {
+        ...state,
+        editMode: action.editMode,
+        showBuilderPane: !!action.editMode,
+      };
+    },
+    [SET_MAX_UNDO_HISTORY_EXCEEDED]() {
+      const { maxUndoHistoryExceeded = <span class="branch-0 cbranch-no" title="branch not covered" >true } = action.payload;</span>
+      return { ...state, maxUndoHistoryExceeded };
+    },
+    [TOGGLE_BUILDER_PANE]() {
+      return { ...state, showBuilderPane: !state.showBuilderPane };
+    },
+    [TOGGLE_EXPAND_SLICE]() {
+      const updatedExpandedSlices = { ...state.expandedSlices };
+      const sliceId = action.sliceId;
+      if (updatedExpandedSlices[sliceId]) {
+        delete updatedExpandedSlices[sliceId];
+      } else {
+        updatedExpandedSlices[sliceId] = true;
+      }
+      return { ...state, expandedSlices: updatedExpandedSlices };
+    },
+    [ON_CHANGE]() {
+      return { ...state, hasUnsavedChanges: true };
+    },
+    [ON_SAVE]() {
+      return {
+        ...state,
+        hasUnsavedChanges: false,
+        maxUndoHistoryExceeded: false,
+        editMode: false,
+        isV2Preview: false, // @TODO remove upon v1 deprecation
+      };
+    },
+&nbsp;
+    [CHANGE_FILTER]() {
+      const hasSelectedFilter = state.sliceIds.includes(action.chart.id);
+      if (<span class="missing-if-branch" title="if path not taken" >I</span>!hasSelectedFilter) {
+        return <span class="cstat-no" title="statement not covered" >state;</span>
+      }
+&nbsp;
+      let filters = state.filters;
+      const { chart, col, vals: nextVals, merge, refresh } = action;
+      const sliceId = chart.id;
+      const filterKeys = [
+        '__time_range',
+        '__time_col',
+        '__time_grain',
+        '__time_origin',
+        '__granularity',
+      ];
+      if (
+        <span class="missing-if-branch" title="else path not taken" >E</span>filterKeys.indexOf(col) &gt;= 0 ||
+        action.chart.formData.groupby.indexOf(col) !== -1
+      ) {
+        let newFilter = {};
+        if (!(sliceId in filters)) {
+          // if no filters existed for the slice, set them
+          newFilter = { [col]: nextVals };
+        } else if ((filters[sliceId] &amp;&amp; !(col in filters[sliceId])) || !merge) {
+          // If no filters exist for this column, or we are overwriting them
+          newFilter = { ...filters[sliceId], [col]: nextVals };
+        } else <span class="missing-if-branch" title="else path not taken" >E</span>if (filters[sliceId][col] instanceof Array) {
+          newFilter[col] = [...filters[sliceId][col], ...nextVals];
+        } else {
+          newFilter[<span class="cstat-no" title="statement not covered" >col] = [filters[sliceId][col], ...nextVals];</span>
+        }
+        filters = { ...filters, [sliceId]: newFilter };
+&nbsp;
+        // remove any empty filters so they don't pollute the logs
+        Object.keys(filters).forEach(chartId =&gt; {
+          Object.keys(filters[chartId]).forEach(column =&gt; {
+            if (
+              !filters[chartId][column] ||
+              filters[chartId][column].length === 0
+            ) {
+              delete filters[chartId][column];
+            }
+          });
+          if (Object.keys(filters[chartId]).length === 0) {
+            delete filters[chartId];
+          }
+        });
+      }
+      return { ...state, filters, refresh };
+    },
+    [SET_UNSAVED_CHANGES]() {
+      const { hasUnsavedChanges } = action.payload;
+      return { ...state, hasUnsavedChanges };
+    },
+  };
+&nbsp;
+  if (action.type in actionHandlers) {
+    return actionHandlers[action.type]();
+  }
+  return state;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

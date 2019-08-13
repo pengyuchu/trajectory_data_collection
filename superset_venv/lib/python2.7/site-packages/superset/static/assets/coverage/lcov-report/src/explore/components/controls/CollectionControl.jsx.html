@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/explore/components/controls/CollectionControl.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">src/explore/components/controls/</a> CollectionControl.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">58.14% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>25/43</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>24/40</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import PropTypes from 'prop-types';
+import { ListGroup, ListGroupItem } from 'react-bootstrap';
+import shortid from 'shortid';
+import {
+  SortableContainer, SortableHandle, SortableElement, arrayMove,
+} from 'react-sortable-hoc';
+&nbsp;
+import InfoTooltipWithTrigger from '../../../components/InfoTooltipWithTrigger';
+import ControlHeader from '../ControlHeader';
+import controlMap from './';
+&nbsp;
+const propTypes = {
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string,
+  description: PropTypes.string,
+  placeholder: PropTypes.string,
+  addTooltip: PropTypes.string,
+  itemGenerator: PropTypes.func,
+  keyAccessor: PropTypes.func,
+  onChange: PropTypes.func,
+  value: PropTypes.oneOfType([
+    PropTypes.array,
+  ]),
+  isFloat: PropTypes.bool,
+  isInt: PropTypes.bool,
+  controlName: PropTypes.string.isRequired,
+};
+&nbsp;
+const defaultProps = {
+  label: null,
+  description: null,
+  onChange: () =&gt; <span class="fstat-no" title="function not covered" >{</span>},
+  placeholder: 'Empty collection',
+  itemGenerator: () =&gt; (<span class="cstat-no" title="statement not covered" >{ key: shortid.generate() }),</span>
+  keyAccessor: o =&gt; <span class="cstat-no" title="statement not covered" >o.key,</span>
+  value: [],
+  addTooltip: 'Add an item',
+};
+const SortableListGroupItem = SortableElement(ListGroupItem);
+const SortableListGroup = SortableContainer(ListGroup);
+const SortableDragger = SortableHandle(<span class="fstat-no" title="function not covered" >() =&gt; (</span>
+<span class="cstat-no" title="statement not covered" >  &lt;i className="fa fa-bars text-primary" style={{ cursor: 'ns-resize' }} /&gt;));</span>
+&nbsp;
+export default class CollectionControl extends React.Component {
+  constructor(<span class="fstat-no" title="function not covered" >props) {</span>
+    super(<span class="cstat-no" title="statement not covered" >props);</span>
+    this.<span class="cstat-no" title="statement not covered" >onAdd = this.onAdd.bind(this);</span>
+  }
+  onChange(<span class="fstat-no" title="function not covered" >i, value) {</span>
+    Object.<span class="cstat-no" title="statement not covered" >assign(this.props.value[i], value);</span>
+    this.<span class="cstat-no" title="statement not covered" >props.onChange(this.props.value);</span>
+  }
+  onAdd() <span class="fstat-no" title="function not covered" >{</span>
+    this.<span class="cstat-no" title="statement not covered" >props.onChange(this.props.value.concat([this.props.itemGenerator()]));</span>
+  }
+  onSortEnd({ <span class="cstat-no" title="statement not covered" >oldIndex, newIndex }) <span class="fstat-no" title="function not covered" >{</span></span>
+    this.<span class="cstat-no" title="statement not covered" >props.onChange(arrayMove(this.props.value, oldIndex, newIndex));</span>
+  }
+  removeItem(<span class="fstat-no" title="function not covered" >i) {</span>
+    this.<span class="cstat-no" title="statement not covered" >props.onChange(this.props.value.filter(<span class="fstat-no" title="function not covered" >(o, ix) =&gt; <span class="cstat-no" title="statement not covered" >i !== ix));</span></span></span>
+  }
+  renderList() <span class="fstat-no" title="function not covered" >{</span>
+    if (<span class="cstat-no" title="statement not covered" >this.props.value.length === 0) {</span>
+      return <span class="cstat-no" title="statement not covered" >&lt;div className="text-muted"&gt;{this.props.placeholder}&lt;/div&gt;;</span>
+    }
+    const <span class="cstat-no" title="statement not covered" >Control = controlMap[this.props.controlName];</span>
+    return (
+<span class="cstat-no" title="statement not covered" >      &lt;SortableListGroup</span>
+        useDragHandle
+        lockAxis="y"
+        onSortEnd={this.onSortEnd.bind(this)}
+      &gt;
+        {this.props.value.map(<span class="fstat-no" title="function not covered" >(o, i) =&gt; (</span>
+<span class="cstat-no" title="statement not covered" >          &lt;SortableListGroupItem</span>
+            className="clearfix"
+            key={this.props.keyAccessor(o)}
+            index={i}
+          &gt;
+            &lt;div className="pull-left m-r-5"&gt;
+              &lt;SortableDragger /&gt;
+            &lt;/div&gt;
+            &lt;div className="pull-left"&gt;
+              &lt;Control
+                {...o}
+                onChange={this.onChange.bind(this, i)}
+              /&gt;
+            &lt;/div&gt;
+            &lt;div className="pull-right"&gt;
+              &lt;InfoTooltipWithTrigger
+                icon="times"
+                label="remove-item"
+                tooltip="remove item"
+                bsStyle="primary"
+                onClick={this.removeItem.bind(this, i)}
+              /&gt;
+            &lt;/div&gt;
+          &lt;/SortableListGroupItem&gt;))}
+      &lt;/SortableListGroup&gt;
+    );
+  }
+  render() <span class="fstat-no" title="function not covered" >{</span>
+    return (
+<span class="cstat-no" title="statement not covered" >      &lt;div&gt;</span>
+        &lt;ControlHeader {...this.props} /&gt;
+        {this.renderList()}
+        &lt;InfoTooltipWithTrigger
+          icon="plus-circle"
+          label="add-item"
+          tooltip={this.props.addTooltip}
+          bsStyle="primary"
+          className="fa-lg"
+          onClick={this.onAdd}
+        /&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+&nbsp;
+CollectionControl.propTypes = propTypes;
+CollectionControl.defaultProps = defaultProps;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

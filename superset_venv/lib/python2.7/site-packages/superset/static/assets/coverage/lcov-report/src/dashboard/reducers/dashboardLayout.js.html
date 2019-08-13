@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/dashboard/reducers/dashboardLayout.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/dashboard/reducers/</a> dashboardLayout.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">96.08% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>98/102</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">81.4% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>35/43</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>13/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">98.96% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>95/96</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {
+  DASHBOARD_ROOT_ID,
+  DASHBOARD_GRID_ID,
+  NEW_COMPONENTS_SOURCE_ID,
+} from '../util/constants';
+import componentIsResizable from '../util/componentIsResizable';
+import findParentId from '../util/findParentId';
+import getComponentWidthFromDrop from '../util/getComponentWidthFromDrop';
+import newComponentFactory from '../util/newComponentFactory';
+import newEntitiesFromDrop from '../util/newEntitiesFromDrop';
+import reorderItem from '../util/dnd-reorder';
+import shouldWrapChildInRow from '../util/shouldWrapChildInRow';
+import { ROW_TYPE, TAB_TYPE, TABS_TYPE } from '../util/componentTypes';
+&nbsp;
+import {
+  UPDATE_COMPONENTS,
+  DELETE_COMPONENT,
+  CREATE_COMPONENT,
+  MOVE_COMPONENT,
+  CREATE_TOP_LEVEL_TABS,
+  DELETE_TOP_LEVEL_TABS,
+} from '../actions/dashboardLayout';
+&nbsp;
+const actionHandlers = {
+  [UPDATE_COMPONENTS](state, action) {
+    const {
+      payload: { nextComponents },
+    } = action;
+    return {
+      ...state,
+      ...nextComponents,
+    };
+  },
+&nbsp;
+  [DELETE_COMPONENT](state, action) {
+    const {
+      payload: { id, parentId },
+    } = action;
+&nbsp;
+    if (<span class="missing-if-branch" title="if path not taken" >I</span>!parentId || !id || !state[id] || !state[parentId]) <span class="cstat-no" title="statement not covered" >return state;</span>
+&nbsp;
+    const nextComponents = { ...state };
+&nbsp;
+    function recursivelyDeleteChildren(componentId, componentParentId) {
+      // delete child and it's children
+      const component = nextComponents[componentId];
+      delete nextComponents[componentId];
+&nbsp;
+      const { children = <span class="branch-0 cbranch-no" title="branch not covered" >[] } = component;</span>
+      children.forEach(childId =&gt; {
+        recursivelyDeleteChildren(childId, componentId);
+      });
+&nbsp;
+      const parent = nextComponents[componentParentId];
+      if (parent) {
+        // may have been deleted in another recursion
+        const componentIndex = (</span>parent.children || <span class="branch-1 cbranch-no" title="branch not covered" >[]).indexOf(componentId);
+        if (<span class="missing-if-branch" title="else path not taken" >E</span>componentIndex &gt; -1) {
+          const nextChildren = [...parent.children];
+          nextChildren.splice(componentIndex, 1);
+          nextComponents[componentParentId] = {
+            ...parent,
+            children: nextChildren,
+          };
+        }
+      }
+    }
+&nbsp;
+    recursivelyDeleteChildren(id, parentId);
+    const nextParent = nextComponents[parentId];
+    if (nextParent.type === ROW_TYPE &amp;&amp; nextParent.children.length === 0) {
+      const grandparentId = findParentId({
+        childId: parentId,
+        layout: nextComponents,
+      });
+      recursivelyDeleteChildren(parentId, grandparentId);
+    }
+&nbsp;
+    return nextComponents;
+  },
+&nbsp;
+  [CREATE_COMPONENT](state, action) {
+    const {
+      payload: { dropResult },
+    } = action;
+&nbsp;
+    const newEntities = newEntitiesFromDrop({ dropResult, layout: state });
+&nbsp;
+    return {
+      ...state,
+      ...newEntities,
+    };
+  },
+&nbsp;
+  [MOVE_COMPONENT](state, action) {
+    const {
+      payload: { dropResult },
+    } = action;
+    const { source, destination, dragging } = dropResult;
+&nbsp;
+    if (<span class="missing-if-branch" title="if path not taken" >I</span>!source || !destination || !dragging) <span class="cstat-no" title="statement not covered" >return state;</span>
+&nbsp;
+    const nextEntities = reorderItem({
+      entitiesMap: state,
+      source,
+      destination,
+    });
+&nbsp;
+    if (<span class="missing-if-branch" title="else path not taken" >E</span>componentIsResizable(nextEntities[dragging.id])) {
+      // update component width if it changed
+      const nextWidth =
+        getComponentWidthFromDrop({
+          dropResult,
+          layout: state,
+        }) || undefined; // don't set a 0 width
+      if (<span class="missing-if-branch" title="if path not taken" >I</span>(nextEntities[dragging.id].meta || {}).width !== nextWidth) {
+        nextEntities[<span class="cstat-no" title="statement not covered" >dragging.id] = {</span>
+          ...nextEntities[dragging.id],
+          meta: {
+            ...nextEntities[dragging.id].meta,
+            width: nextWidth,
+          },
+        };
+      }
+    }
+&nbsp;
+    // wrap the dragged component in a row depending on destination type
+    const wrapInRow = shouldWrapChildInRow({
+      parentType: destination.type,
+      childType: dragging.type,
+    });
+&nbsp;
+    if (wrapInRow) {
+      const destinationEntity = nextEntities[destination.id];
+      const destinationChildren = destinationEntity.children;
+      const newRow = newComponentFactory(ROW_TYPE);
+      newRow.children = [destinationChildren[destination.index]];
+      destinationChildren[destination.index] = newRow.id;
+      nextEntities[newRow.id] = newRow;
+    }
+&nbsp;
+    return {
+      ...state,
+      ...nextEntities,
+    };
+  },
+&nbsp;
+  [CREATE_TOP_LEVEL_TABS](state, action) {
+    const {
+      payload: { dropResult },
+    } = action;
+    const { source, dragging } = dropResult;
+&nbsp;
+    // move children of current root to be children of the dragging tab
+    const rootComponent = state[DASHBOARD_ROOT_ID];
+    const topLevelId = rootComponent.children[0];
+    const topLevelComponent = state[topLevelId];
+&nbsp;
+    if (source.id !== NEW_COMPONENTS_SOURCE_ID) {
+      // component already exists
+      const draggingTabs = state[dragging.id];
+      const draggingTabId = draggingTabs.children[0];
+      const draggingTab = state[draggingTabId];
+&nbsp;
+      // move all children except the one that is dragging
+      const childrenToMove = [...topLevelComponent.children].filter(
+        id =&gt; id !== dragging.id,
+      );
+&nbsp;
+      return {
+        ...state,
+        [DASHBOARD_ROOT_ID]: {
+          ...rootComponent,
+          children: [dragging.id],
+        },
+        [topLevelId]: {
+          ...topLevelComponent,
+          children: [],
+        },
+        [draggingTabId]: {
+          ...draggingTab,
+          children: [...draggingTab.children, ...childrenToMove],
+        },
+      };
+    }
+&nbsp;
+    // create new component
+    const newEntities = newEntitiesFromDrop({ dropResult, layout: state });
+    const newEntitiesArray = Object.values(newEntities);
+    const tabComponent = newEntitiesArray.find(
+      component =&gt; component.type === TAB_TYPE,
+    );
+    const tabsComponent = newEntitiesArray.find(
+      component =&gt; component.type === TABS_TYPE,
+    );
+&nbsp;
+    tabComponent.children = [...topLevelComponent.children];
+    newEntities[topLevelId] = { ...topLevelComponent, children: [] };
+    newEntities[DASHBOARD_ROOT_ID] = {
+      ...rootComponent,
+      children: [tabsComponent.id],
+    };
+&nbsp;
+    return {
+      ...state,
+      ...newEntities,
+    };
+  },
+&nbsp;
+  [DELETE_TOP_LEVEL_TABS](state) {
+    const rootComponent = state[DASHBOARD_ROOT_ID];
+    const topLevelId = rootComponent.children[0];
+    const topLevelTabs = state[topLevelId];
+&nbsp;
+    if (<span class="missing-if-branch" title="if path not taken" >I</span>topLevelTabs.type !== TABS_TYPE) <span class="cstat-no" title="statement not covered" >return state;</span>
+&nbsp;
+    let childrenToMove = [];
+    const nextEntities = { ...state };
+&nbsp;
+    topLevelTabs.children.forEach(tabId =&gt; {
+      const tabComponent = state[tabId];
+      childrenToMove = [...childrenToMove, ...tabComponent.children];
+      delete nextEntities[tabId];
+    });
+&nbsp;
+    delete nextEntities[topLevelId];
+&nbsp;
+    nextEntities[DASHBOARD_ROOT_ID] = {
+      ...rootComponent,
+      children: [DASHBOARD_GRID_ID],
+    };
+&nbsp;
+    nextEntities[DASHBOARD_GRID_ID] = {
+      ...state[DASHBOARD_GRID_ID],
+      children: childrenToMove,
+    };
+&nbsp;
+    return nextEntities;
+  },
+};
+&nbsp;
+export default function layoutReducer(state = {}, action) {
+  if (action.type in actionHandlers) {
+    const handler = actionHandlers[action.type];
+    return handler(state, action);
+  }
+&nbsp;
+  return state;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

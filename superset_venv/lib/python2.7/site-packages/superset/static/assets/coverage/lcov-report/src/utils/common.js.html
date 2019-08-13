@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/utils/common.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/utils/</a> common.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">66.29% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>59/89</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">71.43% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>20/28</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">33.33% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>5/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60.53% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>46/76</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">23×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* eslint global-require: 0 */
+import $ from 'jquery';
+&nbsp;
+const d3 = require('d3');
+&nbsp;
+export const EARTH_CIRCUMFERENCE_KM = 40075.16;
+export const LUMINANCE_RED_WEIGHT = 0.2126;
+export const LUMINANCE_GREEN_WEIGHT = 0.7152;
+export const LUMINANCE_BLUE_WEIGHT = 0.0722;
+export const MILES_PER_KM = 1.60934;
+export const DEFAULT_LONGITUDE = -122.405293;
+export const DEFAULT_LATITUDE = 37.772123;
+export const DEFAULT_ZOOM = 11;
+&nbsp;
+// Regexp for the label added to time shifted series (1 hour offset, 2 days offset, etc.)
+export const TIME_SHIFT_PATTERN = /\d+ \w+ offset/;
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function kmToPixels(kilometers, latitude, zoomLevel) {</span>
+  // Algorithm from: http://wiki.openstreetmap.org/wiki/Zoom_levels
+  const <span class="cstat-no" title="statement not covered" >latitudeRad = latitude * (Math.PI / 180);</span>
+  // Seems like the zoomLevel is off by one
+  const <span class="cstat-no" title="statement not covered" >kmPerPixel = EARTH_CIRCUMFERENCE_KM * Math.cos(latitudeRad) / Math.pow(2, zoomLevel + 9);</span>
+  return <span class="cstat-no" title="statement not covered" >d3.round(kilometers / kmPerPixel, 2);</span>
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function isNumeric(num) {</span>
+  return <span class="cstat-no" title="statement not covered" >!isNaN(parseFloat(num)) &amp;&amp; isFinite(num);</span>
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function rgbLuminance(r, g, b) {</span>
+  // Formula: https://en.wikipedia.org/wiki/Relative_luminance
+  return (<span class="cstat-no" title="statement not covered" >LUMINANCE_RED_WEIGHT * r) + (LUMINANCE_GREEN_WEIGHT * g) + (LUMINANCE_BLUE_WEIGHT * b);</span>
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function getParamFromQuery(query, param) {</span>
+  const <span class="cstat-no" title="statement not covered" >vars = query.split('&amp;');</span>
+  for (<span class="cstat-no" title="statement not covered" >let i = 0; i &lt; vars.length; i += 1) {</span>
+    const <span class="cstat-no" title="statement not covered" >pair = vars[i].split('=');</span>
+    if (<span class="cstat-no" title="statement not covered" >decodeURIComponent(pair[0]) === param) {</span>
+      return <span class="cstat-no" title="statement not covered" >decodeURIComponent(pair[1]);</span>
+    }
+  }
+  return <span class="cstat-no" title="statement not covered" >null;</span>
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function storeQuery(query, callback) {</span>
+  $.<span class="cstat-no" title="statement not covered" >ajax({</span>
+    type: 'POST',
+    url: '/kv/store/',
+    async: false,
+    data: {
+      data: JSON.stringify(query),
+    },
+    success: (<span class="fstat-no" title="function not covered" >data) =&gt; {</span>
+      const <span class="cstat-no" title="statement not covered" >baseUrl = window.location.origin + window.location.pathname;</span>
+      const <span class="cstat-no" title="statement not covered" >url = `${baseUrl}?id=${JSON.parse(data).id}`;</span>
+      callback(<span class="cstat-no" title="statement not covered" >url);</span>
+    },
+  });
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function getParamsFromUrl() {</span>
+  const <span class="cstat-no" title="statement not covered" >hash = window.location.search;</span>
+  const <span class="cstat-no" title="statement not covered" >params = hash.split('?')[1].split('&amp;');</span>
+  const <span class="cstat-no" title="statement not covered" >newParams = {};</span>
+  params.<span class="cstat-no" title="statement not covered" >forEach(<span class="fstat-no" title="function not covered" >(p) =&gt; {</span></span>
+    const <span class="cstat-no" title="statement not covered" >value = p.split('=')[1].replace(/\+/g, ' ');</span>
+    const <span class="cstat-no" title="statement not covered" >key = p.split('=')[0];</span>
+    newParams[<span class="cstat-no" title="statement not covered" >key] = value;</span>
+  });
+  return <span class="cstat-no" title="statement not covered" >newParams;</span>
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function getShortUrl(longUrl, callback, onError) {</span>
+  $.<span class="cstat-no" title="statement not covered" >ajax({</span>
+    type: 'POST',
+    url: '/r/shortner/',
+    async: false,
+    data: {
+      data: '/' + longUrl,
+    },
+    success: callback,
+    error: () =&gt; <span class="fstat-no" title="function not covered" >{</span>
+      if (<span class="cstat-no" title="statement not covered" >onError) {</span>
+        onError(<span class="cstat-no" title="statement not covered" >'Error getting the short URL');</span>
+      }
+      callback(<span class="cstat-no" title="statement not covered" >longUrl);</span>
+    },
+  });
+}
+&nbsp;
+export function supersetURL(rootUrl, getParams = <span class="branch-1 cbranch-no" title="branch not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >{</span></span>}) {
+  const url = new URL(rootUrl, window.location.origin);
+  for (<span class="cstat-no" title="statement not covered" >const k in getParams) {</span>
+    url.<span class="cstat-no" title="statement not covered" >searchParams.set(k, getParams[k]);</span>
+  }
+  return <span class="cstat-no" title="statement not covered" >url.href;</span>
+}
+&nbsp;
+export function isTruthy(obj) {
+  if (typeof obj === 'boolean') {
+    return obj;
+  } else if (typeof obj === 'string') {
+    return ['yes', 'y', 'true', 't', '1'].indexOf(obj.toLowerCase()) &gt;= 0;
+  }
+  return !!obj;
+}
+&nbsp;
+export function optionLabel(opt) {
+  if (opt === null) {
+    return '&lt;NULL&gt;';
+  } else if (opt === '') {
+    return '&lt;empty string&gt;';
+  } else if (opt === true) {
+    return '&lt;true&gt;';
+  } else if (opt === false) {
+    return '&lt;false&gt;';
+  } else if (typeof opt !== 'string' &amp;&amp; opt.toString) {
+    return opt.toString();
+  }
+  return opt;
+}
+&nbsp;
+export function optionValue(opt) {
+  if (opt === null) {
+    return '&lt;NULL&gt;';
+  }
+  return opt;
+}
+&nbsp;
+export function optionFromValue(opt) {
+  // From a list of options, handles special values &amp; labels
+  return { value: optionValue(opt), label: optionLabel(opt) };
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

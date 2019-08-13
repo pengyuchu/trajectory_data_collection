@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/reduxUtils.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">src/</a> reduxUtils.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">77.46% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>55/71</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">39.47% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>15/38</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">75% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>9/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">74.58% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>44/59</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">20×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import shortid from 'shortid';
+import { compose } from 'redux';
+import persistState from 'redux-localstorage';
+import equals from 'deep-equal';
+&nbsp;
+export function addToObject(state, arrKey, obj) {
+  const newObject = Object.assign({}, state[arrKey]);
+  const copiedObject = Object.assign({}, obj);
+&nbsp;
+  if (<span class="missing-if-branch" title="if path not taken" >I</span>!copiedObject.id) {
+    copiedObject.<span class="cstat-no" title="statement not covered" >id = shortid.generate();</span>
+  }
+  newObject[copiedObject.id] = copiedObject;
+  return Object.assign({}, state, { [arrKey]: newObject });
+}
+&nbsp;
+export function alterInObject(state, arrKey, obj, alterations) {
+  const newObject = Object.assign({}, state[arrKey]);
+  newObject[obj.id] = Object.assign({}, newObject[obj.id], alterations);
+  return Object.assign({}, state, { [arrKey]: newObject });
+}
+&nbsp;
+export function alterInArr(state, arrKey, obj, alterations, idKey = <span class="branch-1 cbranch-no" title="branch not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >'</span></span>id') {
+  // Finds an item in an array in the state and replaces it with a
+  // new object with an altered property
+  const newArr = [];
+  state[arrKey].forEach((arrItem) =&gt; {
+    if (obj[idKey] === arrItem[idKey]) {
+      newArr.push(Object.assign({}, arrItem, alterations));
+    } else {
+      newArr.push(arrItem);
+    }
+  });
+  return Object.assign({}, state, { [arrKey]: newArr });
+}
+&nbsp;
+export function removeFromArr(state, arrKey, obj, idKey = <span class="branch-1 cbranch-no" title="branch not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >'</span></span>id') {
+  const newArr = [];
+  state[arrKey].forEach((arrItem) =&gt; {
+    if (!(obj[idKey] === arrItem[idKey])) {
+      newArr.push(arrItem);
+    }
+  });
+  return Object.assign({}, state, { [arrKey]: newArr });
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function getFromArr(arr, id) {</span>
+  let <span class="cstat-no" title="statement not covered" >obj;</span>
+  arr.<span class="cstat-no" title="statement not covered" >forEach(<span class="fstat-no" title="function not covered" >(o) =&gt; {</span></span>
+    if (<span class="cstat-no" title="statement not covered" >o.id === id) {</span>
+      obj = <span class="cstat-no" title="statement not covered" >o;</span>
+    }
+  });
+  return <span class="cstat-no" title="statement not covered" >obj;</span>
+}
+&nbsp;
+export function addToArr(state, arrKey, obj) {
+  const newObj = Object.assign({}, obj);
+  if (<span class="missing-if-branch" title="if path not taken" >I</span>!newObj.id) {
+    newObj.<span class="cstat-no" title="statement not covered" >id = shortid.generate();</span>
+  }
+  const newState = {};
+  newState[arrKey] = [...state[arrKey], newObj];
+  return Object.assign({}, state, newState);
+}
+&nbsp;
+export <span class="fstat-no" title="function not covered" >function initEnhancer(<span class="cstat-no" title="statement not covered" >persist = true) {</span></span>
+  let <span class="cstat-no" title="statement not covered" >enhancer = persist ? compose(persistState()) : compose();</span>
+  if (<span class="cstat-no" title="statement not covered" >process.env.NODE_ENV === 'dev') {</span>
+    /* eslint-disable-next-line no-underscore-dangle */
+    const <span class="cstat-no" title="statement not covered" >composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;</span>
+    enhancer = <span class="cstat-no" title="statement not covered" >persist ? composeEnhancers(persistState()) : composeEnhancers();</span>
+  }
+  return <span class="cstat-no" title="statement not covered" >enhancer;</span>
+}
+&nbsp;
+export function areArraysShallowEqual(arr1, arr2) {
+  // returns whether 2 arrays are shallow equal
+  // used in shouldComponentUpdate when denormalizing arrays
+  // where the array object is different every time, but the content might
+  // be the same
+  if (<span class="missing-if-branch" title="if path not taken" >I</span>!arr1 || !arr2) {
+    return <span class="cstat-no" title="statement not covered" >false;</span>
+  }
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+  const length = arr1.length;
+  for (let i = 0; i &lt; length; i++) {
+    if (<span class="cstat-no" title="statement not covered" >arr1[i] !== arr2[i]) {</span>
+      return <span class="cstat-no" title="statement not covered" >false;</span>
+    }
+  }
+  return true;
+}
+&nbsp;
+export function areObjectsEqual(obj1, obj2) {
+  return equals(obj1, obj2, true);
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

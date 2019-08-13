@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/dashboard/deprecated/v1/components/SliceHeader.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">all files</a> / <a href="index.html">src/dashboard/deprecated/v1/components/</a> SliceHeader.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/45</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/28</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/43</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import React from 'react';</span>
+<span class="cstat-no" title="statement not covered" >import PropTypes from 'prop-types';</span>
+<span class="cstat-no" title="statement not covered" >import moment from 'moment';</span>
+<span class="cstat-no" title="statement not covered" >import { connect } from 'react-redux';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >import { t } from '../../../../locales';</span>
+<span class="cstat-no" title="statement not covered" >import EditableTitle from '../../../../components/EditableTitle';</span>
+<span class="cstat-no" title="statement not covered" >import TooltipWrapper from '../../../../components/TooltipWrapper';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >const propTypes = {</span>
+  slice: PropTypes.object.isRequired,
+  supersetCanExplore: PropTypes.bool,
+  sliceCanEdit: PropTypes.bool,
+  isExpanded: PropTypes.bool,
+  isCached: PropTypes.bool,
+  cachedDttm: PropTypes.string,
+  removeSlice: PropTypes.func,
+  updateSliceName: PropTypes.func,
+  toggleExpandSlice: PropTypes.func,
+  forceRefresh: PropTypes.func,
+  exploreChart: PropTypes.func,
+  exportCSV: PropTypes.func,
+  editMode: PropTypes.bool,
+  annotationQuery: PropTypes.object,
+  annotationError: PropTypes.object,
+};
+&nbsp;
+<span class="cstat-no" title="statement not covered" >const defaultProps = {</span>
+  forceRefresh: () =&gt; (<span class="cstat-no" title="statement not covered" >{}),</span>
+  removeSlice: () =&gt; (<span class="cstat-no" title="statement not covered" >{}),</span>
+  updateSliceName: () =&gt; (<span class="cstat-no" title="statement not covered" >{}),</span>
+  toggleExpandSlice: () =&gt; (<span class="cstat-no" title="statement not covered" >{}),</span>
+  exploreChart: () =&gt; (<span class="cstat-no" title="statement not covered" >{}),</span>
+  exportCSV: () =&gt; (<span class="cstat-no" title="statement not covered" >{}),</span>
+  editMode: false,
+};
+&nbsp;
+class <span class="cstat-no" title="statement not covered" >SliceHeader extends React.PureComponent {</span>
+  constructor(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >props) {</span></span>
+    super(<span class="cstat-no" title="statement not covered" >props);</span>
+&nbsp;
+    this.<span class="cstat-no" title="statement not covered" >onSaveTitle = this.onSaveTitle.bind(this);</span>
+    this.<span class="cstat-no" title="statement not covered" >onToggleExpandSlice = this.onToggleExpandSlice.bind(this);</span>
+    this.<span class="cstat-no" title="statement not covered" >exportCSV = this.props.exportCSV.bind(this, this.props.slice);</span>
+    this.<span class="cstat-no" title="statement not covered" >exploreChart = this.props.exploreChart.bind(this, this.props.slice);</span>
+    this.<span class="cstat-no" title="statement not covered" >forceRefresh = this.props.forceRefresh.bind(this, this.props.slice.slice_id);</span>
+    this.<span class="cstat-no" title="statement not covered" >removeSlice = this.props.removeSlice.bind(this, this.props.slice);</span>
+  }
+&nbsp;
+  onSaveTitle(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >newTitle) {</span></span>
+    if (<span class="cstat-no" title="statement not covered" >this.props.updateSliceName) {</span>
+      this.<span class="cstat-no" title="statement not covered" >props.updateSliceName(this.props.slice.slice_id, newTitle);</span>
+    }
+  }
+&nbsp;
+  onToggleExpandSlice() <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >{</span></span>
+    this.<span class="cstat-no" title="statement not covered" >props.toggleExpandSlice(this.props.slice, !this.props.isExpanded);</span>
+  }
+&nbsp;
+  render() <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >{</span></span>
+    const <span class="cstat-no" title="statement not covered" >slice = this.props.slice;</span>
+    const <span class="cstat-no" title="statement not covered" >isCached = this.props.isCached;</span>
+    const <span class="cstat-no" title="statement not covered" >cachedWhen = moment.utc(this.props.cachedDttm).fromNow();</span>
+    const <span class="cstat-no" title="statement not covered" >refreshTooltip = isCached ?</span>
+      t('Served from data cached %s . Click to force refresh.', cachedWhen) :
+      t('Force refresh data');
+    const <span class="cstat-no" title="statement not covered" >annoationsLoading = t('Annotation layers are still loading.');</span>
+    const <span class="cstat-no" title="statement not covered" >annoationsError = t('One ore more annotation layers failed loading.');</span>
+&nbsp;
+    return (
+<span class="cstat-no" title="statement not covered" >      &lt;div className="row chart-header"&gt;</span>
+        &lt;div className="col-md-12"&gt;
+          &lt;div className="header"&gt;
+            &lt;EditableTitle
+              title={slice.slice_name}
+              canEdit={!!this.props.updateSliceName &amp;&amp; this.props.editMode}
+              onSaveTitle={this.onSaveTitle}
+              showTooltip={this.props.editMode}
+              noPermitTooltip={'You don\'t have the rights to alter this dashboard.'}
+            /&gt;
+            {!!Object.values(this.props.annotationQuery || {}).length &amp;&amp;
+              &lt;TooltipWrapper
+                label="annotations-loading"
+                placement="top"
+                tooltip={annoationsLoading}
+              &gt;
+                &lt;i className="fa fa-refresh warning" /&gt;
+              &lt;/TooltipWrapper&gt;
+            }
+            {!!Object.values(this.props.annotationError || {}).length &amp;&amp;
+              &lt;TooltipWrapper
+                label="annoation-errors"
+                placement="top"
+                tooltip={annoationsError}
+              &gt;
+                &lt;i className="fa fa-exclamation-circle danger" /&gt;
+              &lt;/TooltipWrapper&gt;
+            }
+          &lt;/div&gt;
+          &lt;div className="chart-controls"&gt;
+            &lt;div id={'controls_' + slice.slice_id} className="pull-right"&gt;
+              {this.props.editMode &amp;&amp;
+                &lt;a&gt;
+                  &lt;TooltipWrapper
+                    placement="top"
+                    label="move"
+                    tooltip={t('Move chart')}
+                  &gt;
+                    &lt;i className="fa fa-arrows drag" /&gt;
+                  &lt;/TooltipWrapper&gt;
+                &lt;/a&gt;
+              }
+              &lt;a className={`refresh ${isCached ? 'danger' : ''}`} onClick={this.forceRefresh}&gt;
+                &lt;TooltipWrapper
+                  placement="top"
+                  label="refresh"
+                  tooltip={refreshTooltip}
+                &gt;
+                  &lt;i className="fa fa-repeat" /&gt;
+                &lt;/TooltipWrapper&gt;
+              &lt;/a&gt;
+              {slice.description &amp;&amp;
+              &lt;a onClick={this.onToggleExpandSlice}&gt;
+                &lt;TooltipWrapper
+                  placement="top"
+                  label="description"
+                  tooltip={t('Toggle chart description')}
+                &gt;
+                  &lt;i className="fa fa-info-circle slice_info" /&gt;
+                &lt;/TooltipWrapper&gt;
+              &lt;/a&gt;
+              }
+              {this.props.sliceCanEdit &amp;&amp;
+                &lt;a href={slice.edit_url} target="_blank"&gt;
+                  &lt;TooltipWrapper
+                    placement="top"
+                    label="edit"
+                    tooltip={t('Edit chart')}
+                  &gt;
+                    &lt;i className="fa fa-pencil" /&gt;
+                  &lt;/TooltipWrapper&gt;
+                &lt;/a&gt;
+              }
+              &lt;a className="exportCSV" onClick={this.exportCSV}&gt;
+                &lt;TooltipWrapper
+                  placement="top"
+                  label="exportCSV"
+                  tooltip={t('Export CSV')}
+                &gt;
+                  &lt;i className="fa fa-table" /&gt;
+                &lt;/TooltipWrapper&gt;
+              &lt;/a&gt;
+              {this.props.supersetCanExplore &amp;&amp;
+                &lt;a className="exploreChart" onClick={this.exploreChart}&gt;
+                  &lt;TooltipWrapper
+                    placement="top"
+                    label="exploreChart"
+                    tooltip={t('Explore chart')}
+                  &gt;
+                    &lt;i className="fa fa-share" /&gt;
+                  &lt;/TooltipWrapper&gt;
+                &lt;/a&gt;
+              }
+              {this.props.editMode &amp;&amp;
+                &lt;a className="remove-chart" onClick={this.removeSlice}&gt;
+                  &lt;TooltipWrapper
+                    placement="top"
+                    label="close"
+                    tooltip={t('Remove chart from dashboard')}
+                  &gt;
+                    &lt;i className="fa fa-close" /&gt;
+                  &lt;/TooltipWrapper&gt;
+                &lt;/a&gt;
+              }
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >SliceHeader.propTypes = propTypes;</span>
+<span class="cstat-no" title="statement not covered" >SliceHeader.defaultProps = defaultProps;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function mapStateToProps({ <span class="cstat-no" title="statement not covered" >dashboard }) {</span></span></span>
+  return <span class="cstat-no" title="statement not covered" >{</span>
+    supersetCanExplore: dashboard.dashboard.superset_can_explore,
+    sliceCanEdit: dashboard.dashboard.slice_can_edit,
+  };
+}
+&nbsp;
+export { <span class="cstat-no" title="statement not covered" >SliceHeader };</span>
+export default <span class="cstat-no" title="statement not covered" >connect(mapStateToProps, <span class="fstat-no" title="function not covered" >() =&gt; (<span class="cstat-no" title="statement not covered" >{}))(SliceHeader);</span></span></span>
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+</body>
+</html>

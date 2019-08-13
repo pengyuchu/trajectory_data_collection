@@ -1,0 +1,783 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/SqlLab/components/QuerySearch.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">src/SqlLab/components/</a> QuerySearch.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">69.61% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>71/102</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">38.46% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>20/52</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">53.85% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>14/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">69.79% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>67/96</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">1 branch</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">78×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">91×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">52×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="branch-1 cbranch-no" title="branch not covered" ><span class="missing-if-branch" title="else path not taken" >E</span><span class="branch-1 cbranch-no" title="branch not covered" ><span class="missing-if-branch" title="if path not taken" >I</span>/</span></span></span>* eslint no-undef: 2 */
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Button } from 'react-bootstrap';
+import Select from 'react-select';
+import Loading from '../../components/Loading';
+import QueryTable from './QueryTable';
+import {
+  now,
+  epochTimeXHoursAgo,
+  epochTimeXDaysAgo,
+  epochTimeXYearsAgo,
+} from '../../modules/dates';
+import { STATUS_OPTIONS, TIME_OPTIONS } from '../constants';
+import AsyncSelect from '../../components/AsyncSelect';
+import { t } from '../../locales';
+&nbsp;
+const $ = require('jquery');
+&nbsp;
+const propTypes = {
+  actions: PropTypes.object.isRequired,
+  height: PropTypes.string.isRequired,
+};
+&nbsp;
+class QuerySearch extends React.PureComponent {
+  constructor(props) {
+    super(<span class="branch-1 cbranch-no" title="branch not covered" >p</span>rops);
+    this.state = {
+      userLoading: false,
+      userOptions: [],
+      databaseId: null,
+      userId: null,
+      searchText: null,
+      from: '28 days ago',
+      to: 'now',
+      status: 'success',
+      queriesArray: [],
+      queriesLoading: true,
+    };
+    this.userMutator = this.userMutator.bind(this);
+    this.changeUser = this.changeUser.bind(this);
+    this.dbMutator = this.dbMutator.bind(this);
+    this.onChange = this.onChange.bind(this);
+    this.changeSearch = this.changeSearch.bind(this);
+    this.changeFrom = this.changeFrom.bind(this);
+    this.changeTo = this.changeTo.bind(this);
+    this.changeStatus = this.changeStatus.bind(this);
+    this.refreshQueries = this.refreshQueries.bind(this);
+    this.onUserClicked = this.onUserClicked.bind(this);
+    this.onDbClicked = this.onDbClicked.bind(this);
+  }
+  componentDidMount() <span class="fstat-no" title="function not covered" >{</span>
+    this.<span class="cstat-no" title="statement not covered" >refreshQueries();</span>
+  }
+  onUserClicked(<span class="fstat-no" title="function not covered" >userId) {</span>
+    this.<span class="cstat-no" title="statement not covered" >setState({ userId }, <span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
+      this.<span class="cstat-no" title="statement not covered" >refreshQueries();</span>
+    });
+  }
+  onDbClicked(<span class="fstat-no" title="function not covered" >dbId) {</span>
+    this.<span class="cstat-no" title="statement not covered" >setState({ databaseId: dbId }, <span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
+      this.<span class="cstat-no" title="statement not covered" >refreshQueries();</span>
+    });
+  }
+  onChange(<span class="fstat-no" title="function not covered" >db) {</span>
+    const <span class="cstat-no" title="statement not covered" >val = db ? db.value : null;</span>
+    this.<span class="cstat-no" title="statement not covered" >setState({ databaseId: val });</span>
+  }
+  getTimeFromSelection(selection) {
+    switch (selection) {
+      case 'now':
+        return now();
+      case <span class="branch-1 cbranch-no" title="branch not covered" >'1 hour ago':</span>
+        return <span class="cstat-no" title="statement not covered" >epochTimeXHoursAgo(1);</span>
+      case <span class="branch-2 cbranch-no" title="branch not covered" >'1 day ago':</span>
+        return <span class="cstat-no" title="statement not covered" >epochTimeXDaysAgo(1);</span>
+      case <span class="branch-3 cbranch-no" title="branch not covered" >'7 days ago':</span>
+        return <span class="cstat-no" title="statement not covered" >epochTimeXDaysAgo(7);</span>
+      case '28 days ago':
+        return epochTimeXDaysAgo(28);
+      case <span class="branch-5 cbranch-no" title="branch not covered" >'90 days ago':</span>
+        return <span class="cstat-no" title="statement not covered" >epochTimeXDaysAgo(90);</span>
+      case <span class="branch-6 cbranch-no" title="branch not covered" >'1 year ago':</span>
+        return <span class="cstat-no" title="statement not covered" >epochTimeXYearsAgo(1);</span>
+      default:
+        return <span class="cstat-no" title="statement not covered" >null;</span>
+    }
+  }
+  changeFrom(user) {
+    c</span>onst val = user ? user.value : <span class="branch-1 cbranch-no" title="branch not covered" >null;
+    this.setState({ from: val });
+  }
+  changeTo(status) {
+    c</span>onst val = status ? status.value : <span class="branch-1 cbranch-no" title="branch not covered" >null;
+    this.setState({ to: val });
+  }
+  changeUser(<span class="fstat-no" title="function not covered" >user) {</span>
+    const <span class="cstat-no" title="statement not covered" >val = user ? user.value : null;</span>
+    this.<span class="cstat-no" title="statement not covered" >setState({ userId: val });</span>
+  }
+  insertParams(baseUrl, params) {
+    const validParams = params.filter(function (p) {
+      return p !== '';
+    });
+    return baseUrl + '?' + validParams.join('&amp;');
+  }
+  changeStatus(status) {
+    c</span>onst val = status ? status.value : <span class="branch-1 cbranch-no" title="branch not covered" >null;
+    this.setState({ status: val });
+  }
+  changeSearch(event) {
+    this.setState({ searchText: event.target.value });
+  }
+  userLabel(<span class="fstat-no" title="function not covered" >user) {</span>
+    if (<span class="cstat-no" title="statement not covered" >user.first_name &amp;&amp; user.last_name) {</span>
+      return <span class="cstat-no" title="statement not covered" >user.first_name + ' ' + user.last_name;</span>
+    }
+    return <span class="cstat-no" title="statement not covered" >user.username;</span>
+  }
+  userMutator(<span class="fstat-no" title="function not covered" >data) {</span>
+    const <span class="cstat-no" title="statement not covered" >options = [];</span>
+    for (<span class="cstat-no" title="statement not covered" >let i = 0; i &lt; data.pks.length; i++) {</span>
+      options.<span class="cstat-no" title="statement not covered" >push({ value: data.pks[i], label: this.userLabel(data.result[i]) });</span>
+    }
+    return <span class="cstat-no" title="statement not covered" >options;</span>
+  }
+  dbMutator(<span class="fstat-no" title="function not covered" >data) {</span>
+    const <span class="cstat-no" title="statement not covered" >options = data.result.map(<span class="fstat-no" title="function not covered" >db =&gt; (<span class="cstat-no" title="statement not covered" >{ value: db.id, label: db.database_name }));</span></span></span>
+    this.<span class="cstat-no" title="statement not covered" >props.actions.setDatabases(data.result);</span>
+    if (<span class="cstat-no" title="statement not covered" >data.result.length === 0) {</span>
+      this.<span class="cstat-no" title="statement not covered" >props.actions.addDangerToast(t("It seems you don't have access to any database"));</span>
+    }
+    return <span class="cstat-no" title="statement not covered" >options;</span>
+  }
+  refreshQueries() {
+    this.setState({ queriesLoading: true });
+    const params = [
+      t</span>his.state.userId ? `user_id=${<span class="branch-0 cbranch-no" title="branch not covered" >this.state.userId}` : '',
+      t</span>his.state.databaseId ? `database_id=${<span class="branch-0 cbranch-no" title="branch not covered" >this.state.databaseId}` : '',
+      t</span>his.state.searchText ? `search_text=${<span class="branch-0 cbranch-no" title="branch not covered" >this.state.searchText}` : '',
+      this.state.status ? `status=${this.state.status}` : <span class="branch-1 cbranch-no" title="branch not covered" >'',</span>
+      this.state.from ? `from=${this.getTimeFromSelection(this.state.from)}` : <span class="branch-1 cbranch-no" title="branch not covered" >'',</span>
+      this.state.to ? `to=${this.getTimeFromSelection(this.state.to)}` : <span class="branch-1 cbranch-no" title="branch not covered" >'',</span>
+    ];
+&nbsp;
+    const url = this.insertParams('/superset/search_queries', params);
+    $.getJSON(url, <span class="fstat-no" title="function not covered" >(data, status) =&gt; {</span>
+      if (<span class="cstat-no" title="statement not covered" >status === 'success') {</span>
+        this.<span class="cstat-no" title="statement not covered" >setState({ queriesArray: data, queriesLoading: false });</span>
+      }
+    });
+  }
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;div id="search-header" className="row space-1"&gt;
+          &lt;div className="col-sm-2"&gt;
+            &lt;AsyncSelect
+              dataEndpoint="/users/api/read"
+              mutator={this.userMutator}
+              value={this.state.userId}
+              onChange={this.changeUser}
+            /&gt;
+          &lt;/div&gt;
+          &lt;div className="col-sm-2"&gt;
+            &lt;AsyncSelect
+              onChange={this.onChange}
+              dataEndpoint="/databaseasync/api/read?_flt_0_expose_in_sqllab=1"
+              value={this.state.databaseId}
+              mutator={this.dbMutator}
+            /&gt;
+          &lt;/div&gt;
+          &lt;div className="col-sm-4"&gt;
+            &lt;input
+              type="text"
+              onChange={this.changeSearch}
+              className="form-control input-sm"
+              placeholder={t('Search Results')}
+            /&gt;
+          &lt;/div&gt;
+          &lt;div className="col-sm-4 search-date-filter-container"&gt;
+            &lt;Select
+              name="select-from"
+              placeholder={t('[From]-')}
+              options={TIME_OPTIONS.slice(1, TIME_OPTIONS.length).map(xt =&gt; ({
+                value: xt,
+                label: xt,
+              }))}
+              value={this.state.from}
+              autosize={false}
+              onChange={this.changeFrom}
+            /&gt;
+&nbsp;
+            &lt;Select
+              name="select-to"
+              placeholder={t('[To]-')}
+              options={TIME_OPTIONS.map(xt =&gt; ({ value: xt, label: xt }))}
+              value={this.state.to}
+              autosize={false}
+              onChange={this.changeTo}
+            /&gt;
+&nbsp;
+            &lt;Select
+              name="select-status"
+              placeholder={t('[Query Status]')}
+              options={STATUS_OPTIONS.map(s =&gt; ({ value: s, label: s }))}
+              value={this.state.status}
+              isLoading={false}
+              autosize={false}
+              onChange={this.changeStatus}
+            /&gt;
+&nbsp;
+            &lt;Button bsSize="small" bsStyle="success" onClick={this.refreshQueries}&gt;
+              {t('Search')}
+            &lt;/Button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div className="scrollbar-container"&gt;
+          {this.state.queriesLoading ? (
+            &lt;Loading /&gt;
+          ) : (
+<span class="branch-1 cbranch-no" title="branch not covered" >            &lt;div className="scrollbar-content" style={{ height: this.props.height }}&gt;</span>
+              &lt;QueryTable
+                columns={['state', 'db', 'user', 'time', 'progress', 'rows', 'sql', 'querylink']}
+                onUserClicked={this.onUserClicked}
+                onDbClicked={this.onDbClicked}
+                queries={this.state.queriesArray}
+                actions={this.props.actions}
+              /&gt;
+            &lt;/div&gt;
+          )}
+        &lt;/div&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+QuerySearch.propTypes = propTypes;
+export default QuerySearch;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,896 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/visualizations/paired_ttest.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/visualizations/</a> paired_ttest.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/117</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/48</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/17</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/115</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import d3 from 'd3';</span>
+<span class="cstat-no" title="statement not covered" >import dist from 'distributions';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >import React from 'react';</span>
+<span class="cstat-no" title="statement not covered" >import { Table, Tr, Td, Thead, Th } from 'reactable';</span>
+<span class="cstat-no" title="statement not covered" >import ReactDOM from 'react-dom';</span>
+<span class="cstat-no" title="statement not covered" >import PropTypes from 'prop-types';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >import './paired_ttest.css';</span>
+&nbsp;
+class <span class="cstat-no" title="statement not covered" >TTestTable extends React.Component {</span>
+&nbsp;
+  constructor(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >props) {</span></span>
+    super(<span class="cstat-no" title="statement not covered" >props);</span>
+    this.<span class="cstat-no" title="statement not covered" >state = {</span>
+      pValues: [],
+      liftValues: [],
+      control: 0,
+    };
+  }
+&nbsp;
+  componentWillMount() <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >{</span></span>
+    this.<span class="cstat-no" title="statement not covered" >computeTTest(this.state.control); // initially populate table</span>
+  }
+&nbsp;
+  getLiftStatus(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >row) {</span></span>
+    // Get a css class name for coloring
+    if (<span class="cstat-no" title="statement not covered" >row === this.state.control) {</span>
+      return <span class="cstat-no" title="statement not covered" >'control';</span>
+    }
+    const <span class="cstat-no" title="statement not covered" >liftVal = this.state.liftValues[row];</span>
+    if (<span class="cstat-no" title="statement not covered" >isNaN(liftVal) || !isFinite(liftVal)) {</span>
+      return <span class="cstat-no" title="statement not covered" >'invalid'; // infinite or NaN values</span>
+    }
+    return <span class="cstat-no" title="statement not covered" >liftVal &gt;= 0 ? 'true' : 'false'; // green on true, red on false</span>
+  }
+&nbsp;
+  getPValueStatus(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >row) {</span></span>
+    if (<span class="cstat-no" title="statement not covered" >row === this.state.control) {</span>
+      return <span class="cstat-no" title="statement not covered" >'control';</span>
+    }
+    const <span class="cstat-no" title="statement not covered" >pVal = this.state.pValues[row];</span>
+    if (<span class="cstat-no" title="statement not covered" >isNaN(pVal) || !isFinite(pVal)) {</span>
+      return <span class="cstat-no" title="statement not covered" >'invalid';</span>
+    }
+    return <span class="cstat-no" title="statement not covered" >''; // p-values won't normally be colored</span>
+  }
+&nbsp;
+  getSignificance(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >row) {</span></span>
+    // Color significant as green, else red
+    if (<span class="cstat-no" title="statement not covered" >row === this.state.control) {</span>
+      return <span class="cstat-no" title="statement not covered" >'control';</span>
+    }
+    // p-values significant below set threshold
+    return <span class="cstat-no" title="statement not covered" >this.state.pValues[row] &lt;= this.props.alpha;</span>
+  }
+&nbsp;
+  computeLift(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >values, control) {</span></span>
+    // Compute the lift value between two time series
+    let <span class="cstat-no" title="statement not covered" >sumValues = 0;</span>
+    let <span class="cstat-no" title="statement not covered" >sumControl = 0;</span>
+    for (<span class="cstat-no" title="statement not covered" >let i = 0; i &lt; values.length; i++) {</span>
+      sumValues += <span class="cstat-no" title="statement not covered" >values[i].y;</span>
+      sumControl += <span class="cstat-no" title="statement not covered" >control[i].y;</span>
+    }
+    return <span class="cstat-no" title="statement not covered" >(((sumValues - sumControl) / sumControl) * 100)</span>
+      .toFixed(this.props.liftValPrec);
+  }
+&nbsp;
+  computePValue(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >values, control) {</span></span>
+    // Compute the p-value from Student's t-test
+    // between two time series
+    let <span class="cstat-no" title="statement not covered" >diffSum = 0;</span>
+    let <span class="cstat-no" title="statement not covered" >diffSqSum = 0;</span>
+    let <span class="cstat-no" title="statement not covered" >finiteCount = 0;</span>
+    for (<span class="cstat-no" title="statement not covered" >let i = 0; i &lt; values.length; i++) {</span>
+      const <span class="cstat-no" title="statement not covered" >diff = control[i].y - values[i].y;</span>
+      if (<span class="cstat-no" title="statement not covered" >global.isFinite(diff)) {</span>
+        finiteCount++;
+        diffSum += <span class="cstat-no" title="statement not covered" >diff;</span>
+        diffSqSum += <span class="cstat-no" title="statement not covered" >diff * diff;</span>
+      }
+    }
+    const <span class="cstat-no" title="statement not covered" >tvalue = -Math.abs(diffSum *</span>
+      Math.sqrt((finiteCount - 1) /
+      (finiteCount * diffSqSum - diffSum * diffSum)));
+    try <span class="cstat-no" title="statement not covered" >{</span>
+      return <span class="cstat-no" title="statement not covered" >(2 * new dist.Studentt(finiteCount - 1).cdf(tvalue))</span>
+        .toFixed(this.props.pValPrec); // two-sided test
+    } catch (err) {
+      return <span class="cstat-no" title="statement not covered" >NaN;</span>
+    }
+  }
+&nbsp;
+  computeTTest(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >control) {</span></span>
+    // Compute lift and p-values for each row
+    // against the selected control
+    const <span class="cstat-no" title="statement not covered" >data = this.props.data;</span>
+    const <span class="cstat-no" title="statement not covered" >pValues = [];</span>
+    const <span class="cstat-no" title="statement not covered" >liftValues = [];</span>
+    if (<span class="cstat-no" title="statement not covered" >!data) {</span>
+      return;
+    }
+    for (<span class="cstat-no" title="statement not covered" >let i = 0; i &lt; data.length; i++) {</span>
+      if (<span class="cstat-no" title="statement not covered" >i === control) {</span>
+        pValues.<span class="cstat-no" title="statement not covered" >push('control');</span>
+        liftValues.<span class="cstat-no" title="statement not covered" >push('control');</span>
+      } else {
+        pValues.<span class="cstat-no" title="statement not covered" >push(this.computePValue(data[i].values, data[control].values));</span>
+        liftValues.<span class="cstat-no" title="statement not covered" >push(this.computeLift(data[i].values, data[control].values));</span>
+      }
+    }
+    this.<span class="cstat-no" title="statement not covered" >setState({ pValues, liftValues, control });</span>
+  }
+&nbsp;
+  render() <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >{</span></span>
+    const <span class="cstat-no" title="statement not covered" >data = this.props.data;</span>
+    const <span class="cstat-no" title="statement not covered" >metric = this.props.metric;</span>
+    const <span class="cstat-no" title="statement not covered" >groups = this.props.groups;</span>
+    // Render column header for each group
+    const <span class="cstat-no" title="statement not covered" >columns = groups.map(<span class="fstat-no" title="function not covered" >(group, i) =&gt; (</span></span>
+<span class="cstat-no" title="statement not covered" >      &lt;Th key={i} column={group}&gt;{group}&lt;/Th&gt;</span>
+    ));
+    const <span class="cstat-no" title="statement not covered" >numGroups = groups.length;</span>
+    // Columns for p-value, lift-value, and significance (true/false)
+    columns.<span class="cstat-no" title="statement not covered" >push(&lt;Th key={numGroups + 1} column="pValue"&gt;p-value&lt;/Th&gt;);</span>
+    columns.<span class="cstat-no" title="statement not covered" >push(&lt;Th key={numGroups + 2} column="liftValue"&gt;Lift %&lt;/Th&gt;);</span>
+    columns.<span class="cstat-no" title="statement not covered" >push(&lt;Th key={numGroups + 3} column="significant"&gt;Significant&lt;/Th&gt;);</span>
+    const <span class="cstat-no" title="statement not covered" >rows = data.map(<span class="fstat-no" title="function not covered" >(entry, i) =&gt; {</span></span>
+      const <span class="cstat-no" title="statement not covered" >values = groups.map(<span class="fstat-no" title="function not covered" >(group, j) =&gt; ( <span class="cstat-no" title="statement not covered" >// group names</span></span></span>
+        &lt;Td key={j} column={group} data={entry.group[j]} /&gt;
+      ));
+      values.<span class="cstat-no" title="statement not covered" >push(</span>
+        &lt;Td
+          key={numGroups + 1}
+          className={this.getPValueStatus(i)}
+          column="pValue"
+          data={this.state.pValues[i]}
+        /&gt;,
+      );
+      values.<span class="cstat-no" title="statement not covered" >push(</span>
+        &lt;Td
+          key={numGroups + 2}
+          className={this.getLiftStatus(i)}
+          column="liftValue"
+          data={this.state.liftValues[i]}
+        /&gt;,
+      );
+      values.<span class="cstat-no" title="statement not covered" >push(</span>
+        &lt;Td
+          key={numGroups + 3}
+          className={this.getSignificance(i)}
+          column="significant"
+          data={this.getSignificance(i)}
+        /&gt;,
+      );
+      return (
+<span class="cstat-no" title="statement not covered" >        &lt;Tr</span>
+          key={i}
+          onClick={this.computeTTest.bind(this, i)}
+          className={i === this.state.control ? 'control' : ''}
+        &gt;
+          {values}
+        &lt;/Tr&gt;
+      );
+    });
+    // When sorted ascending, 'control' will always be at top
+    const <span class="cstat-no" title="statement not covered" >sortConfig = groups.concat([</span>
+      {
+        column: 'pValue',
+        sortFunction: (<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >a, b) =&gt; {</span></span>
+          if (<span class="cstat-no" title="statement not covered" >a === 'control') {</span>
+            return <span class="cstat-no" title="statement not covered" >-1;</span>
+          }
+          if (<span class="cstat-no" title="statement not covered" >b === 'control') {</span>
+            return <span class="cstat-no" title="statement not covered" >1;</span>
+          }
+          return <span class="cstat-no" title="statement not covered" >a &gt; b ? 1 : -1; // p-values ascending</span>
+        },
+      },
+      {
+        column: 'liftValue',
+        sortFunction: (<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >a, b) =&gt; {</span></span>
+          if (<span class="cstat-no" title="statement not covered" >a === 'control') {</span>
+            return <span class="cstat-no" title="statement not covered" >-1;</span>
+          }
+          if (<span class="cstat-no" title="statement not covered" >b === 'control') {</span>
+            return <span class="cstat-no" title="statement not covered" >1;</span>
+          }
+          return <span class="cstat-no" title="statement not covered" >parseFloat(a) &gt; parseFloat(b) ? -1 : 1; // lift values descending</span>
+        },
+      },
+      {
+        column: 'significant',
+        sortFunction: (<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >a, b) =&gt; {</span></span>
+          if (<span class="cstat-no" title="statement not covered" >a === 'control') {</span>
+            return <span class="cstat-no" title="statement not covered" >-1;</span>
+          }
+          if (<span class="cstat-no" title="statement not covered" >b === 'control') {</span>
+            return <span class="cstat-no" title="statement not covered" >1;</span>
+          }
+          return <span class="cstat-no" title="statement not covered" >a &gt; b ? -1 : 1; // significant values first</span>
+        },
+      },
+    ]);
+    return (
+<span class="cstat-no" title="statement not covered" >      &lt;div&gt;</span>
+        &lt;h3&gt;{metric}&lt;/h3&gt;
+        &lt;Table
+          className="table"
+          id={`table_${metric}`}
+          sortable={sortConfig}
+        &gt;
+          &lt;Thead&gt;
+            {columns}
+          &lt;/Thead&gt;
+          {rows}
+        &lt;/Table&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >TTestTable.propTypes = {</span>
+  metric: PropTypes.string.isRequired,
+  groups: PropTypes.array.isRequired,
+  data: PropTypes.array.isRequired,
+  alpha: PropTypes.number.isRequired,
+  liftValPrec: PropTypes.number.isRequired,
+  pValPrec: PropTypes.number.isRequired,
+};
+<span class="cstat-no" title="statement not covered" >TTestTable.defaultProps = {</span>
+  metric: '',
+  groups: [],
+  data: [],
+  alpha: 0.05,
+  liftValPrec: 4,
+  pValPrec: 6,
+};
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function pairedTTestVis(slice, payload) {</span></span>
+  const <span class="cstat-no" title="statement not covered" >div = d3.select(slice.selector);</span>
+  const <span class="cstat-no" title="statement not covered" >container = slice.container;</span>
+  const <span class="cstat-no" title="statement not covered" >height = slice.container.height();</span>
+  const <span class="cstat-no" title="statement not covered" >fd = slice.formData;</span>
+  const <span class="cstat-no" title="statement not covered" >data = payload.data;</span>
+  const <span class="cstat-no" title="statement not covered" >alpha = fd.significance_level;</span>
+  const <span class="cstat-no" title="statement not covered" >pValPrec = fd.pvalue_precision;</span>
+  const <span class="cstat-no" title="statement not covered" >liftValPrec = fd.liftvalue_precision;</span>
+  const <span class="cstat-no" title="statement not covered" >tables = fd.metrics.map(<span class="fstat-no" title="function not covered" >(metric, i) =&gt; ( <span class="cstat-no" title="statement not covered" >// create a table for each metric</span></span></span>
+    &lt;TTestTable
+      key={i}
+      metric={metric}
+      groups={fd.groupby}
+      data={data[metric]}
+      alpha={alpha}
+      pValPrec={pValPrec &gt; 32 ? 32 : pValPrec}
+      liftValPrec={liftValPrec &gt; 32 ? 32 : liftValPrec}
+    /&gt;
+  ));
+  div.<span class="cstat-no" title="statement not covered" >html('');</span>
+  ReactDOM.<span class="cstat-no" title="statement not covered" >render(</span>
+    &lt;div className="row"&gt;
+      &lt;div className="col-sm-12"&gt;
+        &lt;div className="paired-ttest-table scrollbar-container"&gt;
+          &lt;div className="scrollbar-content"&gt;
+            {tables}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;,
+    div.node(),
+  );
+  container.<span class="cstat-no" title="statement not covered" >find('.scrollbar-container').css('max-height', height);</span>
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >module.exports = pairedTTestVis;</span>
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/visualizations/pivot_table.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/visualizations/</a> pivot_table.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/33</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import dt from 'datatables.net-bs';</span>
+<span class="cstat-no" title="statement not covered" >import 'datatables.net-bs/css/dataTables.bootstrap.css';</span>
+<span class="cstat-no" title="statement not covered" >import $ from 'jquery';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >import { d3format, fixDataTableBodyHeight } from '../modules/utils';</span>
+<span class="cstat-no" title="statement not covered" >import './pivot_table.css';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >dt(window, $);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >module.exports = <span class="fstat-no" title="function not covered" >function (slice, payload) {</span></span>
+  const <span class="cstat-no" title="statement not covered" >container = slice.container;</span>
+  const <span class="cstat-no" title="statement not covered" >fd = slice.formData;</span>
+  const <span class="cstat-no" title="statement not covered" >height = container.height();</span>
+  let <span class="cstat-no" title="statement not covered" >cols = payload.data.columns;</span>
+  if (<span class="cstat-no" title="statement not covered" >Array.isArray(cols[0])) {</span>
+    cols = <span class="cstat-no" title="statement not covered" >cols.map(<span class="fstat-no" title="function not covered" >col =&gt; <span class="cstat-no" title="statement not covered" >col[0]);</span></span></span>
+  }
+&nbsp;
+  // payload data is a string of html with a single table element
+  container.<span class="cstat-no" title="statement not covered" >html(payload.data.html);</span>
+&nbsp;
+  // jQuery hack to set verbose names in headers
+  const <span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >replaceCell = function () {</span></span></span>
+    const <span class="cstat-no" title="statement not covered" >s = $(this)[0].textContent;</span>
+    $(<span class="cstat-no" title="statement not covered" >this)[0].textContent = slice.datasource.verbose_map[s] || s;</span>
+  };
+  slice.<span class="cstat-no" title="statement not covered" >container.find('thead tr:first th').each(replaceCell);</span>
+  slice.<span class="cstat-no" title="statement not covered" >container.find('thead tr th:first-child').each(replaceCell);</span>
+&nbsp;
+  // jQuery hack to format number
+  slice.<span class="cstat-no" title="statement not covered" >container.find('tbody tr').each(<span class="fstat-no" title="function not covered" >function () {</span></span>
+    $(<span class="cstat-no" title="statement not covered" >this).find('td').each(<span class="fstat-no" title="function not covered" >function (i) {</span></span>
+      const <span class="cstat-no" title="statement not covered" >metric = cols[i];</span>
+      const <span class="cstat-no" title="statement not covered" >format = slice.datasource.column_formats[metric] || fd.number_format || '.3s';</span>
+      const <span class="cstat-no" title="statement not covered" >tdText = $(this)[0].textContent;</span>
+      if (<span class="cstat-no" title="statement not covered" >!isNaN(tdText) &amp;&amp; tdText !== '') {</span>
+        $(<span class="cstat-no" title="statement not covered" >this)[0].textContent = d3format(format, tdText);</span>
+      }
+    });
+  });
+&nbsp;
+  if (<span class="cstat-no" title="statement not covered" >fd.groupby.length === 1) {</span>
+    // When there is only 1 group by column,
+    // we use the DataTable plugin to make the header fixed.
+    // The plugin takes care of the scrolling so we don't need
+    // overflow: 'auto' on the table.
+    container.<span class="cstat-no" title="statement not covered" >css('overflow', 'hidden');</span>
+    const <span class="cstat-no" title="statement not covered" >table = container.find('table').DataTable({</span>
+      paging: false,
+      searching: false,
+      bInfo: false,
+      scrollY: `${height}px`,
+      scrollCollapse: true,
+      scrollX: true,
+    });
+    table.<span class="cstat-no" title="statement not covered" >column('-1').order('desc').draw();</span>
+    fixDataTableBodyHeight(<span class="cstat-no" title="statement not covered" >container.find('.dataTables_wrapper'), height);</span>
+  } else {
+    // When there is more than 1 group by column we just render the table, without using
+    // the DataTable plugin, so we need to handle the scrolling ourselves.
+    // In this case the header is not fixed.
+    container.<span class="cstat-no" title="statement not covered" >css('overflow', 'auto');</span>
+    container.<span class="cstat-no" title="statement not covered" >css('height', `${height + 10}px`);</span>
+  }
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jul 18 2018 23:16:47 GMT-0700 (Pacific Daylight Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
